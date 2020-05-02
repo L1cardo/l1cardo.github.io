@@ -1,0 +1,105 @@
+class:
+  class_name: 友情链接
+  link_list:
+    1:
+      name: Swift
+      link: https://swiftgg.gitbook.io/swift/
+      avatar: https://developer.apple.com/assets/elements/icons/swift/swift-64x64.png
+      descr: Swift 官方文档中文版
+    2:
+      name: 码酱
+      link: http://luokangyuan.com/
+      avatar: http://image.luokangyuan.com/1_qq_27922023.jpg
+      descr: 我不是大佬，只是在追寻大佬的脚步
+    3:
+      name: 闪烁之狐
+      link: https://blinkfox.github.io/
+      avatar: http://image.luokangyuan.com/4027734.jpeg
+      descr: 编程界大佬，人还特别好，不懂的都可以请教大佬
+    4:
+      name: 洪卫の博客
+      link: https://sunhwee.com
+      avatar: https://sunhwee.com/hwsun.jpg
+      descr: UESTC CVer！
+    5:
+      name: 杰杰
+      link: https://jiejietop.gitee.io/
+      avatar: https://jiejietop.gitee.io/medias/avatars/avatar.jpg
+      descr: ღ( ´･ᴗ･` )我怎么辣么可爱
+    6:
+      name: luozb
+      link: http://safetytraffic.cf
+      avatar: http://safetytraffic.cf/medias/traffic.png
+      descr: 交通安全攻城狮
+    7:
+      name: Five-great
+      link: https://www.fivecc.cn/
+      avatar: https://www.fivecc.cn/medias/avatar.jpg
+      descr: 有事多研究 没事多琢磨
+    8:
+      name: liuzhihang
+      link: https://liuzhihang.com/
+      avatar: https://liuzhihang.com/medias/avatar.jpg
+      descr: Work study notes about java programmers…
+    9:
+      name: 分享客
+      link: https://sharerdiary.com/
+      avatar: https://sharerdiary.com/medias/avatars/yezijie.jpg
+      descr: 爱生活，爱分享!
+    10:
+      name: Sitoi
+      link: https://sitoi.cn
+      avatar: https://github.com/Sitoi.png
+      descr: 妄想通过成为 Spider-Man 实现财富自由的程序猿
+    11:
+      name: Faber
+      link: http://www.faber.cc/
+      avatar: http://www.faber.cc/medias/avatar.jpg
+      descr: 努力不一定能成功，但永远不会后悔
+       
+    12:
+      name: CpZhao
+      link: https://chengpengzhao.com
+      avatar: https://chengpengzhao.com/medias/avatar.jpg
+      descr: 一个流体力学专业的菜鸡
+    13:
+      name: 过客~励む
+      link: https://yafine-blog.cn
+      avatar: https://yafine-blog.cn/medias/avatar.jpg
+      descr: 专注Web，学习，记录，分享！
+    14:
+      name: AngelNI’s Blog
+      link: https://angelni.github.io
+      avatar: https://angelni.github.io/AngelNI.github.io/images/avatar.png
+      descr: 愿我们都能和最好的自己相遇
+    15:
+      name: A2Data
+      link: https://www.a2data.cn
+      avatar: https://www.a2data.cn/medias/avatar.gif
+      descr: 武术跨行大数据，用技术推动梦想的落地！
+    16:
+      name: My blog
+      link: https://qvchuang.top
+      avatar: https://qvchuang.top/medias/logo.png
+      descr: 学习、记录、分享
+    17:
+      name: Pideron
+      link: https://www.zicongxie.com
+      avatar: https://www.zicongxie.com/img/avatar.png
+      descr: 愿望是以学习为生
+    18:
+      name: 极客生活
+      link: http://www.geeklife.top
+      avatar: http://www.geeklife.top/logo.png
+      descr: 好的技术没有围墙
+    19:
+      name: IT之旅
+      link: https://www.meijindong.top
+      avatar: https://www.meijindong.top/img/avatar.png
+      descr: 程序员在旅途
+    20:
+      name: F7ionsy's blog
+      link: https://f7ionsy.me/
+      avatar: https://cdn.jsdelivr.net/gh/F7ionsy/home@master/user.jpg
+      descr: F7ionsy's blog
+
