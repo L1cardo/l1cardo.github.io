@@ -3,7 +3,7 @@ name: 自动部署 Hexo
 on:
   push:
     branches:
-      - master
+      - blog
 
 jobs:
   build:
@@ -47,4 +47,4 @@ jobs:
           git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
           git commit -m "Update"
-          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:gh-pages
+          git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" master:master
