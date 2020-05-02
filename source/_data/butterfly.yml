@@ -174,7 +174,7 @@ post_meta:
 
 # Please see doc for more details: https://docs.jerryc.me/config.html#字數統計
 wordcount:
-  enable: false
+  enable: true
   post_wordcount: true
   min2read: true
   total_wordcount: true
