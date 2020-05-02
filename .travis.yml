@@ -1,5 +1,5 @@
 language: node_js
-node_js: 13.x
+node_js: stable
 
 sudo: required
 
