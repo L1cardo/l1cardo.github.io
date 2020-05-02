@@ -1,4 +1,4 @@
-name: 自動部署 Hexo
+name: 自动部署 Hexo
 
 on:
   push:
@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: 开始运行
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.1.0
 
       - name: 设置 Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v1.4.2
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -27,7 +27,7 @@ jobs:
           npm install hexo-cli -g
 
       - name: 缓存
-        uses: actions/cache@v1
+        uses: actions/cache@v1.1.2
         id: cache-dependencies
         with:
           path: node_modules
