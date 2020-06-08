@@ -54,13 +54,13 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 - Install via Homebrew
 
-```bash
-brew tap bigwig-club/brew
-brew cask install bigwig-club/brew/app-tracker
-```
+    ```bash
+    brew tap bigwig-club/brew
+    brew cask install bigwig-club/brew/app-tracker
+    ```
 
 - Direct Install
   
-[Releases · L1cardo/AppTracker-Release · GitHub](https://github.com/L1cardo/AppTracker-Release/releases)
+    [Releases · L1cardo/AppTracker-Release · GitHub](https://github.com/L1cardo/AppTracker-Release/releases)
 
 
