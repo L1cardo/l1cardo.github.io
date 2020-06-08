@@ -1,5 +1,5 @@
 ---
-title: App Tracker
+title: App Tracker Install Tutorial
 top: true
 categories:
   - App
@@ -9,6 +9,10 @@ tags:
 date: 2020-06-08 00:00:00
 cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/compose_music_ovo2.svg
 ---
+
+<h1 align="center">App Tracker Install Tutorial</h1>
+
+[[🇺🇸English](https://blog.licardo.cn/posts/7d6f9f95/)] [[🇨🇳中文](https://blog.licardo.cn/posts/d41dd91b/)]
 
 # App Tracker for iOS
 

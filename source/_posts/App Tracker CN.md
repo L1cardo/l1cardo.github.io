@@ -10,6 +10,10 @@ date: 2020-06-08 00:00:00
 cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/compose_music_ovo2.svg
 ---
 
+<h1 align="center">App Tracker 安装教程</h1>
+
+[[🇺🇸English](https://blog.licardo.cn/posts/7d6f9f95/)] [[🇨🇳中文](https://blog.licardo.cn/posts/d41dd91b/)]
+
 # App Tracker for iOS
 
 [在 AltStore 中打开](altstore://install?url=https://github.com/L1cardo/AppTracker-Release/releases/download/v1.0.0/App.Tracker.ipa)
@@ -59,7 +63,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
     brew cask install bigwig-club/brew/app-tracker
     ```
 
-- 直接 Install
+- 直接安装
   
     [Releases · L1cardo/AppTracker-Release · GitHub](https://github.com/L1cardo/AppTracker-Release/releases)
 
