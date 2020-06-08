@@ -29,7 +29,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 11. Trust AltStore.
 12. Tap the "Open in AltStore" button located above.
 13. AltStore will now install the app. Wait until it finishes.
-14. Open unc0ver and jail​break!
+14. Open App Tracker and enjoy!
 
 ### Windows
 
@@ -48,7 +48,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 11. Tap the "Open in AltStore" button located above.
 12. If promoted, sign into the same Apple ID you used before.
 13. AltStore will now install the app. Wait until it finishes.
-14. Open unc0ver and jail​break!
+14. Open App Tracker and enjoy!
 
 # App Tracker for macOS
 
