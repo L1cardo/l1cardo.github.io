@@ -12,7 +12,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 <h1 align="center">App Tracker Install Tutorial</h1>
 
-[[🇺🇸English](https://blog.licardo.cn/posts/7d6f9f95/)] [[🇨🇳中文](https://blog.licardo.cn/posts/d41dd91b/)]
+[[🇺🇸English](https://blog.licardo.cn/posts/8b0ba943/)] [[🇨🇳中文](https://blog.licardo.cn/posts/d41dd91b/)]
 
 # App Tracker for iOS
 
