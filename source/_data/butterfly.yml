@@ -7,17 +7,17 @@
 #   name || link || icon
 
 menu:
-  主页: / || fa fa-home
-  时间轴: /archives/ || fa fa-archive
-  标签: /tags/ || fa fa-tags
-  分类: /categories/ || fa fa-folder-open
-  清单 || fa fa-list:
-    - 书籍 || /books/ || fa fa-book
-    - 电影 || /movies/ || fa fa-film
-    - 游戏 || /games/ || fa fa-gamepad
-  留言板: /contact/ || fa fa-comments
-  友情链接: /friends/ || fa fa-link
-  关于: /about/ || fa fa-heart
+  主页: / || fas fa-home
+  时间轴: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  清单 || fas fa-list:
+    - 书籍 || /books/ || fas fa-book
+    - 电影 || /movies/ || fas fa-film
+    - 游戏 || /games/ || fas fa-gamepad
+  留言板: /contact/ || fas fa-comments
+  友情链接: /friends/ || fas fa-link
+  关于: /about/ || fas fa-heart
 
 # Code Blocks (代碼相關)
 # --------------------------------------
@@ -40,7 +40,7 @@ copy:
 # ---------------
 social:
   fab fa-github: https://github.com/L1cardo || GitHub
-  fab fa-envelope: albert.abdilim@foxmail.com || Email
+  fas fa-envelope: albert.abdilim@foxmail.com || Email
   fab fa-twitter: https://twitter.com/AlbertAbdilim || Twitter
   fab fa-weibo: https://weibo.com/1935602951 || Weibo
 
