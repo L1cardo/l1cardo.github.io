@@ -1,3 +1,13 @@
+---
+title: TIME 隐私政策
+categories:
+  - 隐私政策
+tags:
+  - TIME
+  - Privacy Policy
+date: 2020-06-20 00:00:00
+---
+
 # 隐私政策
 
 **生效日期：2020-06-20**

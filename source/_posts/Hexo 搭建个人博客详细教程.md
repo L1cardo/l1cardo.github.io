@@ -1,6 +1,5 @@
 ---
 title: Hexo 搭建个人博客详细教程
-top: true
 categories:
   - Hexo
 tags:

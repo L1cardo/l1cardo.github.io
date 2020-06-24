@@ -1,6 +1,5 @@
 ---
 title: Matery 主题详细配置教程
-top: true
 categories:
   - Hexo
 tags:
