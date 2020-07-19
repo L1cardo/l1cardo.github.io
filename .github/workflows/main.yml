@@ -14,10 +14,10 @@ jobs:
 
     steps:
       - name: 开始运行
-        uses: actions/checkout@v2.1.0
+        uses: actions/checkout@v2.3.1
 
       - name: 设置 Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1.4.2
+        uses: actions/setup-node@v2.1.0
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -27,7 +27,7 @@ jobs:
           npm install hexo-cli -g
 
       - name: 缓存
-        uses: actions/cache@v1.1.2
+        uses: actions/cache@v2.0.0
         id: cache-dependencies
         with:
           path: node_modules
