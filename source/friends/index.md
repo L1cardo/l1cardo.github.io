@@ -10,4 +10,4 @@ top_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.r
  - Blog 名称： Licardo
  - Blog 地址： https://blog.licardo.cn/
  - Blog 头像： https://blog.licardo.cn/img/avatar.png
- - Blog 信息： 一个医学生的成才之路
+ - Blog 信息： 喜欢编程的医学生
