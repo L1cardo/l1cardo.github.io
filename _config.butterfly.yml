@@ -660,7 +660,7 @@ newest_comments:
     appId: eL21jNkmO1ys1jk2K2E4JU3D-gzGzoHsz # leancloud application app id
     appKey: UTUTkSYCaQpNgs5vU35AzLGo # leancloud application app key
     serverURL: https://blog.licardo.cn # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-    default_avatar: # mp/identicon/monsterid/wavatar/retro/robohash/blank
+    default_avatar: monsterid # mp/identicon/monsterid/wavatar/retro/robohash/blank
   github_issues:
     enable: false
     repo:
