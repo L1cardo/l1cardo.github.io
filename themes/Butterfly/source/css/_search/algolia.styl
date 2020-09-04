@@ -11,25 +11,25 @@
       outline: none
       border: 2px solid $search-color
       border-radius: 2rem
-      background: $search-bg
-      font-size: 14px
+      background: var(--search-bg)
+      color: var(--search-input-color)
 
   .ais-hits--item.algolia-hit-item
     position: relative
-    padding-left: 1.5rem
+    padding-left: 1.2rem
 
     &:hover
       &:before
-        border-color: $theme-button-hover-color
+        border-color: $pseudo-hover
 
     &:before
-      $w = .3rem
+      $w = .5em
       position: absolute
-      top: .4rem
+      top: .53em
       left: 0
       width: w = $w
       height: h = w
-      border: .5 * w solid $search-color
+      border: .15rem solid $search-color
       border-radius: w
       background: transparent
       content: ''
@@ -38,8 +38,7 @@
 
     a
       display: block
-      color: $font-black
-      font-size: 14px
+      color: var(--search-result-title)
       cursor: pointer
 
       &:hover

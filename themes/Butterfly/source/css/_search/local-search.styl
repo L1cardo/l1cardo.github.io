@@ -12,27 +12,27 @@
       outline: none
       border: 2px solid $search-color
       border-radius: 2rem
-      background: $search-bg
-      font-size: 14px
+      background: var(--search-bg)
+      color: var(--search-input-color)
       -webkit-appearance: none
 
   .local-search__hit-item
     position: relative
-    padding-left: 1.3rem
+    padding-left: 1.2rem
     line-height: 1.7
 
     &:hover
       &:before
-        border-color: $theme-button-hover-color
+        border-color: $pseudo-hover
 
     &:before
-      $w = .3rem
+      $w = .5em
       position: absolute
-      top: .3rem
+      top: .45em
       left: 0
       width: w = $w
       height: h = w
-      border: .5 * w solid $search-color
+      border: .15rem solid $search-color
       border-radius: w
       background: transparent
       content: ''
@@ -41,9 +41,8 @@
 
     a
       display: block
-      color: $font-black
+      color: var(--search-result-title)
       font-weight: 600
-      font-size: 14px
       cursor: pointer
 
       &:hover
@@ -63,3 +62,7 @@
   .search-result-list
     overflow-y: auto
     max-height: 10.5rem
+
+    +maxWidth768()
+      padding-bottom: 2rem
+      max-height: 75vh !important

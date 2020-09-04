@@ -16,7 +16,7 @@
     overflow-y: auto
     width: 250px
     height: 100%
-    background: #f6f8fa
+    background: var(--sidebar-bg)
     transition: all .5s
 
     & > .mobile_author_icon
@@ -46,13 +46,11 @@
             @extend .limit-one-line
 
           .length_num
-            color: $dark-black
-            font-size: .9rem
+            color: var(--text-highlight-color)
+            font-size: 1.28em
 
           .headline
-            display: block
-            color: $font-black
-            font-size: .7rem
+            color: var(--font-color)
 
     hr
       margin: 1rem auto
@@ -65,8 +63,8 @@
         position: relative
         display: block
         padding: .3rem 1.5rem
-        color: $font-black
-        font-size: .8rem
+        color: var(--font-color)
+        font-size: 1.15em
         cursor: pointer
 
         i:first-child
@@ -79,16 +77,18 @@
           &:hover
             color: $light-blue
 
-      .menus-expand
+      .expand
         position: absolute
-        right: 0
-        padding: .4rem
-        transition: all .3s
-        transform: rotate(0)
+        top: .78em
+        right: .4rem
+        transition: transform .3s
 
-        &.menus-closed
+        &.hide
           transform: rotate(90deg) !important
 
       .menus_item_child
         margin: 0
         list-style: none
+
+        if hexo-config('hide_sidebar_menu_child')
+          display: none
