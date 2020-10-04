@@ -10,7 +10,8 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 ---
 
 # Account-Switcher
-App Store 多账号自动登录器
+> App Store 多账号自动登录器
+> https://github.com/Bigwig-Club/Account-Switcher
 
 由于我有多个不同地区的 App Store 账号, 并且有时候也需要在多个 App Store 账户中切换登录, 这就萌生出找一个能自动登录的 app 的念头, 但是找了很久都没找到. 要么是太老, 要么是不开源安全性无从考证.
 
