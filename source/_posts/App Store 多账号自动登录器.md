@@ -22,7 +22,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 # 声明
 所有的数据均保存在 **你自己的电脑上**, Account Switcher **不** 收集你的任何信息!
 
-## 安装
+# 安装
 在终端中运行以下命令:
 
 ```zsh
@@ -30,15 +30,15 @@ brew tap bigwig-club/brew
 brew cask install bigwig-club/brew/account-switcher
 ```
 
-## 卸载
+# 卸载
 在终端中运行以下命令:
 
 ```zsh
 brew cask zap bigwig-club/brew/account-switcher
 ```
 
-## 示例
+# 示例
 ![](https://raw.githubusercontent.com/Bigwig-Club/Account-Switcher/master/demo.gif)
 
-## 许可
+# 许可
 Apache License 2.0
