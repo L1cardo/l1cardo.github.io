@@ -462,7 +462,7 @@ yandex_site_verification:
 
 theme_color:
   enable: true
-  main: "#6236FF"
+  main: "#6C63FF"
   paginator: "#00c4b6"
   button_hover: "#FF7242"
   text_selection: "#00c4b6"
@@ -472,8 +472,8 @@ theme_color:
   code_foreground: "#F47466"
   code_background: "rgba(27, 31, 35, .05)"
   toc_color: "#00c4b6"
-  blockquote_padding_color: "#6236FF"
-  blockquote_background_color: "#6236FF"
+  blockquote_padding_color: "#6C63FF"
+  blockquote_background_color: "#6C63FF"
 
 # The top_img settings of home page
 # default: top img - full screen, site info - middle (默認top_img全屏，site_info在中間)
