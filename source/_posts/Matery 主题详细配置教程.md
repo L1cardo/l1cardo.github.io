@@ -59,7 +59,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 - 请在稳定版与最新版中二选一
 
-```bash
+```zsh
 git clone https://github.com/blinkfox/hexo-theme-matery.git            # 稳定版
 git clone -b develop https://github.com/blinkfox/hexo-theme-matery.git # 最新版
 ```
@@ -80,7 +80,7 @@ git clone -b develop https://github.com/blinkfox/hexo-theme-matery.git # 最新�
 
 `categories` 页是用来展示所有分类的页面，如果在你的博客 `source` 目录下还没有 `categories/index.md` 文件，那么你就需要新建一个，命令如下：
 
-```bash
+```zsh
 hexo new page "categories"
 ```
 
@@ -99,7 +99,7 @@ layout: "categories"
 
 `tags` 页是用来展示所有标签的页面，如果在你的博客 `source` 目录下还没有 `tags/index.md` 文件，那么你就需要新建一个，命令如下：
 
-```bash
+```zsh
 hexo new page "tags"
 ```
 
@@ -118,7 +118,7 @@ layout: "tags"
 
 `about` 页是用来展示**关于我和我的博客**信息的页面，如果在你的博客 `source` 目录下还没有 `about/index.md` 文件，那么你就需要新建一个，命令如下：
 
-```bash
+```zsh
 hexo new page "about"
 ```
 
@@ -137,7 +137,7 @@ layout: "about"
 
 `contact` 页是用来展示**留言板**信息的页面，如果在你的博客 `source` 目录下还没有 `contact/index.md` 文件，那么你就需要新建一个，命令如下：
 
-```bash
+```zsh
 hexo new page "contact"
 ```
 
@@ -158,7 +158,7 @@ layout: "contact"
 
 `friends` 页是用来展示**友情连接**信息的页面，如果在你的博客 `source` 目录下还没有 `friends/index.md` 文件，那么你就需要新建一个，命令如下：
 
-```bash
+```zsh
 hexo new page "friends"
 ```
 
@@ -277,7 +277,7 @@ menu:
 
 本主题新增了对`emoji`表情的支持，使用到了 [hexo-filter-github-emojis](https://npm.taobao.org/package/hexo-filter-github-emojis) 的 Hexo 插件来支持 `emoji`表情的生成，把对应的`markdown emoji`语法（`::`,例如：`:smile:`）转变成会跳跃的`emoji`表情，安装命令如下：
 
-```bash
+```zsh
 npm install hexo-filter-github-emojis --save
 ```
 
@@ -298,7 +298,7 @@ githubEmojis:
 
 由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 [hexo-prism-plugin](https://github.com/ele828/hexo-prism-plugin) 的 Hexo 插件来做代码高亮，安装命令如下：
 
-```bash
+```zsh
 npm i -S hexo-prism-plugin
 ```
 
@@ -319,7 +319,7 @@ prism_plugin:
 
 本主题中还使用到了 [hexo-generator-search](https://github.com/wzpan/hexo-generator-search) 的 Hexo 插件来做内容搜索，安装命令如下：
 
-```bash
+```zsh
 npm install hexo-generator-search --save
 ```
 
@@ -337,7 +337,7 @@ search:
 
 安装命令如下：
 
-```bash
+```zsh
 npm i hexo-permalink-pinyin --save
 ```
 
@@ -357,7 +357,7 @@ permalink_pinyin:
 
 安装命令如下：
 
-```bash
+```zsh
 npm i --save hexo-wordcount
 ```
 
@@ -375,7 +375,7 @@ wordCount:
 
 本主题中还使用到了 [hexo-generator-feed](https://github.com/hexojs/hexo-generator-feed) 的 Hexo 插件来做 `RSS`，安装命令如下：
 
-```bash
+```zsh
 npm install hexo-generator-feed --save
 ```
 

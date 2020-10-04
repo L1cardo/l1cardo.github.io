@@ -43,7 +43,7 @@ git-flow 并不是要替代 Git，它仅仅是非常聪明有效地把标准的 
 
 话虽如此，git-flow 却存在一些限制。让我们开始在一个新的项目上初始化它吧，之后我们就会有所发现：
 
-```bash
+```zsh
 $ git flow init
 Initialized empty Git repository in /Users/tobi/acme-website/.git/
 Branch name for production releases: [master] 
@@ -81,7 +81,7 @@ git-flow 模式会预设两个主分支在仓库中：
 
 让我们开始开发一个新功能 “rss-feed”：
 
-```bash
+```zsh
 $ git flow feature start rss-feed
 Switched to a new branch 'feature/rss-feed'
 
@@ -96,7 +96,7 @@ Summary of actions:
 
 当你需要帮助的时候，你可以随时请求帮助。例如：
 
-```bash
+```zsh
 $ git flow feature help
 ```
 
@@ -107,7 +107,7 @@ git-flow 也会直接签出这个新的分支，这样你就可以直接进行�
 
 经过一段时间艰苦地工作和一系列的聪明提交，我们的新功能终于完成了：
 
-```bash
+```zsh
 $ git flow feature finish rss-feed
 Switched to branch 'develop'
 Updating 6bcf266..41748ad
@@ -133,7 +133,7 @@ Release 管理是版本控制处理中的另外一个非常重要的话题。让
 
 当你认为现在在 “develop” 分支的代码已经是一个成熟的 release 版本时，这意味着：第一，它包括所有新的功能和必要的修复；第二，它已经被彻底的测试过了。如果上述两点都满足，那就是时候开始生成一个新的 release 了：
 
-```bash
+```zsh
 $ git flow release start 1.1.5
 Switched to a new branch 'release/1.1.5'
 ```
@@ -146,7 +146,7 @@ Switched to a new branch 'release/1.1.5'
 
 现在是时候按下那个危险的红色按钮来完成我们的release了：
 
-```bash
+```zsh
 git flow release finish 1.1.5
 ```
 
@@ -166,7 +166,7 @@ git flow release finish 1.1.5
 
 ### 创建 Hotfixes
 
-```bash
+```zsh
 $ git flow hotfix start missing-link
 ```
 
@@ -179,7 +179,7 @@ $ git flow hotfix start missing-link
 
 在把我们的修复提交到 hotfix 分支之后，就该去完成它了：
 
-```bash
+```zsh
 $ git flow hotfix finish missing-link
 ```
 

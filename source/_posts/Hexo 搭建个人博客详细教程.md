@@ -74,7 +74,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 打开你的终端，敲入下面的命令
 
-```bash
+```zsh
 cd ~/. ssh
 ```
 
@@ -82,7 +82,7 @@ cd ~/. ssh
 
 接下来敲入下面的命令
 
-```bash
+```zsh
 ssh-keygen -t rsa -C "邮件地址"
 ```
 
@@ -94,13 +94,13 @@ ssh-keygen -t rsa -C "邮件地址"
 
 在终端里面敲入一下命令行并回车：
 
-```bash
+```zsh
 ssh -T git@github.com
 ```
 
 如果提示`Are you sure you want to continue connecting (yes/no)?`，输入`yes` 并回车，然后会看到：
 
-```bash
+```zsh
 Hi L1cardo! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
@@ -110,14 +110,14 @@ Hi L1cardo! You've successfully authenticated, but GitHub does not provide shell
 
 在终端里面敲入一下命令行并回车：
 
-```bash
+```zsh
 git config --global user.name "你的 GitHub 用户名"
 git config --global user.email  "你的 GitHub 注册邮箱"
 ```
 
 就像我，我的 GitHub 用户名是 `L1cardo` ，我的 GitHub 注册邮箱是 `xxxx@qq.com` ，那么我就要这样填写：
 
-```bash
+```zsh
 git config --global user.name "L1cardo"
 git config --global user.email "xxxx@qq.com"
 ```
@@ -128,7 +128,7 @@ git config --global user.email "xxxx@qq.com"
 
 在终端里面敲入一下命令行并回车：
 
-```bash
+```zsh
 npm install hexo-cli -g
 ```
 
@@ -138,7 +138,7 @@ npm install hexo-cli -g
 
 然后在终端里面执行下面的命令：
 
-```bash
+```zsh
 cd /Users/licardo/数据/博客
 hexo init
 ```
@@ -149,7 +149,7 @@ Hexo 会自动下载一些文件到这个目录，目录结构如下图：
 
 然后要让 Hexo 生成博客文件，在终端里面执行：
 
-```bash
+```zsh
 hexo g
 ```
 
@@ -159,7 +159,7 @@ hexo g
 
 接下来我们就可以上传的 GitHub 了，但是我们还什么都没有写，也不知道博客部署完了以后会是什么样子，所以我们最好在本地启动预览服务来看看我们的博客的效果，在终端里执行以下命令：
 
-```bash
+```zsh
 hexo s
 ```
 
@@ -177,7 +177,7 @@ hexo s
 
 - 请在稳定版与最新版中二选一
 
-```bash
+```zsh
 cd /Users/licardo/数据/博客/themes
 git clone https://github.com/blinkfox/hexo-theme-matery.git            # 稳定版
 git clone -b develop https://github.com/blinkfox/hexo-theme-matery.git # 最新版
@@ -193,7 +193,7 @@ git clone -b develop https://github.com/blinkfox/hexo-theme-matery.git # 最新�
 
 然后在终端里面执行下面的命令：
 
-```bash
+```zsh
 hexo clean
 hexo g
 hexo s
@@ -213,13 +213,13 @@ hexo s
 
 然后安装 Hexo 上传到 GitHub 的插件，终端里面执行：
 
-```bash
+```zsh
 npm install hexo-deployer-git --save
 ```
 
 万事具备了，距离将你的博客部署到 GitHub 上只差一步了，接下来屏住呼吸，在终端里执行下面的命令：
 
-```bash
+```zsh
 hexo d
 ```
 
@@ -247,7 +247,7 @@ GitHub Pages 是 GitHub 为我们提供的静态页面服务，Hexo 就是一个
 
 常见命令：
 
-```bash
+```zsh
 hexo new "postName"      # 新建文章
 hexo new page "pageName" # 新建页面
 hexo generate            # 生成静态页面至public文件夹
@@ -259,7 +259,7 @@ hexo version             # 查看Hexo的版本
 
 缩写：
 
-```bash
+```zsh
 hexo n == hexo new
 hexo g == hexo generate
 hexo s == hexo server
@@ -268,7 +268,7 @@ hexo d == hexo deploy
 
 组合命令：
 
-```bash
+```zsh
 hexo s -g # 生成并本地预览
 hexo d -g # 生成并上传
 ```
@@ -283,7 +283,7 @@ hexo d -g # 生成并上传
 
 定位到博客根目录地址，在博客根目录下打开终端，然后执行命令：
 
-```bash
+```zsh
 hexo new 'my-first-blog'
 ```
 
