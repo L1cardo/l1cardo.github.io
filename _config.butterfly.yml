@@ -44,7 +44,7 @@ copy:
 #   icon: link || the description
 social:
   fab fa-github: https://github.com/L1cardo || GitHub
-  fas fa-envelope: albert.abdilim@foxmail.com || Email
+  fas fa-envelope: mailto:albert.abdilim@foxmail.com || Email
   fab fa-twitter: https://twitter.com/AlbertAbdilim || Twitter
   fab fa-weibo: https://weibo.com/1935602951 || Weibo
 
@@ -57,17 +57,9 @@ algolia_search:
   hits:
     per_page: 6
 
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
-    hits_stats: '${hits} results found in ${time} ms'
-
 # Local search
 local_search:
   enable: true
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}" # if there are no result
 
 # Math (數學)
 # --------------------------------------
@@ -192,7 +184,6 @@ index_post_content:
 toc:
   enable: true
   number: true
-  auto_open: true # auto open the sidebar
 
 post_copyright:
   enable: true
@@ -321,6 +312,7 @@ valine:
   emojiCDN: # emoji CDN
   enableQQ: false # enable the Nickname box to automatically get QQ Nickname and QQ Avatar
   requiredFields: nick,mail # required fields (nick/mail)
+  option:
 
 # utterances
 # https://utteranc.es/
@@ -340,6 +332,10 @@ facebook_comments:
   pageSize: 10 # The number of comments to show
   order_by: social # social/time/reverse_time
   lang: en_US # Language en_US/zh_CN/zh_TW and so on
+
+  # Twikoo
+# https://github.com/imaegoo/twikoo
+twikoo:
 
 # Chat Services
 # --------------------------------------
@@ -536,6 +532,7 @@ activate_power_mode:
   enable: false
   colorful: true # open particle animation (冒光特效)
   shake: true #  open shake (抖動特效)
+  mobile: false
 
 # Mouse click effects: fireworks (鼠標點擊效果: 煙火特效)
 fireworks:
@@ -579,9 +576,9 @@ font:
 
 # Font settings for the site title and site subtitle
 # 左上角網站名字 主頁居中網站名字
-# blog_title_font:
-  # font_link: https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
-  # font-family: Titillium Web, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif
+blog_title_font:
+  font_link:
+  font-family:
 
 # The setting of divider icon (水平分隔線圖標設置)
 hr_icon:
@@ -620,6 +617,8 @@ preloader: false
 
 aside:
   enable: true
+  hide: false
+  button: true
   mobile: true # display on mobile
   position: right # left or right
   card_author:
@@ -857,6 +856,7 @@ CDN:
   disqusjs: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqus.js
   disqusjs_css: https://cdn.jsdelivr.net/npm/disqusjs@1/dist/disqusjs.css
   utterances: https://utteranc.es/client.js
+  twikoo: https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js
 
   # share
   addtoany: https://static.addtoany.com/menu/page.js
@@ -925,3 +925,4 @@ CDN:
   prismjs_autoloader: https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js
 
   artitalk: https://cdn.jsdelivr.net/npm/artitalk
+  
