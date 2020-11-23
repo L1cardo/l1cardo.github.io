@@ -13,7 +13,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 # Apple Device Model Name
 > Update time: 2020-10-18
 
-You can use this [link](https://gitee.com/l1cardo/codes/3vpmoy96gn0b81zwxkqie79/raw?blob_name=Apple_Device_Model_Name) to see the raw data.
+You can use this [link](https://gitee.com/l1cardo/apple-device-model-name/raw/master/apple-device.json) to see the raw data.
 
 Or you can just copy the json file below.
 
