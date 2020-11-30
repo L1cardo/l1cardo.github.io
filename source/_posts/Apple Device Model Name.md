@@ -240,7 +240,8 @@ Or you can just copy the json file below.
         "MacBookPro17,1": "MacBook Pro (13-inch, M1, 2020)",
 
         "x86_64": "Simulator",
-        "i386": "Simulator"
+        "i386": "Simulator",
+        "arm64": "Simulator"
     }
 }
 ```
