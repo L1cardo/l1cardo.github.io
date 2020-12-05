@@ -386,7 +386,7 @@ footer:
   custom_text:
   copyright: true # Copyright of theme and framework
   ICP: # Chinese ICP License
-    enable: false
+    enable: true
     url: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
     text:
     icon: /img/upyun.png
