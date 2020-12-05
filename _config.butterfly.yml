@@ -388,7 +388,7 @@ footer:
   ICP: # Chinese ICP License
     enable: true
     url: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    text:
+    text:  
     icon: /img/upyun.png
 
 # Analysis
