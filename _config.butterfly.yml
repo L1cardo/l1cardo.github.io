@@ -384,7 +384,7 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://www.upyun.com/static/img/%E6%A0%B7%E5%BC%8F%E5%9B%BE.7cf927c.png" style="filter:invert(1)></a>
+  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://www.upyun.com/static/img/%E6%A0%B7%E5%BC%8F%E5%9B%BE.7cf927c.png" style="filter:invert(1)><span></span></a>
   copyright: true # Copyright of theme and framework
 
 # Analysis
