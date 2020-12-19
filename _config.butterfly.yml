@@ -134,7 +134,7 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - /img/post.jpg
+    # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
@@ -334,7 +334,7 @@ facebook_comments:
   order_by: social # social/time/reverse_time
   lang: en_US # Language en_US/zh_CN/zh_TW and so on
 
-  # Twikoo
+# Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo: blog-8gbfkgr2797302c0
 
@@ -384,13 +384,8 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text:
+  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://www.upyun.com/static/img/%E6%A0%B7%E5%BC%8F%E5%9B%BE.7cf927c.png"><span></span></a>
   copyright: true # Copyright of theme and framework
-  ICP: # Chinese ICP License
-    enable: true
-    url: https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral
-    text:
-    icon: /img/upyun.png
 
 # Analysis
 # --------------------------------------
@@ -687,12 +682,13 @@ newest_comments:
     enable: false
     forum:
     api_key:
-  twikoo:
-    enable: true
-    default_avatar: robohash # mp/identicon/monsterid/wavatar/retro/robohash/blank/404
+  twikoo: true
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
+
+# Change font size
+change_font_size: false
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
