@@ -7,6 +7,9 @@ top_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.r
 
 ---
 # 我的 Blog 信息
+
+### 留下友联之前一定要把我加好哦！
+
  - Blog 名称： Licardo
  - Blog 地址： https://blog.licardo.cn/
  - Blog 头像： https://blog.licardo.cn/img/avatar.png
