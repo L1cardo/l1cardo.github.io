@@ -1,7 +1,7 @@
 ---
 title: App Store 多账号自动登录器
 categories:
-  - App
+  - App 推荐
 tags:
   - App
   - macOS
