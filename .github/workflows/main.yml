@@ -36,7 +36,6 @@ jobs:
           hexo clean && hexo g
           cd ./public
           git init
-          git config --global init.defaultBranch main
           git config user.name "${{secrets.GIT_NAME}}"
           git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
