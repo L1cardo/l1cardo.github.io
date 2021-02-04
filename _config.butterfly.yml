@@ -17,7 +17,7 @@ menu:
     - 游戏 || /games/ || fas fa-gamepad
   留言板: /contact/ || fas fa-comments
   友情链接: /friends/ || fas fa-link
-  跑步: https://running-page.l1cardo.vercel.app || fas fa-running
+  跑步: https://run.licardo.cn || fas fa-running
   关于: /about/ || fas fa-heart
 
 # If you are using hexo-douban, you can configure it (如果你有使用 hexo-douban,可配置這個)
