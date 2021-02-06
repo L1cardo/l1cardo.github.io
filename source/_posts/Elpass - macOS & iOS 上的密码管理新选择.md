@@ -5,7 +5,7 @@ categories:
 tags:
   - App
   - macOS
-date: 2021-01-12 12:00:00
+date: 2021-02-06 00:00:00
 cover: https://i.loli.net/2021/01/12/jDzXF2NqQdYbL3P.png
 ---
 
