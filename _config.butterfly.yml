@@ -11,10 +11,10 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  清单 || fas fa-list:
-    书籍： /books/ || fas fa-book
-    电影： /movies/ || fas fa-film
-    游戏： /games/ || fas fa-gamepad
+  清单||fas fa-list:
+    书籍: /books/ || fas fa-book
+    电影: /movies/ || fas fa-film
+    游戏: /games/ || fas fa-gamepad
   留言板: /contact/ || fas fa-comments
   友情链接: /friends/ || fas fa-link
   跑步: https://run.licardo.cn || fas fa-running
