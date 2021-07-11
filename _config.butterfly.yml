@@ -274,7 +274,7 @@ comments:
   # Up to two comments system, the first will be shown as default
   # Choose: Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo
   use:
-  # - Twikoo
+    - Twikoo
   # - Disqus
   text: true # Display the comment name next to the button
   # lazyload: The comment system will be load when comment element enters the browser's viewport.
@@ -287,6 +287,7 @@ comments:
 # https://disqus.com/
 disqus:
   shortname:
+  apikey: # For newest comments widget
 
 # Alternative Disqus - Render comments with Disqus API
 # DisqusJS 評論系統，可以實現在網路審查地區載入 Disqus 評論列表，兼容原版
@@ -344,6 +345,7 @@ valine:
 waline:
   serverURL: # Waline server address url
   avatar: monsterid # gravatar style https://zh-tw.gravatar.com/site/implement/images/#default-image
+  avatarCDN: # Gravatar CDN baseURL
   bg: /image/comment_bg.png # waline background
   visitor: false
   option:
@@ -708,17 +710,6 @@ newest_comments:
   limit: 6
   storage: 10 # unit: mins, save data to localStorage
   avatar: true
-  # You can only choose one, or neither
-  valine: false
-  github_issues:
-    enable: false
-    repo:
-  disqus:
-    enable: false
-    forum:
-    api_key:
-  twikoo: true
-  waline: false
 
 # Bottom right button (右下角按鈕)
 # --------------------------------------
