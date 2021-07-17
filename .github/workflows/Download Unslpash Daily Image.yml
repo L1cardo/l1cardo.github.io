@@ -31,7 +31,7 @@ jobs:
       - name: Download Unslpash daily image
         run: |
           cd ./themes/butterfly/source/img/
-          unsplash-wallpaper --daily --width 4096 --height 2160
+          unsplash-wallpaper --featured wallpapers --daily --width 4096 --height 2160
           
       - name: Rename image
         run: |
