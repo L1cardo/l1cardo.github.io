@@ -104,10 +104,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/L1cardo/Image-Hosting@master/blog/top.jpg
+index_img: https://source.unsplash.com/daily #https://cdn.jsdelivr.net/gh/L1cardo/Image-Hosting@master/blog/top.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://cdn.jsdelivr.net/gh/L1cardo/Image-Hosting@master/blog/top.jpg
+default_top_img: https://source.unsplash.com/daily #https://cdn.jsdelivr.net/gh/L1cardo/Image-Hosting@master/blog/top.jpg
 
 # The banner image of archive page
 archive_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/experience_design_eq3j.svg
