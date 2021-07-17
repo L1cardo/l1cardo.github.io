@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
 
-      - name: 设置 Node.js ${{ matrix.node-version }}
+      - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2.1.5
         with:
           node-version: ${{ matrix.node-version }}
@@ -28,7 +28,7 @@ jobs:
       - name: Download Unslpash daily image
         run: |
           cd ./themes/butterfly/source/img/
-          unsplash-wallpaper --daily
+          unsplash-wallpaper --daily --width 4096 --height 2160
           
       - name: Rename image
         run: |
