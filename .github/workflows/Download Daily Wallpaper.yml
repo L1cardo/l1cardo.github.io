@@ -34,7 +34,7 @@ jobs:
       - name: Download Bing wallpaper
         run: |
           cd ./themes/butterfly/source/img/
-          curl https://bing.ioliu.cn/v1/rand?w=4096&h=2160 -o bing_wallpaper.jpg
+          curl "https://bing.ioliu.cn/v1/rand?w=4096&h=2160" -o "bing_wallpaper.jpg"
           
       - name: Push to GitHub
         uses: EndBug/add-and-commit@v7.2.1
