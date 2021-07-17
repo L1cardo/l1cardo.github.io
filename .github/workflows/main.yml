@@ -32,6 +32,10 @@ jobs:
       - name: 安装插件
         run: |
           npm install
+      - name: 下载Unsplash每日图片
+        run: |
+          npm i -g unsplash-wallpaper
+          unsplash-wallpaper --daily --dir "./themes/butterfly/source/img/"
 
       - name: 部署博客
         run: |
