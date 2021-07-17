@@ -35,7 +35,7 @@ jobs:
       - name: 下载Unsplash每日图片
         run: |
           npm i -g unsplash-wallpaper
-          unsplash-wallpaper --daily --dir "./themes/butterfly/source/img/"
+          unsplash-wallpaper --daily --dir "./themes/butterfly/source/img/banner.jpg"
 
       - name: 部署博客
         run: |
