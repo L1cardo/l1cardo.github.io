@@ -27,11 +27,10 @@ jobs:
           
       - name: 下载Unsplash每日图片
         run: |
-          splash --day --save "./themes/butterfly/source/img/banner.jpg"
+          splash --day --save "./themes/butterfly/source/img/"
 
       - name: Push
         uses: EndBug/add-and-commit@v7.2.1
         with:
           branch: blog
-          default_author: L1cardo
-          message: Download Unslpash Daily Image
+          message: 'Download Unslpash Daily Image'
