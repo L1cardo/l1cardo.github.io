@@ -1,12 +1,14 @@
 name: Deploy to Hexo
 
 on:
+  schedule:
+    - cron: "0 6 * * *"
   workflow_dispatch:
+  watch:
+    types: [started]
   push:
     branches:
       - blog
-  schedule:
-    - cron: "0 6 * * *"
 
 jobs:
   build:
