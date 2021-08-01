@@ -103,10 +103,10 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://cdn.jsdelivr.net/gh/L1cardo/l1cardo.github.io@blog/themes/butterfly/source/img/bing_wallpaper.jpg
+index_img: https://cdn.jsdelivr.net/gh/L1cardo/l1cardo@main/assets/unsplash_wallpaper.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://cdn.jsdelivr.net/gh/L1cardo/l1cardo.github.io@blog/themes/butterfly/source/img/bing_wallpaper.jpg
+default_top_img: https://cdn.jsdelivr.net/gh/L1cardo/l1cardo@main/assets/unsplash_wallpaper.jpg
 
 # The banner image of archive page
 archive_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/experience_design_eq3j.svg
