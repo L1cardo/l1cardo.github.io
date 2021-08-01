@@ -1,12 +1,14 @@
 name: Download Daily Wallpaper
 
 on:
+  schedule:
+    - cron: "0 5 * * *"
   workflow_dispatch:
+  watch:
+    types: [started]
   push:
     branches:
       - blog
-  schedule:
-    - cron: "0 5 * * *"
 
 jobs:
   build:
