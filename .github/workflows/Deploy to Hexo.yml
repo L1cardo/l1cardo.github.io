@@ -2,8 +2,6 @@ name: Deploy to Hexo
 
 on:
   workflow_dispatch:
-  watch:
-    types: [started]
   push:
     branches:
       - blog
