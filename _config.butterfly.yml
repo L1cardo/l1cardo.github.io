@@ -750,7 +750,7 @@ fancybox: true
 mermaid:
   enable: false
   # built-in themes: default/forest/dark/neutral
-    theme:
+  theme:
     light: default
     dark: dark
 
