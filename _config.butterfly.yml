@@ -262,7 +262,7 @@ addThis:
 # https://github.com/overtrue/share.js
 sharejs:
   enable: true
-  sites: facebook,twitter,wechat,weibo,qq
+  sites: facebook,twitter,weibo,wechat,qq
 
 # AddToAny
 # https://www.addtoany.com/
@@ -749,7 +749,7 @@ medium_zoom: false
 
 # fancybox
 # http://fancyapps.com/fancybox/3/
-fancybox: true
+fancybox: false
 
 # Tag Plugins settings (標籤外掛)
 # --------------------------------------
@@ -817,7 +817,7 @@ pangu:
 # Lazyload (圖片懶加載)
 # https://github.com/verlok/vanilla-lazyload
 lazyload:
-  enable: true
+  enable: false
   field: site # site/post
   placeholder: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
   blur: false
