@@ -1,5 +1,5 @@
 ---
-title: 板载 ELRS 飞控设置
+title: 板载 ELRS 密码设置
 top: true
 categories:
   - FPV
@@ -12,7 +12,7 @@ cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressL
 
 <div class=md-content data-md-component=content>
     <article class="md-content__inner md-typeset">
-        <h1 style="text-align: center">板载 ELRS 飞控设置</h1>
+        <h1 style="text-align: center">板载 ELRS 密码设置</h1>
         <h2>绑定密码</h2>
         <div class=bp-wrapper> <input class="md-input bp-input" type=text placeholder=...> </div>
         <p>UID Bytes
@@ -91,5 +91,5 @@ cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressL
         setOutput("");
         }
         </script>
-        <script type=text/javascript src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
+        <script type=text/javascript src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </div>

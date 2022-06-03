@@ -4,7 +4,6 @@ categories:
   - Hexo
 tags:
   - Hexo
-abbrlink: 36692
 date: 2019-09-30 00:00:00
 cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/blogging_vpvv.svg
 ---

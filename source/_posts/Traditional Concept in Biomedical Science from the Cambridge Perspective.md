@@ -5,7 +5,6 @@ categories:
 tags:
   - Critical Summary
   - 剑桥
-abbrlink: 9376
 date: 2019-08-12 00:00:00
 cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/teaching_f1cm.svg
 ---
