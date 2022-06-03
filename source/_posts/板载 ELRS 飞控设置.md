@@ -91,5 +91,5 @@ cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressL
         setOutput("");
         }
         </script>
-        <script type=text/javascript src=https://unpkg.com/crypto-js@4.1.1/crypto-js.js></script>
+        <script type=text/javascript src="https://cdn.bootcdn.net/ajax/libs/crypto-js/4.1.1/crypto-js.js"></script>
 </div>
