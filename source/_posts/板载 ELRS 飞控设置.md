@@ -21,7 +21,7 @@ cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressL
         </div>
         </p>
         <h4>设置绑定密码</h4>
-        <p>在Betaflight CLI命令行里面输入以下命令（现在上面输入你的密码）</p>
+        <p>在 Betaflight CLI 命令行里面输入以下命令（现在上面输入你的密码）</p>
         <div class=highlight>
             <pre><code></code></pre>
         </div>
