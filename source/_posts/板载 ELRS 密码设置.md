@@ -40,10 +40,9 @@ UID Bytes
 
 要调整它，你需要进入 Betaflight CLI 并使用以下命令：
 
-```
-set expresslrs_rate_index = [序号]
-save
-```
+<div class=highlight>
+    <pre><code>set expresslrs_rate_index = [序号]<br>save</code></pre>
+</div>
 
 上面的`[序号]`替换成以下内容：
 
