@@ -25,7 +25,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 # 安装
 在终端中运行以下命令:
 
-```zsh
+```bash
 brew tap bigwig-club/brew
 brew cask install bigwig-club/brew/account-switcher
 ```
@@ -33,7 +33,7 @@ brew cask install bigwig-club/brew/account-switcher
 # 卸载
 在终端中运行以下命令:
 
-```zsh
+```bash
 brew cask zap bigwig-club/brew/account-switcher
 ```
 

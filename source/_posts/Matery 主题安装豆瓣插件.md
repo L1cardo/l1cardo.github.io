@@ -30,7 +30,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 在博客所在文件夹下执行以下命令行：
 
-```zsh
+```bash
 npm install hexo-douban --save
 ```
 
@@ -152,7 +152,7 @@ layout: ['page', 'douban']
 
 所有的事情都准备好了，现在你可以生成你的页面，然后部署到相应的平台
 
-```zsh
+```bash
 hexo douban
 ```
 
@@ -160,7 +160,7 @@ hexo douban
 
 当然了，你也可以使用简化命令：
 
-```zsh
+```bash
 hexo d
 ```
 
@@ -168,7 +168,7 @@ hexo d
 
 以下是可选的命令参数：
 
-```zsh
+```bash
 -h, --help    # 帮助页面
 -b, --books   # 只生成书单页面
 -g, --games   # 只生成游戏页面
