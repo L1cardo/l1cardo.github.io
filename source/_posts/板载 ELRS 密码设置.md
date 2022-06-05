@@ -17,7 +17,7 @@ cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressL
 ## 绑定密码
 
 <div class=bp-wrapper>
-    <input class="bp-input" type=text placeholder=...>
+    <input class="bp-input" type=text placeholder=... autocomplete=off>
 </div>
 
 UID Bytes
