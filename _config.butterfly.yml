@@ -856,7 +856,7 @@ CDN:
   # The CDN provider of internal scripts (主題內部 js 的 cdn 配置)
   # option: local/jsdelivr
   # Dev version cannot choose jsdelivr (dev版的主題不能設置為 jsdelivr)
-  internal_provider: jsdelivr
+  internal_provider: local
   # The CDN provider of third party scripts (第三方 js 的 cdn 配置)
   # option: local/jsdelivr
   # when set it to local, you need to install hexo-butterfly-extjs
@@ -890,12 +890,12 @@ CDN:
     # canvas_ribbon:
     # canvas_fluttering_ribbon:
     # canvas_nest:
-    # lazyload:
+    lazyload: https://npm.elemecdn.com/vanilla-lazyload/dist/lazyload.iife.min.js
     # instantpage:
     typed: https://npm.elemecdn.com/typed.js/lib/typed.min.js
     # pangu:
-    # fancybox_css_v4:
-    # fancybox_v4:
+    fancybox_css_v4: https://npm.elemecdn.com/@fancyapps/ui/dist/fancybox.css
+    fancybox_v4: https://npm.elemecdn.com/@fancyapps/ui/dist/fancybox.umd.js
     # medium_zoom:
     # snackbar_css:
     # snackbar:
