@@ -877,11 +877,11 @@ CDN:
     # valine:
     # disqusjs:
     # disqusjs_css:
-    twikoo: https://cdn.bootcdn.net/ajax/libs/twikoo/1.5.8/twikoo.all.min.js
+    #twikoo: https://cdn.bootcdn.net/ajax/libs/twikoo/1.5.8/twikoo.all.min.js
     # waline_js:
     # waline_css:
-    sharejs: https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/js/share.min.js
-    sharejs_css: https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/css/share.min.css
+    #sharejs: https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/js/share.min.js
+    #sharejs_css: https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/css/share.min.css
     # mathjax:
     # katex:
     # katex_copytex:
@@ -903,7 +903,7 @@ CDN:
     # fireworks:
     # click_heart:
     # ClickShowText:
-    fontawesomeV6: https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css
+    #fontawesomeV6: https://cdn.bootcdn.net/ajax/libs/font-awesome/6.1.1/css/all.min.css
     # flickr_justified_gallery_js:
     # flickr_justified_gallery_css:
     # aplayer_css:
