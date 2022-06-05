@@ -261,14 +261,14 @@ addThis:
 # Share.js
 # https://github.com/overtrue/share.js
 sharejs:
-  enable: false
+  enable: true
   sites: facebook,twitter,weibo,wechat,qq
 
 # AddToAny
 # https://www.addtoany.com/
 addtoany:
-  enable: true
-  item: copy_link,email,facebook,twitter,wechat # facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
+  enable: false
+  item: facebook,twitter,wechat,sina_weibo,facebook_messenger,email,copy_link
 
 # Comments System
 # --------------------------------------
@@ -880,8 +880,8 @@ CDN:
     twikoo: https://cdn.bootcdn.net/ajax/libs/twikoo/1.5.8/twikoo.all.min.js
     # waline_js:
     # waline_css:
-    # sharejs:
-    # sharejs_css:
+    sharejs: https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/js/share.min.js
+    sharejs_css: https://cdn.bootcdn.net/ajax/libs/social-share.js/1.0.9/css/share.min.css
     # mathjax:
     # katex:
     # katex_copytex:
