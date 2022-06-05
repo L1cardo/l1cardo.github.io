@@ -35,10 +35,12 @@ cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressL
         </div>
         <p>
             上面的<code>[序号]</code>替换成以下内容：
+            <ul>
             <li>500Hz = 0</li>
             <li>250Hz = 1</li>
             <li>150Hz = 2</li>
             <li>50Hz = 3</li>
+            </ul>
         </p>
     </article>
     <script type=text/javascript>
