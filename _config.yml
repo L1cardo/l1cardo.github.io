@@ -111,17 +111,25 @@ deploy:
   branch: master
 
 douban:
-  user: 169608885
+  id: 169608885
   builtin: true
+  item_per_page: 10
+  meta_max_line: 4
   book:
+    path: books/index.html
     title: '我喜欢的书籍'
     quote: '书中自有黄金屋'
+    option:
   movie:
+    path: movies/index.html
     title: '那些年, 我看过的电影'
     quote: '过去、现在、未来'
+    option:
   game:
+    path: games/index.html
     title: '爱打游戏的宅男'
     quote: '还挺好玩的'
+    option:
   timeout: 10000
 
 # 搜索

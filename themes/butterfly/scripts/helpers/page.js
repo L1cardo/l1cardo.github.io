@@ -94,7 +94,7 @@ hexo.extend.helper.register('findArchivesTitle', function (page, menu, date) {
 })
 
 hexo.extend.helper.register('isImgOrUrl', function (path) {
-  const imgTestReg = /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/i
+  const imgTestReg = /\.(png|jpe?g|gif|svg|webp)(\?.*)?$/
   if (path.indexOf('//') !== -1 || imgTestReg.test(path)) {
     return true
   }
