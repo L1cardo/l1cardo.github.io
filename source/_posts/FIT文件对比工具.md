@@ -18,8 +18,8 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
     <button id="compareButton">对比</button>
     <label for="coordinateType">横坐标：</label>
     <select id="coordinateType">
-        <option value="distance">距离</option>
         <option value="time">时间</option>
+        <option value="distance">距离</option>
     </select>
 </div>
 
