@@ -118,10 +118,7 @@ h1 {
     margin-top: 20px;
 }
 
-.chart-container {
-    width: 100%;
-    max-width: 600px;
-    height: 400px;
+#charts canvas {
     padding: 10px;
     background-color: white;
     border: 1px solid #ddd;
