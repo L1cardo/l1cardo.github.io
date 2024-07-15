@@ -32,7 +32,9 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 
 <div id="processingTimeContainer" style="margin-top: 10px; display: none;">总处理时间: <span id="processingTime"></span> 秒</div>
 
-<div id="fileInfoTableContainer"></div>
+<div class="file-info-table-container">
+  <div id="fileInfoTableContainer"></div>
+</div>
 
 <div id="charts"></div>
 
@@ -67,22 +69,29 @@ h1 {
 }
 
 #compareButton {
-    background-color: #28a745;
+    background-color: #625BFD;
     color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 #compareButton:hover {
-    background-color: #218838;
+    background-color: #EF7040;
+    transform: scale(1.05);
+}
+
+.file-info-table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
 }
 
 .file-info-table {
     border-collapse: collapse;
     width: 100%;
-    margin-top: 20px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-width: 800px; /* 确保表格在小屏幕上有滚动条 */
 }
 
 .file-info-table th, 
@@ -155,6 +164,7 @@ h1 {
     margin-top: 20px;
     color: #555;
 }
+
 </style>
 
 <script type=text/javascript>
