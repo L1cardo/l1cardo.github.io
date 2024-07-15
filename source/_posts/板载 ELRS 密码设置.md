@@ -7,7 +7,7 @@ tags:
   - FPV
   - ELRS
 date: 2022-06-03 00:00:00
-cover: https://ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png
+cover: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png
 ---
 
 # 板载 ELRS 密码设置

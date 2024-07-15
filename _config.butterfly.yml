@@ -3,7 +3,7 @@
 # --------------------------------------
 
 nav:
-  logo: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png # image
+  logo: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png # image
   display_title: true
   fixed: false # fixed navigation bar
 
@@ -53,21 +53,21 @@ social:
 # --------------------------------------
 
 # Favicon（網站圖標）
-favicon: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/favicon.ico
+favicon: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/favicon.ico
 
 # Avatar (頭像)
 avatar:
-  img: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png
+  img: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/unsplash_wallpaper_1080p.jpg
+index_img: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/unsplash_wallpaper_1080p.jpg
 
 # If the banner of page not setting, it will show the top_img
-default_top_img: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/unsplash_wallpaper_1080p.jpg
+default_top_img: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/unsplash_wallpaper_1080p.jpg
 
 # The banner image of archive page
 archive_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/experience_design_eq3j.svg
@@ -104,8 +104,8 @@ cover:
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:
-  flink: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
-  post_page: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
+  flink: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
+  post_page: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
 
 # A simple 404 page
 error_404:
@@ -178,10 +178,10 @@ reward:
   enable: true
   text:
   QR_code:
-    - img: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg
+    - img: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg
       link:
       text: 微信
-    - img: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg
+    - img: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg
       link:
       text: 支付宝
 
@@ -221,7 +221,7 @@ footer:
   owner:
     enable: true
     since: 2019
-  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a>
+  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a>
   copyright: true # Copyright of theme and framework
 
 # aside (側邊欄)
@@ -461,7 +461,7 @@ valine:
   appKey: UTUTkSYCaQpNgs5vU35AzLGo # leancloud application app key
   avatar: robohash # gravatar style https://valine.js.org/#/avatar
   serverURLs: https://el21jnkm.lc-cn-n1-shared.com # This configuration is suitable for domestic custom domain name users, overseas version will be automatically detected (no need to manually fill in)
-  bg: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/comment_bg.png # valine background
+  bg: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/comment_bg.png # valine background
   visitor: false
   option:
 
@@ -469,7 +469,7 @@ valine:
 # https://waline.js.org/
 waline:
   serverURL: # Waline server address url
-  bg: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/comment_bg.png # waline background
+  bg: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/comment_bg.png # waline background
   pageview: false
   option:
 
@@ -891,7 +891,7 @@ pangu:
 lazyload:
   enable: false
   field: site # site/post
-  placeholder: https://ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
+  placeholder: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif
   blur: false
 
 # PWA
