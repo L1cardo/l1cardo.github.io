@@ -11,8 +11,6 @@ date: 2024-07-14 00:00:00
 cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 ---
 
-<body oncontextmenu="return false;">
-
 <h1>FIT 文件对比工具</h1>
 
 > 此工具不会上传您的数据，所有的处理都在本地运行，请放心使用!<br>如果在使用途中发现任何问题或者意见，请邮件联系我，谢谢！
@@ -38,7 +36,7 @@ div id="fileInputSection">
   <div id="fileInfoTableContainer"></div>
 </div>
 
-<div id="charts"></div>
+<div oncontextmenu="return false;" id="charts"></div>
 
 <style>
 body {
@@ -499,4 +497,3 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ })()
 ;
 </script>
-</body>
