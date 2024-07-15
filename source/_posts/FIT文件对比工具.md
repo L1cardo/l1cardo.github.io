@@ -13,6 +13,8 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 
 <h1>FIT 文件对比工具</h1>
 
+> 此工具不会上传您的数据，所有的处理都在本地运行，请放心使用!<br>如果在使用途中发现任何问题或者意见，请邮件联系我，谢谢！
+
 <div id="fileInputSection">
     <input type="file" id="fileInput" multiple accept=".fit" />
     <button id="compareButton">对比</button>
@@ -28,50 +30,104 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
     <div class="spinner"></div>
 </div>
 
+<div id="processingTimeContainer" style="margin-top: 10px; display: none;">总处理时间: <span id="processingTime"></span> 秒</div>
+
+<div id="fileInfoTableContainer"></div>
+
 <div id="charts"></div>
 
 <style>
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
 h1 {
     text-align: center;
-}
-
-#fileInput {
-    margin: 20px;
-}
-
-#compareButton {
-    margin: 20px;
+    color: #444;
+    margin-bottom: 20px;
 }
 
 #fileInputSection {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+#fileInput,
+#compareButton,
+#coordinateType {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#compareButton {
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#compareButton:hover {
+    background-color: #218838;
+}
+
+.file-info-table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.file-info-table th, 
+.file-info-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.file-info-table th {
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+.file-info-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 #charts {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .chart-container {
-    width: 400px;
-    height: 300px;
-    margin: 20px;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 #loadingIndicator {
-    display: none;
     text-align: center;
     margin-top: 20px;
 }
 
 #loadingIndicator p {
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .spinner {
@@ -91,6 +147,13 @@ h1 {
     100% {
         transform: rotate(360deg);
     }
+}
+
+#processingTimeContainer {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
+    color: #555;
 }
 </style>
 
@@ -211,7 +274,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var fit_file_parser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fit-file-parser */ \"./node_modules/fit-file-parser/dist/fit-parser.js\");\n/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! chart.js/auto */ \"./node_modules/chart.js/auto/auto.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\n\n\nconst fileInput = document.getElementById('fileInput');\nconst compareButton = document.getElementById('compareButton');\nconst coordinateTypeSelect = document.getElementById('coordinateType');\nconst chartContainer = document.getElementById('charts');\n\nlet chart;  // Declare chart variable outside to keep reference\n\ncompareButton.addEventListener('click', handleFileCompare);\ncoordinateTypeSelect.addEventListener('change', handleFileCompare);\n\nfunction handleFileCompare() {\n    const files = fileInput.files;\n\n    if (files.length === 0) {\n        alert('请至少选择一个文件来对比');\n        return;\n    }\n\n    // 显示加载状态\n    loadingIndicator.style.display = 'block';\n\n    const fitParser = new fit_file_parser__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n        force: true,\n        speedUnit: 'km/h',\n        lengthUnit: 'km',\n        temperatureUnit: 'celsius',\n        elapsedRecordField: true,\n        mode: 'cascade',\n    });\n\n    const allData = [];\n    let filesProcessed = 0;\n\n    for (const file of files) {\n        const reader = new FileReader();\n        reader.onload = function(event) {\n            const content = event.target.result;\n            fitParser.parse(content, function(error, data) {\n                if (error) {\n                    console.error(error);\n                } else {\n                    console.log('Parsed Data:', data); // Debug the parsed data structure\n                    allData.push({ data, fileName: file.name });\n                }\n                filesProcessed++;\n                if (filesProcessed === files.length) {\n                    displayData(allData);\n                    // 隐藏加载状态\n                    loadingIndicator.style.display = 'none';\n                }\n            });\n        };\n        reader.readAsArrayBuffer(file);\n    }\n}\n\nfunction formatTime(seconds) {\n    const hours = Math.floor(seconds / 3600);\n    const minutes = Math.floor((seconds % 3600) / 60);\n    const secs = seconds % 60;\n\n    const formattedHours = hours.toString().padStart(2, '0'); // 如果小时不足两位，前面补0\n    const formattedMinutes = minutes.toString().padStart(2, '0'); // 如果分钟不足两位，前面补0\n    const formattedSeconds = secs.toString().padStart(2, '0'); // 秒保留两位小数，不足两位补0\n\n    return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;\n}\n\nfunction getUnit(label) {\n    switch (label) {\n        case '心率':\n            return ' bpm'; // 心率单位为 bpm\n        case '速度':\n            return ' km/h'; // 速度单位为 km/h\n        case '踏频':\n            return ' rpm'; // 踏频单位为 rpm\n        case '海拔':\n            return ' m'; // 踏频单位为 rpm\n        default:\n            return '';\n    }\n}\n\nfunction displayData(allData) {\n    chartContainer.innerHTML = ''; // Clear previous charts\n\n    const overallHeartRateDatasets = [];\n    const overallSpeedDatasets = [];\n    const overallCadenceDatasets = [];\n    const overallAltitudeDatasets = [];\n\n    const coordinateType = coordinateTypeSelect.value; // Get current coordinate type selection\n\n    allData.forEach(({ data, fileName }, index) => {\n        const records = data.activity.sessions.flatMap(session =>\n            session.laps.flatMap(lap => lap.records)\n        );\n\n        if (!records || records.length === 0) {\n            console.error(`No records found for file: ${fileName}`);\n            return;\n        }\n\n        let labels, xAxisLabel;\n\n        if (coordinateType === 'distance') {\n            labels = records.map(record => `${record.distance.toFixed(2)} KM`);\n            xAxisLabel = '距离';\n        } else if (coordinateType === 'time') {\n            labels = records.map(record => formatTime(record.elapsed_time));\n            xAxisLabel = '时间';\n        }\n\n        const heartRates = records.map(record => record.heart_rate);\n        const speeds = records.map(record => record.speed);\n        const cadences = records.map(record => record.cadence);\n        const altitudes = records.map(record => (record.altitude * 1000).toFixed(0));\n\n        const canvas = document.createElement('canvas');\n        canvas.id = `chart-${index}`;\n        chartContainer.appendChild(canvas);\n\n        const ctx = canvas.getContext('2d');\n\n        const datasets = [\n            {\n                label: '心率',\n                data: heartRates,\n                borderColor: 'rgba(255, 99, 132, 1)',\n                backgroundColor: 'rgba(255, 99, 132, 0.2)',\n                borderWidth: 2,\n                fill: false,\n                pointRadius: 0,\n                pointHoverRadius: 0\n            },\n            {\n                label: '速度',\n                data: speeds,\n                borderColor: 'rgba(54, 162, 235, 1)',\n                backgroundColor: 'rgba(54, 162, 235, 0.2)',\n                borderWidth: 2,\n                fill: false,\n                pointRadius: 0,\n                pointHoverRadius: 0\n            },\n            {\n                label: '踏频',\n                data: cadences,\n                borderColor: 'rgba(255, 206, 86, 1)',\n                backgroundColor: 'rgba(255, 206, 86, 0.2)',\n                borderWidth: 2,\n                fill: false,\n                pointRadius: 0,\n                pointHoverRadius: 0\n            },\n            {\n                label: '海拔',\n                data: altitudes,\n                borderColor: 'rgba(75, 192, 192, 1)',\n                backgroundColor: 'rgba(75, 192, 192, 0.2)',\n                borderWidth: 2,\n                fill: false,\n                pointRadius: 0,\n                pointHoverRadius: 0\n            }\n        ];\n\n        chart = new chart_js_auto__WEBPACK_IMPORTED_MODULE_1__[\"default\"](ctx, {\n            type: 'line',\n            data: {\n                labels: labels,\n                datasets: datasets\n            },\n            options: {\n                responsive: true,\n                interaction: {\n                    mode: 'index',\n                    intersect: false,\n                },\n                plugins: {\n                    legend: {\n                        display: true,\n                        labels: {\n                            color: 'rgb(255, 99, 132)',\n                            font: {\n                                size: 14\n                            }\n                        }\n                    },\n                    title: {\n                        display: true,\n                        text: fileName,\n                        color: 'rgb(54, 162, 235)',\n                        font: {\n                            size: 18\n                        }\n                    },\n                    tooltip: {\n                        callbacks: {\n                            label: function(tooltipItem) {\n                                let label = tooltipItem.dataset.label || '';\n                                if (label) {\n                                    label += ': ';\n                                }\n                                // 添加单位到 Tooltip 文本\n                                label += tooltipItem.formattedValue + getUnit(tooltipItem.dataset.label); // 替换 '单位' 为你的实际单位\n                                return label;\n                            }\n                        }\n                    }\n                },\n                scales: {\n                    x: {\n                        display: true,\n                        title: {\n                            display: true,\n                            text: xAxisLabel,\n                            color: '#911',\n                            font: {\n                                size: 16,\n                                weight: 'bold',\n                                family: 'Tahoma'\n                            }\n                        },\n                        grid: {\n                            display: true,\n                            color: 'rgba(200, 200, 200, 0.2)'\n                        },\n                        ticks: {\n                            color: 'blue',\n                            font: {\n                                size: 12\n                            }\n                        }\n                    },\n                    y: {\n                        display: true,\n                        title: {\n                            display: false,\n                            text: '值',\n                            color: '#191',\n                            font: {\n                                size: 16,\n                                weight: 'bold',\n                                family: 'Tahoma'\n                            }\n                        },\n                        grid: {\n                            display: true,\n                            color: 'rgba(200, 200, 200, 0.2)'\n                        },\n                        ticks: {\n                            color: 'green',\n                            font: {\n                                size: 12\n                            }\n                        }\n                    }\n                }\n            }\n        });\n\n        overallHeartRateDatasets.push({\n            label: fileName,\n            data: heartRates,\n            borderColor: `rgba(${(index * 50) % 255}, ${(index * 100) % 255}, ${(index * 150) % 255}, 1)`,\n            borderWidth: 1,\n            fill: false,\n            pointRadius: 0,\n            pointHoverRadius: 0\n        });\n\n        overallSpeedDatasets.push({\n            label: fileName,\n            data: speeds,\n            borderColor: `rgba(${(index * 150) % 255}, ${(index * 50) % 255}, ${(index * 100) % 255}, 1)`,\n            borderWidth: 1,\n            fill: false,\n            pointRadius: 0,\n            pointHoverRadius: 0\n        });\n\n        overallCadenceDatasets.push({\n            label: fileName,\n            data: cadences,\n            borderColor: `rgba(${(index * 100) % 255}, ${(index * 150) % 255}, ${(index * 50) % 255}, 1)`,\n            borderWidth: 1,\n            fill: false,\n            pointRadius: 0,\n            pointHoverRadius: 0\n        });\n\n        overallAltitudeDatasets.push({\n            label: fileName,\n            data: altitudes,\n            borderColor: `rgba(${(index * 50) % 255}, ${(index * 150) % 255}, ${(index * 100) % 255}, 1)`,\n            borderWidth: 1,\n            fill: false,\n            pointRadius: 0,\n            pointHoverRadius: 0\n        });\n    });\n\n    function createOverallComparisonChart(label, datasets) {\n        let xAxisLabel;\n        const canvas = document.createElement('canvas');\n        chartContainer.appendChild(canvas);\n        const ctx = canvas.getContext('2d');\n\n        new chart_js_auto__WEBPACK_IMPORTED_MODULE_1__[\"default\"](ctx, {\n            type: 'line',\n            data: {\n                labels: allData[0].data.activity.sessions.flatMap(session =>\n                    session.laps.flatMap(lap => {\n                        if (coordinateType === 'distance') {\n                            xAxisLabel = '距离';\n                            return lap.records.map(record => `${record.distance.toFixed(2)} KM`);\n                        } else if (coordinateType === 'time') {\n                            xAxisLabel = '时间';\n                            return lap.records.map(record => formatTime(record.elapsed_time));\n                        }\n                    })\n                ),\n                datasets: datasets\n            },\n            options: {\n                responsive: true,\n                interaction: {\n                    mode: 'index',\n                    intersect: false,\n                },\n                plugins: {\n                    legend: {\n                        display: true,\n                        labels: {\n                            color: 'rgb(255, 99, 132)',\n                            font: {\n                                size: 14\n                            }\n                        }\n                    },\n                    title: {\n                        display: true,\n                        text: `总对比：${label}`,\n                        font: {\n                            size: 18,\n                        }\n                    },\n                    tooltip: {\n                        callbacks: {\n                            label: function(tooltipItem) {\n                                let tooltipLabel = tooltipItem.dataset.label || '';\n                                if (tooltipLabel) {\n                                    tooltipLabel += ': ';\n                                }\n                                // 添加单位到 Tooltip 文本\n                                tooltipLabel += tooltipItem.formattedValue + getUnit(label); // 替换 '单位' 为你的实际单位\n                                return tooltipLabel;\n                            }\n                        }\n                    }\n                },\n                scales: {\n                    x: {\n                        display: true,\n                        title: {\n                            display: true,\n                            text: xAxisLabel,\n                            color: '#911',\n                            font: {\n                                size: 16,\n                                weight: 'bold',\n                                family: 'Tahoma'\n                            }\n                        },\n                    },\n                    y: {\n                        display: true,\n                        title: {\n                            display: true,\n                            text: label,\n                            font: {\n                                size: 12,\n                                weight: 'bold',\n                                family: 'Tahoma'\n                            }\n                        }\n                    }\n                }\n            }\n        });\n    }\n\n    createOverallComparisonChart('心率', overallHeartRateDatasets);\n    createOverallComparisonChart('速度', overallSpeedDatasets);\n    createOverallComparisonChart('踏频', overallCadenceDatasets);\n    createOverallComparisonChart('海拔', overallAltitudeDatasets);\n}\n\n//# sourceURL=webpack://FIT_file_comparison_tool/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var fit_file_parser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! fit-file-parser */ \"./node_modules/fit-file-parser/dist/fit-parser.js\");\n/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! chart.js/auto */ \"./node_modules/chart.js/auto/auto.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\n\n\nconst fileInput = document.getElementById(\"fileInput\");\nconst compareButton = document.getElementById(\"compareButton\");\nconst coordinateTypeSelect = document.getElementById(\"coordinateType\");\nconst chartContainer = document.getElementById(\"charts\");\nconst loadingIndicator = document.getElementById(\"loadingIndicator\");\nconst fileInfoTableContainer = document.getElementById(\"fileInfoTableContainer\");\nconst processingTimeContainer = document.getElementById(\"processingTimeContainer\");\nconst processingTimeElement = document.getElementById(\"processingTime\");\n\ncompareButton.addEventListener(\"click\", handleFileCompare);\ncoordinateTypeSelect.addEventListener(\"change\", handleFileCompare);\n\nasync function handleFileCompare() {\n  const files = fileInput.files;\n  if (files.length === 0) {\n    alert(\"请至少选择一个文件来对比\");\n    return;\n  }\n\n  const startTime = performance.now(); // 记录开始时间\n  loadingIndicator.style.display = \"block\";\n  processingTimeContainer.style.display = \"none\"; // 隐藏处理时间容器\n\n  const fitParser = new fit_file_parser__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n    force: true,\n    speedUnit: \"km/h\",\n    lengthUnit: \"km\",\n    temperatureUnit: \"celsius\",\n    elapsedRecordField: true,\n    mode: \"cascade\",\n  });\n\n  const allDataPromises = Array.from(files).map((file) =>\n    new Promise((resolve, reject) => {\n      const reader = new FileReader();\n      reader.onload = (event) => {\n        fitParser.parse(event.target.result, (error, data) => {\n          if (error) {\n            console.error(error);\n            reject(error);\n          } else {\n            resolve({ data, fileName: file.name });\n          }\n        });\n      };\n      reader.readAsArrayBuffer(file);\n    })\n  );\n\n  try {\n    const allData = await Promise.all(allDataPromises);\n    displayFileInfo(allData);\n    displayData(allData);\n    loadingIndicator.style.display = \"none\";\n    \n    const endTime = performance.now(); // 记录结束时间\n    const processingTime = ((endTime - startTime) / 1000).toFixed(2); // 计算处理时间并保留两位小数\n    processingTimeElement.textContent = processingTime; // 设置处理时间文本\n    processingTimeContainer.style.display = \"block\"; // 显示处理时间容器\n  } catch (error) {\n    loadingIndicator.style.display = \"none\";\n    alert(\"文件处理过程中发生错误\");\n  }\n}\n\nconst formatTime = (seconds) => new Date(seconds * 1000).toISOString().substr(11, 8);\nconst formatDate = (dateString) => new Date(dateString).toLocaleString();\nconst formatDistance = (distance) => `${(distance / 1000).toFixed(2)} km`;\nconst formatAltitude = (altitude) => altitude.toString();\nconst getUnit = (label) => {\n  const units = {\n    心率: \" bpm\",\n    速度: \" km/h\",\n    踏频: \" rpm\",\n    海拔: \" m\",\n  };\n  return units[label] || \"\";\n};\n\nfunction displayFileInfo(allData) {\n  const table = document.createElement(\"table\");\n  table.classList.add(\"file-info-table\");\n\n  const headers = [\"文件名\", \"运动类型\", \"开始时间\", \"结束时间\", \"总时间\", \"总距离\", \"总上升高度\", \"总下降高度\", \"总卡路里\", \"最大踏频\", \"平均踏频\", \"最大心率\", \"最大速度\", \"平均速度\", \"最大功率\", \"平均功率\", \"标准化功率\", \"设备信息\"];\n  table.appendChild(createTableRow(headers, \"th\"));\n\n  allData.forEach(({ data, fileName }) => {\n    const session = data.activity.sessions[0];\n    const events = data.activity.events;\n    const startEvent = events.find((event) => event.event_type === \"start\");\n    const stopEvent = events.find((event) => event.event_type === \"stop_all\");\n\n    const cells = [\n      fileName,\n      session.sport || \"\",\n      startEvent ? formatDate(startEvent.timestamp) : \"\",\n      stopEvent ? formatDate(stopEvent.timestamp) : \"\",\n      formatTime(session.total_elapsed_time),\n      formatDistance(session.total_distance),\n      formatAltitude(session.total_ascent * 1000),\n      formatAltitude(session.total_descent * 1000),\n      `${session.total_calories} 千卡`,\n      `${session.max_cadence} rpm`,\n      `${session.avg_cadence} rpm`,\n      `${session.max_heart_rate} bpm`,\n      `${session.max_speed.toFixed(2)} km/h`,\n      `${session.avg_speed.toFixed(2)} km/h`,\n      `${session.max_power} 瓦`,\n      `${session.avg_power} 瓦`,\n      `${session.normalized_power} 瓦`,\n      data.activity.device_infos[0].product_name || \"\",\n    ];\n    table.appendChild(createTableRow(cells, \"td\"));\n  });\n\n  fileInfoTableContainer.innerHTML = \"\";\n  fileInfoTableContainer.appendChild(table);\n}\n\nfunction createTableRow(cells, cellTag) {\n  const row = document.createElement(\"tr\");\n  cells.forEach((cellText) => {\n    const cell = document.createElement(cellTag);\n    cell.textContent = cellText;\n    row.appendChild(cell);\n  });\n  return row;\n}\n\nfunction displayData(allData) {\n  chartContainer.innerHTML = \"\";\n  const overallDatasets = {\n    心率: [],\n    速度: [],\n    踏频: [],\n    海拔: [],\n  };\n\n  const coordinateType = coordinateTypeSelect.value;\n\n  allData.forEach(({ data, fileName }, index) => {\n    const records = data.activity.sessions.flatMap((session) => session.laps.flatMap((lap) => lap.records));\n    if (!records || records.length === 0) {\n      console.error(`No records found for file: ${fileName}`);\n      return;\n    }\n\n    const labels = records.map((record) =>\n      coordinateType === \"distance\" ? `${record.distance.toFixed(2)} KM` : formatTime(record.elapsed_time)\n    );\n\n    const datasets = {\n      心率: records.map((record) => record.heart_rate),\n      速度: records.map((record) => record.speed),\n      踏频: records.map((record) => record.cadence),\n      海拔: records.map((record) => record.altitude * 1000),\n    };\n\n    createChart(fileName, labels, datasets);\n\n    Object.keys(overallDatasets).forEach((key) => {\n      overallDatasets[key].push({\n        label: fileName,\n        data: datasets[key],\n        borderColor: `rgba(${(index * 50) % 255}, ${(index * 100) % 255}, ${(index * 150) % 255}, 1)`,\n        borderWidth: 1,\n        fill: false,\n        pointRadius: 0,\n        pointHoverRadius: 0,\n      });\n    });\n  });\n\n  Object.keys(overallDatasets).forEach((key) => {\n    createOverallComparisonChart(key, overallDatasets[key], allData[0].data.activity.sessions, coordinateType);\n  });\n}\n\nfunction createChart(fileName, labels, datasets) {\n  const canvas = document.createElement(\"canvas\");\n  chartContainer.appendChild(canvas);\n\n  new chart_js_auto__WEBPACK_IMPORTED_MODULE_1__[\"default\"](canvas.getContext(\"2d\"), {\n    type: \"line\",\n    data: {\n      labels,\n      datasets: Object.keys(datasets).map((key) => ({\n        label: key,\n        data: datasets[key],\n        borderColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 1)`,\n        backgroundColor: `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.2)`,\n        borderWidth: 2,\n        fill: false,\n        pointRadius: 0,\n        pointHoverRadius: 0,\n      })),\n    },\n    options: {\n      responsive: true,\n      interaction: {\n        mode: \"index\",\n        intersect: false,\n      },\n      plugins: {\n        legend: {\n          display: true,\n          labels: {\n            color: \"rgb(255, 99, 132)\",\n            font: {\n              size: 14,\n            },\n          },\n        },\n        title: {\n          display: true,\n          text: fileName,\n          color: \"rgb(54, 162, 235)\",\n          font: {\n            size: 18,\n          },\n        },\n        tooltip: {\n          callbacks: {\n            label: (tooltipItem) =>\n              `${tooltipItem.dataset.label}: ${tooltipItem.formattedValue}${getUnit(tooltipItem.dataset.label)}`,\n          },\n        },\n      },\n      scales: {\n        x: {\n          display: true,\n          grid: {\n            color: \"rgba(200, 200, 200, 0.2)\",\n          },\n          ticks: {\n            color: \"blue\",\n            font: {\n              size: 12,\n            },\n          },\n        },\n        y: {\n          display: true,\n          grid: {\n            color: \"rgba(200, 200, 200, 0.2)\",\n          },\n          ticks: {\n            color: \"green\",\n            font: {\n              size: 12,\n            },\n          },\n        },\n      },\n    },\n  });\n}\n\nfunction createOverallComparisonChart(label, datasets, sessions, coordinateType) {\n  const labels = sessions.flatMap((session) =>\n    session.laps.flatMap((lap) => lap.records.map((record) =>\n      coordinateType === \"distance\" ? `${record.distance.toFixed(2)} KM` : formatTime(record.elapsed_time)\n    ))\n  );\n\n  const canvas = document.createElement(\"canvas\");\n  chartContainer.appendChild(canvas);\n\n  new chart_js_auto__WEBPACK_IMPORTED_MODULE_1__[\"default\"](canvas.getContext(\"2d\"), {\n    type: \"line\",\n    data: {\n      labels,\n      datasets,\n    },\n    options: {\n      responsive: true,\n      interaction: {\n        mode: \"index\",\n        intersect: false,\n      },\n      plugins: {\n        legend: {\n          display: true,\n          labels: {\n            color: \"rgb(255, 99, 132)\",\n            font: {\n              size: 14,\n            },\n          },\n        },\n        title: {\n          display: true,\n          text: `总对比：${label}`,\n          font: {\n            size: 18,\n          },\n        },\n        tooltip: {\n          callbacks: {\n            label: (tooltipItem) =>\n              `${tooltipItem.dataset.label}: ${tooltipItem.formattedValue}${getUnit(label)}`,\n          },\n        },\n      },\n      scales: {\n        x: {\n          display: true,\n        },\n        y: {\n          display: true,\n          title: {\n            display: true,\n            text: label,\n            font: {\n              size: 12,\n              weight: \"bold\",\n              family: \"Tahoma\",\n            },\n          },\n        },\n      },\n    },\n  });\n}\n\n\n//# sourceURL=webpack://FIT_file_comparison_tool/./src/index.js?");
 
 /***/ }),
 
