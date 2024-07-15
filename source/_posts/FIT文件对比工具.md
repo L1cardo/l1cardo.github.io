@@ -15,7 +15,7 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 
 > 此工具不会上传您的数据，所有的处理都在本地运行，请放心使用!<br>如果在使用途中发现任何问题或者意见，请邮件联系我，谢谢！
 
-div id="fileInputSection">
+<div id="fileInputSection">
   <input type="file" id="fileInput" multiple accept=".fit" aria-label="选择FIT文件" />
   <button id="compareButton" aria-label="对比文件">对比</button>
   <label for="coordinateType">横坐标：</label>
