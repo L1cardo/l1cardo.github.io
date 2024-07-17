@@ -50,161 +50,158 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 }
 
 #fileInputSection {
-    text-align: center;
-    margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 #fileInput,
 #compareButton,
 #coordinateType {
-    margin: 10px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 #compareButton {
-    background-color: #625BFD;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+  background-color: #625bfd;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 #compareButton:hover {
-    background-color: #EF7040;
-    transform: scale(1.05);
+  background-color: #ef7040;
+  transform: scale(1.05);
 }
 
 .file-info-table-container {
-    width: 100%;
-    overflow-x: auto;
-    margin-top: 20px;
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
 }
 
 .file-info-table {
-    border-collapse: collapse;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    min-width: 800px; /* 确保表格在小屏幕上有滚动条 */
+  border-collapse: collapse;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 800px; /* 确保表格在小屏幕上有滚动条 */
 }
 
-.file-info-table th, 
+.file-info-table th,
 .file-info-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
 }
 
 .file-info-table th {
-    background-color: #f4f4f4;
-    color: #555;
+  background-color: #f4f4f4;
 }
 
 .file-info-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+  background-color: #f9f9f9;
 }
 
 #charts {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .chart-container {
-    width: 100%;
-    max-height: 750px;
-    position: relative;
+  width: 100%;
+  max-height: 750px;
+  position: relative;
 }
 
 .chart-container:hover .chart-tooltip {
-    display: block; /* 鼠标悬停时显示 */
+  display: block; /* 鼠标悬停时显示 */
 }
 
 #charts canvas {
-    width: 100% !important;
-    padding: 10px;
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100% !important;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .chart-controls {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    gap: 5px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px;
 }
 
 .chart-controls button {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chart-controls button:hover {
-    background-color: #f0f0f0;
+  background-color: #f0f0f0;
 }
 
 .chart-controls i {
-    font-size: 16px;
-    color: #333;
+  font-size: 16px;
 }
 
 .chart-tooltip {
-    position: absolute;
-    top: 40px; /* 调整至右上角 */
-    right: 10px; /* 调整至右上角 */
-    padding: 5px 0px;
-    font-size: 10px;
-    text-align: right;
-    display: none; /* 默认隐藏 */
+  position: absolute;
+  top: 40px; /* 调整至右上角 */
+  right: 10px; /* 调整至右上角 */
+  padding: 5px 0px;
+  font-size: 10px;
+  text-align: right;
+  display: none; /* 默认隐藏 */
 }
 
 #loadingIndicator {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 #loadingIndicator p {
-    font-size: 16px;
-    margin-bottom: 10px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 .spinner {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 4px solid rgba(0, 0, 0, 0.1);
-    border-top-color: #333;
-    animation: spin 1s ease-in-out infinite;
-    margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top-color: #625bfd;
+  animation: spin 1s ease-in-out infinite;
+  margin: 0 auto;
 }
 
 @keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #processingTimeContainer {
-    text-align: center;
-    font-size: 18px;
-    margin-top: 20px;
-    color: #555;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 </style>
@@ -349,7 +346,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js/auto */ \"./node_modules/chart.js/auto/auto.js\");\n/* harmony import */ var chartjs_plugin_zoom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! chartjs-plugin-zoom */ \"./node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.esm.js\");\n/* harmony import */ var fit_file_parser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! fit-file-parser */ \"./node_modules/fit-file-parser/dist/fit-parser.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\n\n\n\nconst fileInput = document.getElementById(\"fileInput\");\nconst compareButton = document.getElementById(\"compareButton\");\nconst coordinateTypeSelect = document.getElementById(\"coordinateType\");\nconst chartContainer = document.getElementById(\"charts\");\nconst loadingIndicator = document.getElementById(\"loadingIndicator\");\nconst fileInfoTableContainer = document.getElementById(\"fileInfoTableContainer\");\nconst processingTimeContainer = document.getElementById(\"processingTimeContainer\");\nconst processingTimeElement = document.getElementById(\"processingTime\");\n\nconst crosshairLinePlugin = {\n  id: \"crosshairLine\",\n  afterDraw(chart) {\n    const { tooltip, ctx, chartArea } = chart;\n    if (tooltip && tooltip._active && tooltip._active.length) {\n      const activePoint = tooltip._active[0];\n      const { x } = activePoint.element;\n\n      ctx.save();\n      ctx.beginPath();\n      ctx.moveTo(x, chartArea.top);\n      ctx.lineTo(x, chartArea.bottom);\n      ctx.lineWidth = 1;\n      ctx.strokeStyle = \"#969696\";\n      ctx.setLineDash([5, 2]);\n      ctx.stroke();\n      ctx.restore();\n    }\n  },\n};\n\nchart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"].register(crosshairLinePlugin);\nchart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"].register(chartjs_plugin_zoom__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\ncompareButton.addEventListener(\"click\", handleFileCompare);\ncoordinateTypeSelect.addEventListener(\"change\", handleFileCompare);\n\nlet chartInstances = [];\n\nasync function handleFileCompare() {\n  const files = fileInput.files;\n  if (files.length === 0) {\n    alert(\"请至少选择一个文件来对比\");\n    return;\n  }\n\n  const startTime = performance.now();\n  showLoadingIndicator(true);\n\n  try {\n    const allData = await parseFiles(files);\n    console.log(allData);\n    displayFileInfo(allData);\n    displayData(allData);\n    displayProcessingTime(startTime);\n  } catch (error) {\n    console.error(error);\n    alert(\"文件处理过程中发生错误\");\n  } finally {\n    showLoadingIndicator(false);\n  }\n}\n\nasync function parseFiles(files) {\n  const fitParser = new fit_file_parser__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n    force: true,\n    speedUnit: \"km/h\",\n    lengthUnit: \"km\",\n    temperatureUnit: \"celsius\",\n    elapsedRecordField: true,\n    mode: \"cascade\",\n  });\n\n  const allDataPromises = Array.from(files).map(\n    (file) =>\n      new Promise((resolve, reject) => {\n        const reader = new FileReader();\n        reader.onload = (event) => {\n          fitParser.parse(event.target.result, (error, data) => {\n            if (error) {\n              reject(error);\n            } else {\n              resolve({ data, fileName: file.name });\n            }\n          });\n        };\n        reader.readAsArrayBuffer(file);\n      })\n  );\n\n  return Promise.all(allDataPromises);\n}\n\nfunction showLoadingIndicator(show) {\n  loadingIndicator.style.display = show ? \"block\" : \"none\";\n  processingTimeContainer.style.display = show ? \"none\" : \"block\";\n}\n\nfunction displayProcessingTime(startTime) {\n  const endTime = performance.now();\n  const processingTime = ((endTime - startTime) / 1000).toFixed(2);\n  processingTimeElement.textContent = processingTime;\n  processingTimeContainer.style.display = \"block\";\n}\n\nfunction displayFileInfo(allData) {\n  const table = document.createElement(\"table\");\n  table.classList.add(\"file-info-table\");\n\n  const headers = [\"文件名\", \"运动类型\", \"开始时间\", \"结束时间\", \"总时间\", \"总距离\", \"总上升高度\", \"总下降高度\", \"总卡路里\", \"最大步频/踏频\", \"平均步频/踏频\", \"最大心率\", \"平均心率\", \"最大速度\", \"平均速度\", \"最大功率\", \"平均功率\", \"标准化功率\", \"设备信息\"];\n  table.appendChild(createTableRow(headers, \"th\"));\n\n  allData.forEach(({ data, fileName }) => {\n    const session = data.activity.sessions[0];\n    const events = data.activity.events;\n    const startEvent = events.find((event) => event.event_type === \"start\");\n    const stopEvent = events.find((event) => event.event_type === \"stop_all\");\n\n    const cells = [\n      fileName, \n      session.sport || \"\", \n      startEvent ? formatDate(startEvent.timestamp) : \"\", \n      stopEvent ? formatDate(stopEvent.timestamp) : \"\", \n      formatTime(session.total_elapsed_time), \n      formatDistance(session.total_distance), \n      formatAltitude(session.total_ascent), \n      formatAltitude(session.total_descent), \n      `${session.total_calories} kcal`, \n      `${session.max_cadence} ${getUnit(\"cadence\", session.sport)}`, \n      `${session.avg_cadence} ${getUnit(\"cadence\", session.sport)}`, \n      `${session.max_heart_rate} bpm`,\n      `${session.avg_heart_rate} bpm`,\n      `${session.max_speed.toFixed(2)} km/h`, \n      `${session.avg_speed.toFixed(2)} km/h`, \n      `${session.max_power} w`, \n      `${session.avg_power} w`, \n      `${session.normalized_power} w`, \n      data.activity.device_infos[0]?.product_name || \"\"\n    ];\n    table.appendChild(createTableRow(cells, \"td\"));\n  });\n\n  fileInfoTableContainer.innerHTML = \"\";\n  fileInfoTableContainer.appendChild(table);\n}\n\nfunction createTableRow(cells, cellTag) {\n  const row = document.createElement(\"tr\");\n  cells.forEach((cellText) => {\n    const cell = document.createElement(cellTag);\n    cell.textContent = cellText;\n    row.appendChild(cell);\n  });\n  return row;\n}\n\nfunction displayData(allData) {\n  clearPreviousCharts();\n\n  const overallDatasets = {\n    heartRate: [],\n    speed: [],\n    cadence: [],\n    altitude: [],\n  };\n\n  const coordinateType = coordinateTypeSelect.value;\n\n\n  allData.forEach(({ data, fileName }, index) => {\n    const records = getRecords(data.activity.sessions);\n    const sport = data.activity.sessions[0].sport\n    if (records.length === 0) {\n      console.error(`No records found for file: ${fileName}`);\n      return;\n    }\n\n    const labels = createLabels(records, coordinateType);\n    const datasets = createDatasets(records);\n\n    chartInstances.push(createChart(fileName, labels, datasets, sport));\n    addToOverallDatasets(overallDatasets, datasets, fileName, index);\n  });\n\n  Object.keys(overallDatasets).forEach((key) => {\n    chartInstances.push(createOverallComparisonChart(key, overallDatasets[key], allData[0].data.activity.sessions, coordinateType));\n  });\n}\n\nfunction clearPreviousCharts() {\n  chartContainer.innerHTML = \"\";\n  chartInstances.forEach((chart) => chart.destroy());\n  chartInstances = [];\n}\n\nfunction getRecords(sessions) {\n  return sessions.flatMap((session) => session.laps.flatMap((lap) => lap.records));\n}\n\nfunction createLabels(records, coordinateType) {\n  return records.map((record) => (coordinateType === \"distance\" ? `${record.distance.toFixed(2)} KM` : formatTime(record.elapsed_time)));\n}\n\nfunction createDatasets(records) {\n  return {\n    heartRate: records.map((record) => record.heart_rate),\n    speed: records.map((record) => record.speed),\n    cadence: records.map((record) => record.cadence),\n    altitude: records.map((record) => record.altitude * 1000),\n  };\n}\n\nfunction addToOverallDatasets(overallDatasets, datasets, fileName, index) {\n  Object.keys(overallDatasets).forEach((key) => {\n    overallDatasets[key].push({\n      label: fileName,\n      data: datasets[key],\n      borderWidth: 1,\n      fill: false,\n      pointRadius: 0,\n      pointHoverRadius: 0,\n    });\n  });\n}\n\nfunction createChart(fileName, labels, datasets, sport) {\n  const canvas = document.createElement(\"canvas\");\n  const chartWrapper = document.createElement(\"div\");\n  chartWrapper.classList.add(\"chart-container\");\n  chartWrapper.appendChild(canvas);\n\n  // 添加提示框\n  const tooltipText = document.createElement(\"div\");\n  tooltipText.classList.add(\"chart-tooltip\");\n  tooltipText.innerHTML = \"左键框选区域放大<br>Ctrl+鼠标左键平移<br>双击重置缩放\";\n  chartWrapper.appendChild(tooltipText);\n\n  const controls = document.createElement(\"div\");\n  controls.classList.add(\"chart-controls\");\n  controls.innerHTML = `\n        <button onclick=\"zoomIn(event)\">➕</button>\n        <button onclick=\"zoomOut(event)\">➖</button>\n        <button onclick=\"resetZoom(event)\">🔄</button>\n    `;\n  chartWrapper.appendChild(controls);\n  chartContainer.appendChild(chartWrapper);\n\n  const chart = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"](canvas.getContext(\"2d\"), {\n    type: \"line\",\n    data: {\n      labels,\n      datasets: Object.keys(datasets).map((key) => ({\n        label: getLocalizedName(key, sport),\n        data: datasets[key],\n        borderWidth: 2,\n        fill: false,\n        pointRadius: 0,\n        pointHoverRadius: 0,\n      })),\n    },\n    options: {\n      responsive: true,\n      maintainAspectRatio: false,\n      interaction: {\n        mode: \"nearest\",\n        intersect: false,\n      },\n      onClick(event, elements, chart) {\n        if (event.native.ctrlKey) {\n          chart.panZoom.dragEnabled = !chart.panZoom.dragEnabled;\n        }\n      },\n      onDblClick(event, elements, chart) {\n        chart.resetZoom();\n      },\n      plugins: {\n        zoom: {\n          pan: {\n            enabled: true,\n            mode: \"x\",\n            modifierKey: \"ctrl\", // 按住ctrl键平移\n          },\n          zoom: {\n            drag: {\n              enabled: true,\n              backgroundColor: \"rgba(0,0,0,0.1)\",\n              modifierKey: null, // 默认左键缩放\n            },\n            mode: \"x\",\n          },\n        },\n        legend: {\n          display: true,\n          labels: {\n            font: {\n              size: 14,\n            },\n          },\n        },\n        title: {\n          display: true,\n          text: fileName,\n          font: {\n            size: 18,\n          },\n        },\n        tooltip: {\n          mode: \"index\",\n          position: \"nearest\",\n          intersect: false,\n          callbacks: {\n            label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.formattedValue}${getUnitFromChinese(tooltipItem.dataset.label)}`,\n          },\n        },\n      },\n    },\n  });\n\n  canvas.addEventListener(\"dblclick\", () => {\n    chart.resetZoom();\n  });\n\n  canvas.chart = chart; // 方便后续调用\n\n  return chart;\n}\n\nfunction createOverallComparisonChart(label, datasets, sessions, coordinateType) {\n  const labels = sessions.flatMap((session) => session.laps.flatMap((lap) => lap.records.map((record) => (coordinateType === \"distance\" ? `${record.distance.toFixed(2)} KM` : formatTime(record.elapsed_time)))));\n  const sport = sessions[0].sport\n  const canvas = document.createElement(\"canvas\");\n  const chartWrapper = document.createElement(\"div\");\n  chartWrapper.classList.add(\"chart-container\");\n  chartWrapper.appendChild(canvas);\n\n  // 添加提示框\n  const tooltipText = document.createElement(\"div\");\n  tooltipText.classList.add(\"chart-tooltip\");\n  tooltipText.innerHTML = \"左键框选区域放大<br>Ctrl+鼠标左键平移<br>双击重置缩放\";\n  chartWrapper.appendChild(tooltipText);\n\n  const controls = document.createElement(\"div\");\n  controls.classList.add(\"chart-controls\");\n  controls.innerHTML = `\n        <button onclick=\"zoomIn(event)\">➕</button>\n        <button onclick=\"zoomOut(event)\">➖</button>\n        <button onclick=\"resetZoom(event)\">🔄</button>\n    `;\n  chartWrapper.appendChild(controls);\n  chartContainer.appendChild(chartWrapper);\n\n  const chart = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"](canvas.getContext(\"2d\"), {\n    type: \"line\",\n    data: {\n      labels,\n      datasets,\n    },\n    options: {\n      responsive: true,\n      maintainAspectRatio: false,\n      interaction: {\n        mode: \"nearest\",\n        intersect: false,\n      },\n      onClick(event, elements, chart) {\n        if (event.native.ctrlKey) {\n          chart.panZoom.dragEnabled = !chart.panZoom.dragEnabled;\n        }\n      },\n      onDblClick(event, elements, chart) {\n        chart.resetZoom();\n      },\n      plugins: {\n        zoom: {\n          pan: {\n            enabled: true,\n            mode: \"x\",\n            modifierKey: \"ctrl\", // 按住ctrl键平移\n          },\n          zoom: {\n            drag: {\n              enabled: true,\n              backgroundColor: \"rgba(0,0,0,0.1)\",\n              modifierKey: null, // 默认左键缩放\n            },\n            mode: \"x\",\n          },\n        },\n        legend: {\n          display: true,\n          labels: {\n            font: {\n              size: 14,\n            },\n          },\n        },\n        title: {\n          display: true,\n          text: `总对比：${ getLocalizedName(label, sport) }`,\n          font: {\n            size: 18,\n          },\n        },\n       tooltip: {\n          mode: \"index\",\n          position: \"nearest\",\n          intersect: false,\n          callbacks: {\n            label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.formattedValue}${getUnit(label, sport)}`,\n          },\n        },\n      },\n    },\n  });\n\n  canvas.addEventListener(\"dblclick\", () => {\n    chart.resetZoom();\n  });\n\n  canvas.chart = chart; // 方便后续调用\n\n  return chart;\n}\n\nwindow.zoomIn = function (event) {\n  const chart = event.target.closest(\".chart-container\").querySelector(\"canvas\").chart;\n  chart.zoom(1.2);\n};\n\nwindow.zoomOut = function (event) {\n  const chart = event.target.closest(\".chart-container\").querySelector(\"canvas\").chart;\n  chart.zoom(0.8);\n};\n\nwindow.resetZoom = function (event) {\n  const chart = event.target.closest(\".chart-container\").querySelector(\"canvas\").chart;\n  chart.resetZoom();\n};\n\nfunction formatTime(seconds) {\n  return new Date(seconds * 1000).toISOString().substr(11, 8);\n}\n\nfunction formatDate(dateString) {\n  return new Date(dateString).toLocaleString();\n}\n\nfunction formatDistance(distance) {\n  return `${(distance / 1000).toFixed(2)} km`;\n}\n\nfunction formatAltitude(altitude) {\n  return `${(altitude * 1000).toFixed(0)} m`;\n}\n\nfunction getCadenceLabel(sport) {\n  return sport === \"running\" ? \"步频\" : \"踏频\";\n}\n\nfunction getLocalizedName(label, sport) {\n  const labels = {\n    heartRate: \"心率\",\n    speed: \"速度\",\n    cadence: getCadenceLabel(sport),\n    altitude: \"海拔\",\n  }\n  return labels[label] || \"\";\n}\n\nfunction getUnit(label, sport) {\n  const units = {\n    heartRate: \" bpm\",\n    speed: \" km/h\",\n    cadence: getCadenceLabel(sport)===\"步频\" ? \" spm\" : \" rpm\",\n    altitude: \" m\",\n  };\n  return units[label] || \"\";\n}\n\nfunction getUnitFromChinese(label, sport) {\n  const units = {\n    心率: \" bpm\",\n    速度: \" km/h\",\n    步频: \" spm\",\n    踏频: \" rpm\",\n    海拔: \" m\",\n  };\n  return units[label] || \"\";\n}\n\n\n//# sourceURL=webpack://FIT_file_comparison_tool/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var chart_js_auto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! chart.js/auto */ \"./node_modules/chart.js/auto/auto.js\");\n/* harmony import */ var chartjs_plugin_zoom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! chartjs-plugin-zoom */ \"./node_modules/chartjs-plugin-zoom/dist/chartjs-plugin-zoom.esm.js\");\n/* harmony import */ var fit_file_parser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! fit-file-parser */ \"./node_modules/fit-file-parser/dist/fit-parser.js\");\n/* harmony import */ var _styles_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./styles.css */ \"./src/styles.css\");\n\n\n\n\n\nconst fileInput = document.getElementById(\"fileInput\");\nconst compareButton = document.getElementById(\"compareButton\");\nconst coordinateTypeSelect = document.getElementById(\"coordinateType\");\nconst chartContainer = document.getElementById(\"charts\");\nconst loadingIndicator = document.getElementById(\"loadingIndicator\");\nconst fileInfoTableContainer = document.getElementById(\"fileInfoTableContainer\");\nconst processingTimeContainer = document.getElementById(\"processingTimeContainer\");\nconst processingTimeElement = document.getElementById(\"processingTime\");\n\nconst crosshairLinePlugin = {\n  id: \"crosshairLine\",\n  afterDraw(chart) {\n    const { tooltip, ctx, chartArea } = chart;\n    if (tooltip && tooltip._active && tooltip._active.length) {\n      const activePoint = tooltip._active[0];\n      const { x } = activePoint.element;\n\n      ctx.save();\n      ctx.beginPath();\n      ctx.moveTo(x, chartArea.top);\n      ctx.lineTo(x, chartArea.bottom);\n      ctx.lineWidth = 1;\n      ctx.strokeStyle = \"#969696\";\n      ctx.setLineDash([5, 2]);\n      ctx.stroke();\n      ctx.restore();\n    }\n  },\n};\n\nchart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"].register(crosshairLinePlugin);\nchart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"].register(chartjs_plugin_zoom__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\ncompareButton.addEventListener(\"click\", handleFileCompare);\ncoordinateTypeSelect.addEventListener(\"change\", handleFileCompare);\n\nlet chartInstances = [];\n\nasync function handleFileCompare() {\n  const files = fileInput.files;\n  if (files.length === 0) {\n    alert(\"请至少选择一个文件来对比\");\n    return;\n  }\n\n  const startTime = performance.now();\n  showLoadingIndicator(true);\n\n  try {\n    const allData = await parseFiles(files);\n    console.log(allData);\n    displayFileInfo(allData);\n    displayData(allData);\n    displayProcessingTime(startTime);\n  } catch (error) {\n    console.error(error);\n    alert(\"文件处理过程中发生错误\");\n  } finally {\n    showLoadingIndicator(false);\n  }\n}\n\nasync function parseFiles(files) {\n  const fitParser = new fit_file_parser__WEBPACK_IMPORTED_MODULE_2__[\"default\"]({\n    force: true,\n    speedUnit: \"km/h\",\n    lengthUnit: \"km\",\n    temperatureUnit: \"celsius\",\n    elapsedRecordField: true,\n    mode: \"cascade\",\n  });\n\n  const allDataPromises = Array.from(files).map(\n    (file) =>\n      new Promise((resolve, reject) => {\n        const reader = new FileReader();\n        reader.onload = (event) => {\n          fitParser.parse(event.target.result, (error, data) => {\n            if (error) {\n              reject(error);\n            } else {\n              resolve({ data, fileName: file.name });\n            }\n          });\n        };\n        reader.readAsArrayBuffer(file);\n      })\n  );\n\n  return Promise.all(allDataPromises);\n}\n\nfunction showLoadingIndicator(show) {\n  loadingIndicator.style.display = show ? \"block\" : \"none\";\n  processingTimeContainer.style.display = show ? \"none\" : \"block\";\n}\n\nfunction displayProcessingTime(startTime) {\n  const endTime = performance.now();\n  const processingTime = ((endTime - startTime) / 1000).toFixed(2);\n  processingTimeElement.textContent = processingTime;\n  processingTimeContainer.style.display = \"block\";\n}\n\nfunction displayFileInfo(allData) {\n  const table = document.createElement(\"table\");\n  table.classList.add(\"file-info-table\");\n\n  const headers = [\"文件名\", \"运动类型\", \"开始时间\", \"结束时间\", \"总时间\", \"总距离\", \"总上升高度\", \"总下降高度\", \"总卡路里\", \"最大步频/踏频\", \"平均步频/踏频\", \"最大心率\", \"平均心率\", \"最大速度\", \"平均速度\", \"最大功率\", \"平均功率\", \"标准化功率\", \"设备信息\"];\n  table.appendChild(createTableRow(headers, \"th\"));\n\n  allData.forEach(({ data, fileName }) => {\n    const session = data.activity.sessions[0];\n    const events = data.activity.events;\n    const startEvent = events.find((event) => event.event_type === \"start\");\n    const stopEvent = events.find((event) => event.event_type === \"stop_all\");\n\n    const cells = [fileName, session.sport || \"\", startEvent ? formatDate(startEvent.timestamp) : \"\", stopEvent ? formatDate(stopEvent.timestamp) : \"\", formatTime(session.total_elapsed_time), formatDistance(session.total_distance), formatAltitude(session.total_ascent), formatAltitude(session.total_descent), `${session.total_calories} kcal`, `${session.max_cadence} ${getUnit(\"cadence\", session.sport)}`, `${session.avg_cadence} ${getUnit(\"cadence\", session.sport)}`, `${session.max_heart_rate} bpm`, `${session.avg_heart_rate} bpm`, `${session.max_speed.toFixed(2)} km/h`, `${session.avg_speed.toFixed(2)} km/h`, `${session.max_power} w`, `${session.avg_power} w`, `${session.normalized_power} w`, data.activity.device_infos[0]?.product_name || \"\"];\n    table.appendChild(createTableRow(cells, \"td\"));\n  });\n\n  fileInfoTableContainer.innerHTML = \"\";\n  fileInfoTableContainer.appendChild(table);\n}\n\nfunction createTableRow(cells, cellTag) {\n  const row = document.createElement(\"tr\");\n  cells.forEach((cellText) => {\n    const cell = document.createElement(cellTag);\n    cell.textContent = cellText;\n    row.appendChild(cell);\n  });\n  return row;\n}\n\nfunction displayData(allData) {\n  clearPreviousCharts();\n\n  const overallDatasets = {\n    heartRate: [],\n    speed: [],\n    cadence: [],\n    altitude: [],\n  };\n\n  const coordinateType = coordinateTypeSelect.value;\n\n  allData.forEach(({ data, fileName }, index) => {\n    const records = getRecords(data.activity.sessions);\n    const sport = data.activity.sessions[0].sport;\n    if (records.length === 0) {\n      console.error(`No records found for file: ${fileName}`);\n      return;\n    }\n\n    const labels = createLabels(records, coordinateType);\n    const datasets = createDatasets(records);\n\n    chartInstances.push(createChart(fileName, labels, datasets, sport));\n    addToOverallDatasets(overallDatasets, datasets, fileName, index);\n  });\n\n  Object.keys(overallDatasets).forEach((key) => {\n    chartInstances.push(createOverallComparisonChart(key, overallDatasets[key], allData[0].data.activity.sessions, coordinateType));\n  });\n}\n\nfunction clearPreviousCharts() {\n  chartContainer.innerHTML = \"\";\n  chartInstances.forEach((chart) => chart.destroy());\n  chartInstances = [];\n}\n\nfunction getRecords(sessions) {\n  return sessions.flatMap((session) => session.laps.flatMap((lap) => lap.records));\n}\n\nfunction createLabels(records, coordinateType) {\n  return records.map((record) => (coordinateType === \"distance\" ? `${record.distance.toFixed(2)} KM` : formatTime(record.elapsed_time)));\n}\n\nfunction createDatasets(records) {\n  return {\n    heartRate: records.map((record) => record.heart_rate),\n    speed: records.map((record) => record.speed),\n    cadence: records.map((record) => record.cadence),\n    altitude: records.map((record) => record.altitude * 1000),\n  };\n}\n\nfunction addToOverallDatasets(overallDatasets, datasets, fileName, index) {\n  Object.keys(overallDatasets).forEach((key) => {\n    overallDatasets[key].push({\n      label: fileName,\n      data: datasets[key],\n      borderWidth: 1,\n      fill: false,\n      pointRadius: 0,\n      pointHoverRadius: 0,\n    });\n  });\n}\n\nfunction createChart(fileName, labels, datasets, sessions, sport) {\n  const canvas = document.createElement(\"canvas\");\n  const chartWrapper = document.createElement(\"div\");\n  chartWrapper.classList.add(\"chart-container\");\n  chartWrapper.appendChild(canvas);\n\n  // 添加提示框\n  const tooltipText = document.createElement(\"div\");\n  tooltipText.classList.add(\"chart-tooltip\");\n  tooltipText.innerHTML = \"左键框选区域放大<br>Ctrl+鼠标左键平移<br>双击重置缩放\";\n  chartWrapper.appendChild(tooltipText);\n\n  const controls = document.createElement(\"div\");\n  controls.classList.add(\"chart-controls\");\n  controls.innerHTML = `\n        <button onclick=\"zoomIn(event)\">＋</button>\n        <button onclick=\"zoomOut(event)\">－</button>\n        <button onclick=\"resetZoom(event)\">🔄</button>\n    `;\n  chartWrapper.appendChild(controls);\n  chartContainer.appendChild(chartWrapper);\n\n  // 过滤掉非数字值并计算最大值\n  const filterNonNumeric = (data) => data.filter((value) => !isNaN(value) && isFinite(value));\n  const maxValue = Math.max(...filterNonNumeric(datasets.heartRate));\n\n  const chart = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"](canvas.getContext(\"2d\"), {\n    type: \"line\",\n    data: {\n      labels,\n      datasets: Object.keys(datasets).map((key) => ({\n        label: getLocalizedName(key, sport),\n        data: datasets[key],\n        borderWidth: 2,\n        fill: false,\n        pointRadius: 0,\n        pointHoverRadius: 0,\n      })),\n    },\n    options: {\n      responsive: true,\n      maintainAspectRatio: false,\n      interaction: {\n        mode: \"nearest\",\n        intersect: false,\n      },\n      onClick(event, elements, chart) {\n        if (event.native.ctrlKey) {\n          chart.panZoom.dragEnabled = !chart.panZoom.dragEnabled;\n        }\n      },\n      onDblClick(event, elements, chart) {\n        chart.resetZoom();\n      },\n      scales: {\n        y: {\n          suggestedMax: maxValue\n        },\n      },\n      plugins: {\n        zoom: {\n          pan: {\n            enabled: true,\n            mode: \"x\",\n            modifierKey: \"ctrl\", // 按住ctrl键平移\n          },\n          zoom: {\n            drag: {\n              enabled: true,\n              backgroundColor: \"rgba(0,0,0,0.1)\",\n              modifierKey: null, // 默认左键缩放\n            },\n            mode: \"x\",\n          },\n        },\n        legend: {\n          display: true,\n          labels: {\n            font: {\n              size: 14,\n            },\n          },\n        },\n        title: {\n          display: true,\n          text: fileName,\n          font: {\n            size: 18,\n          },\n        },\n        tooltip: {\n          mode: \"index\",\n          position: \"nearest\",\n          intersect: false,\n          callbacks: {\n            label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.formattedValue}${getUnitFromChinese(tooltipItem.dataset.label)}`,\n          },\n        },\n      },\n    },\n  });\n\n  canvas.addEventListener(\"dblclick\", () => {\n    chart.resetZoom();\n  });\n\n  canvas.chart = chart; // 方便后续调用\n\n  return chart;\n}\n\nfunction createOverallComparisonChart(label, datasets, sessions, coordinateType) {\n  const labels = sessions.flatMap((session) => session.laps.flatMap((lap) => lap.records.map((record) => (coordinateType === \"distance\" ? `${record.distance.toFixed(2)} KM` : formatTime(record.elapsed_time)))));\n  const sport = sessions[0].sport;\n  const canvas = document.createElement(\"canvas\");\n  const chartWrapper = document.createElement(\"div\");\n  chartWrapper.classList.add(\"chart-container\");\n  chartWrapper.appendChild(canvas);\n\n  // 添加提示框\n  const tooltipText = document.createElement(\"div\");\n  tooltipText.classList.add(\"chart-tooltip\");\n  tooltipText.innerHTML = \"左键框选区域放大<br>Ctrl+鼠标左键平移<br>双击重置缩放\";\n  chartWrapper.appendChild(tooltipText);\n\n  const controls = document.createElement(\"div\");\n  controls.classList.add(\"chart-controls\");\n  controls.innerHTML = `\n        <button onclick=\"zoomIn(event)\">＋</button>\n        <button onclick=\"zoomOut(event)\">－</button>\n        <button onclick=\"resetZoom(event)\">🔄</button>\n    `;\n  chartWrapper.appendChild(controls);\n  chartContainer.appendChild(chartWrapper);\n\n  // 过滤掉非数字值并计算最大值\n  const filterNonNumeric = (data) => data.filter((value) => !isNaN(value) && isFinite(value));\n  const maxValue = Math.max(...filterNonNumeric(datasets[0].data));\n  const minValue = Math.min(...filterNonNumeric(datasets[0].data));\n\n  const chart = new chart_js_auto__WEBPACK_IMPORTED_MODULE_0__[\"default\"](canvas.getContext(\"2d\"), {\n    type: \"line\",\n    data: {\n      labels,\n      datasets,\n    },\n    options: {\n      responsive: true,\n      maintainAspectRatio: false,\n      interaction: {\n        mode: \"nearest\",\n        intersect: false,\n      },\n      onClick(event, elements, chart) {\n        if (event.native.ctrlKey) {\n          chart.panZoom.dragEnabled = !chart.panZoom.dragEnabled;\n        }\n      },\n      onDblClick(event, elements, chart) {\n        chart.resetZoom();\n      },\n      scales: {\n        y: {\n          suggestedMax: maxValue,\n          suggestedMin: minValue\n        },\n      },\n      plugins: {\n        zoom: {\n          pan: {\n            enabled: true,\n            mode: \"x\",\n            modifierKey: \"ctrl\", // 按住ctrl键平移\n          },\n          zoom: {\n            drag: {\n              enabled: true,\n              backgroundColor: \"rgba(0,0,0,0.1)\",\n              modifierKey: null, // 默认左键缩放\n            },\n            mode: \"x\",\n          },\n        },\n        legend: {\n          display: true,\n          labels: {\n            font: {\n              size: 14,\n            },\n          },\n        },\n        title: {\n          display: true,\n          text: `总对比：${getLocalizedName(label, sport)}`,\n          font: {\n            size: 18,\n          },\n        },\n        tooltip: {\n          mode: \"index\",\n          position: \"nearest\",\n          intersect: false,\n          callbacks: {\n            label: (tooltipItem) => `${tooltipItem.dataset.label}: ${tooltipItem.formattedValue}${getUnit(label, sport)}`,\n          },\n        },\n      },\n    },\n  });\n\n  canvas.addEventListener(\"dblclick\", () => {\n    chart.resetZoom();\n  });\n\n  canvas.chart = chart; // 方便后续调用\n\n  return chart;\n}\n\nwindow.zoomIn = function (event) {\n  const chart = event.target.closest(\".chart-container\").querySelector(\"canvas\").chart;\n  chart.zoom(1.2);\n};\n\nwindow.zoomOut = function (event) {\n  const chart = event.target.closest(\".chart-container\").querySelector(\"canvas\").chart;\n  chart.zoom(0.8);\n};\n\nwindow.resetZoom = function (event) {\n  const chart = event.target.closest(\".chart-container\").querySelector(\"canvas\").chart;\n  chart.resetZoom();\n};\n\nfunction formatTime(seconds) {\n  return new Date(seconds * 1000).toISOString().substr(11, 8);\n}\n\nfunction formatDate(dateString) {\n  return new Date(dateString).toLocaleString();\n}\n\nfunction formatDistance(distance) {\n  return `${(distance / 1000).toFixed(2)} km`;\n}\n\nfunction formatAltitude(altitude) {\n  return `${(altitude * 1000).toFixed(0)} m`;\n}\n\nfunction getCadenceLabel(sport) {\n  return sport === \"running\" ? \"步频\" : \"踏频\";\n}\n\nfunction getLocalizedName(label, sport) {\n  const labels = {\n    heartRate: \"心率\",\n    speed: \"速度\",\n    cadence: getCadenceLabel(sport),\n    altitude: \"海拔\",\n  };\n  return labels[label] || \"\";\n}\n\nfunction getUnit(label, sport) {\n  const units = {\n    heartRate: \" bpm\",\n    speed: \" km/h\",\n    cadence: getCadenceLabel(sport) === \"步频\" ? \" spm\" : \" rpm\",\n    altitude: \" m\",\n  };\n  return units[label] || \"\";\n}\n\nfunction getUnitFromChinese(label, sport) {\n  const units = {\n    心率: \" bpm\",\n    速度: \" km/h\",\n    步频: \" spm\",\n    踏频: \" rpm\",\n    海拔: \" m\",\n  };\n  return units[label] || \"\";\n}\n\n\n//# sourceURL=webpack://FIT_file_comparison_tool/./src/index.js?");
 
 /***/ }),
 
