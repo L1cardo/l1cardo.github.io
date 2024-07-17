@@ -8,6 +8,7 @@ tags:
   - FIT
   - 佳明
 date: 2024-07-14 00:00:00
+aside: false
 cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 ---
 
@@ -39,18 +40,13 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 <div oncontextmenu="return false;" id="charts"></div>
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f9f9f9;
-    color: #333;
-    line-height: 1.6;
+
+#content-inner {
+  max-width: none;
 }
 
-h1 {
-    text-align: center;
-    color: #444;
-    margin-bottom: 20px;
+#post {
+  width: 98%;
 }
 
 #fileInputSection {
