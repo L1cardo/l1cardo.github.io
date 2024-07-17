@@ -116,6 +116,7 @@ cover: https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png
 
 .chart-container {
     width: 100%;
+    max-height: 750px;
     position: relative;
 }
 
