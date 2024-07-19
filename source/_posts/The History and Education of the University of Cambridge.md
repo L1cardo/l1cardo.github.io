@@ -28,3 +28,8 @@ I kept thinking after the lecture. Students in China work really hard. Some of t
 #### Conclusion & Application
 
 Study is important, and so are other skills. They can relax our mind and get rid of pressure which is one of the main reasons for suicide of Chinese students. So my point is that don’t be a bookworm but a fully developed person.
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div>

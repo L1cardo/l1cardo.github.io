@@ -54,3 +54,8 @@ phone:
 We may update our privacy policy from time to time. We will notify you of any changes by posting a new privacy policy on this page.
 
 It is recommended that you regularly review this privacy policy for any changes. Changes to this privacy policy will be effective when posted on this page.
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div>

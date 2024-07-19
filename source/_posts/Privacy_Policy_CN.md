@@ -52,3 +52,8 @@ date: 2020-06-20 00:00:00
 ### 5、对此隐私策略的更改
 
 我们可能会不时更新我们的隐私政策。我们将通过在此页面上发布新的隐私政策来通知您任何更改。 建议您定期查看本隐私政策以了解任何变更。本隐私政策的更改在此页面上发布时生效。
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div>

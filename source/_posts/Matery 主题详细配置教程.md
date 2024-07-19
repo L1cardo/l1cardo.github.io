@@ -643,3 +643,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
   - `IOS`下移除搜索框自动获得焦点属性，防止自动获得焦点后导致视图上移；
 - v1.0.0
   - 新增了所有基础功能；
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div>
