@@ -51,7 +51,7 @@ UID Bytes
 - 150Hz = 2
 - 50Hz = 3
 
-<div style="display: flex; justify-content: center; align-items: center; gap: 40px;">
+<div style="display: flex; justify-content: center; align-items: center; padding: 20px 100px 0px 100px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>
