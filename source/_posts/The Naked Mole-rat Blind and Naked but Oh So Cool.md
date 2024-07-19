@@ -29,7 +29,7 @@ Once we figure out what happens when mole-rats’ DNA replication, transcription
 
 Dr. Ewan Smith gave us the lecture, and he told us that there were few people were doing mole-rat thing, because they are too difficult to take care of. I think that besides knowledge we must have passion when we study or research or do something else.
 
-<div style="display: flex; justify-content: center; align-items: center; padding: 20px 100px 0px 100px;">
+<div style="display: flex;align-items: center;justify-content: space-evenly;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>

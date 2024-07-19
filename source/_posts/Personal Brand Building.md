@@ -29,7 +29,7 @@ We did a lot of work to discuss how to find one’s value, and I think that the 
 
 I think I will be more confident than before after the lecture. Not just to live what others want me to be, but to live what I want me to be.
 
-<div style="display: flex; justify-content: center; align-items: center; padding: 20px 100px 0px 100px;">
+<div style="display: flex;align-items: center;justify-content: space-evenly;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>

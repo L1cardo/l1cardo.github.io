@@ -29,7 +29,7 @@ I found that we should focus more on what can we provide for the Company than wh
 
 I will use what I had learned from the lecture in my English articles. It is a huge improvement for me.
 
-<div style="display: flex; justify-content: center; align-items: center; padding: 20px 100px 0px 100px;">
+<div style="display: flex;align-items: center;justify-content: space-evenly;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>

@@ -198,7 +198,7 @@ $ git flow hotfix finish missing-link
 
 记住，使用 git-flow 并不是必须的。当积攒了一定的使用经验后，很多团队会不再需要它了。当你能正确地理解工作流程的基本组成部分和目标的之后，你完全可以定义一个属于你自己的工作流程。
 
-<div style="display: flex; justify-content: center; align-items: center; padding: 20px 100px 0px 100px;">
+<div style="display: flex;align-items: center;justify-content: space-evenly;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>
