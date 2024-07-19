@@ -177,7 +177,7 @@ hexo d
 
 如果在配置文件中配置了 `builtin` 参数为 `true` ，那么除了可以使用 `hexo douban` 命令之外，`hexo g` 或 `hexo s` 也内嵌了生成页面的功能。
 
-<div style="display: flex;align-items: center;justify-content: space-evenly;">
+<div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>
