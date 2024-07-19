@@ -22,7 +22,7 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 最终的显示效果就像下面显示的一样，我觉得还是可以的：
 
-![](https://cdn.jsdelivr.net/gh/L1cardo/Image-Hosting@master/uPic/Matery豆瓣插件展示.png)
+![](https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/uPic/Matery豆瓣插件展示.png)
 
 下面就详细的教大家最终怎么样才能达到我这个效果吧
 

@@ -24,19 +24,19 @@ cover: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rac
 
 ### iOS
 
-![](https://cdn.jsdelivr.net/gh/L1cardo/LiveText@master/Demos/iOS.gif)
+![](https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/LiveText/master/Demos/iOS.gif)
 
 ### watchOS
 
-![](https://cdn.jsdelivr.net/gh/L1cardo/LiveText@master/Demos/watchOS.gif)
+![](https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/LiveText/master/Demos/watchOS.gif)
 
 ### macOS
 
-![](https://cdn.jsdelivr.net/gh/L1cardo/LiveText@master/Demos/macOS.gif)
+![](https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/LiveText/master/Demos/macOS.gif)
 
 ### tvOS
 
-![](https://cdn.jsdelivr.net/gh/L1cardo/LiveText@master/Demos/tvOS.gif)
+![](https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/LiveText/master/Demos/tvOS.gif)
 
 <div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
   <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">

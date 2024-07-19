@@ -5,7 +5,7 @@ comments: false
 top_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/personal_goals_edgd.svg
 ---
 
-![me](https://cdn.jsdelivr.net/gh/L1cardo/L1cardo@master/assets/me.gif)
+![me](https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/L1cardo/main/me.gif)
 
 ## Hey 👋, I'm Albert Abdilim
 
@@ -42,7 +42,8 @@ I love programming and I love Swift.
 - Email: [![Email](https://img.shields.io/badge/albert.abdilim@foxmail.com-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:albert.abdilim@foxmail.com)
 
 ### I like running
-[![running](https://cdn.jsdelivr.net/gh/L1cardo/running_page@master/assets/github.svg)](https://running-page.l1cardo.vercel.app)
+[![running](
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/running_page/master/assets/github.svg)](https://running-page.l1cardo.vercel.app)
 
 ### My GitHub Stats
 
