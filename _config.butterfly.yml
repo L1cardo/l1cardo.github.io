@@ -85,7 +85,7 @@ disable_top_img: false
 default_top_img: https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/bing_wallpaper_1080p.jpg
 
 # The banner image of index page
-index_img: https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/bing_wallpaper_1080p.jpg
+index_img: https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/bing_wallpaper_1080p.jpg
 
 # The banner image of archive page
 archive_img: https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/experience_design_eq3j.svg
@@ -284,7 +284,7 @@ footer:
   copyright:
     enable: true
     version: true
-  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a>
+  custom_text: <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a>
 
 # --------------------------------------
 # Aside Settings
@@ -428,6 +428,9 @@ rightside_item_order:
 rightside_config_animation: true
 
 # --------------------------------------
+# Global Settings
+# --------------------------------------
+
 anchor:
   # When you scroll, the URL will update according to header id.
   auto_update: false
