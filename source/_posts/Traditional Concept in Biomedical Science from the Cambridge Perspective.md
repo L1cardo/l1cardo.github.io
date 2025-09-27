@@ -30,6 +30,6 @@ Dr. Katerina Jenkins told us the length of NDA of a human is the distance betwee
 We can sequence a DNA fragment, which means we can know the exact order of the ATCG. So, if there is something wrong with the sequence e.g. missing, increasing, disorder, we can detect it, which means that the sequencing can be used to diagnosis the abnormality of a human body, and that abnormality is disease.
 
 <div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
-  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
-  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>

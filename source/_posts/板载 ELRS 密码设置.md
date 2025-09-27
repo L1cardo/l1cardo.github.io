@@ -7,7 +7,7 @@ tags:
   - FPV
   - ELRS
 date: 2022-06-03 00:00:00
-cover: https://mirror.ghproxy.com/https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png
+cover: https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png
 ---
 
 # 板载 ELRS 密码设置
@@ -52,8 +52,8 @@ UID Bytes
 - 50Hz = 3
 
 <div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
-  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
-  <img src="https://mirror.ghproxy.com/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
 </div>
 
 <script type=text/javascript>
