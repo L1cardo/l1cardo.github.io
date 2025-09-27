@@ -350,9 +350,8 @@ aside:
     type: monthly
     # Eg: YYYY年MM月
     format: YYYY 年 M 月 # eg: YYYY年MM月
-    order: -1 # Sort of order. 1, asc for ascending; -1, desc for descending
-    limit: 8 # if set 0 will show all
-   order: -1
+    # Sort of order. 1, asc for ascending; -1, desc for descending
+    order: -1
     # If set 0 will show all
     limit: 8
     sort_order:
