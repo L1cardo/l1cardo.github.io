@@ -13,14 +13,14 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [22.x]
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: ${{ matrix.node-version }}
 
@@ -47,5 +47,5 @@ jobs:
           git config user.name "${{secrets.GIT_NAME}}"
           git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
-          git commit -m "Update"
+          git commit -m "Bolg deploy by Github Action"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" main:main
