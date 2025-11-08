@@ -1,0 +1,586 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Matery 主题详细配置教程 | Licardo</title><meta name="author" content="Licardo"><meta name="copyright" content="Licardo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Matery 主题详细配置教程 2019-10-04  转自 Matery 主题官方文档 | 🇺🇸English Document | QQ 交流群: 926552981  这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。  1. 特性 简单漂亮，文章内容美观易读 Material Design 设计 响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Matery 主题详细配置教程">
+<meta property="og:url" content="https://blog.licardo.cn/posts/f1670866/index.html">
+<meta property="og:site_name" content="Licardo">
+<meta property="og:description" content="Matery 主题详细配置教程 2019-10-04  转自 Matery 主题官方文档 | 🇺🇸English Document | QQ 交流群: 926552981  这是一个采用 Material Design 和响应式设计的 Hexo 博客主题。  1. 特性 简单漂亮，文章内容美观易读 Material Design 设计 响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/content_vbqo.svg">
+<meta property="article:published_time" content="2019-10-04T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-08T15:12:14.560Z">
+<meta property="article:author" content="Licardo">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Matery">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/content_vbqo.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Matery 主题详细配置教程",
+  "url": "https://blog.licardo.cn/posts/f1670866/",
+  "image": "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/content_vbqo.svg",
+  "datePublished": "2019-10-04T00:00:00.000Z",
+  "dateModified": "2025-11-08T15:12:14.560Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Licardo",
+      "url": "https://blog.licardo.cn"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/favicon.ico"><link rel="canonical" href="https://blog.licardo.cn/posts/f1670866/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?335d5a7787e03ba0532c58a4ef332c24";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Matery 主题详细配置教程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/content_vbqo.svg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" alt="Logo"><span class="site-name">Licardo</span></a><a class="nav-page-title" href="/"><span class="site-name">Matery 主题详细配置教程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Matery 主题详细配置教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-10-04T00:00:00.000Z" title="发表于 2019-10-04 00:00:00">2019-10-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-08T15:12:14.560Z" title="更新于 2025-11-08 15:12:14">2025-11-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Hexo/">Hexo</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="Matery-主题详细配置教程"><a href="#Matery-主题详细配置教程" class="headerlink" title="Matery 主题详细配置教程"></a>Matery 主题详细配置教程</h1><blockquote>
+<p>2019-10-04</p>
+</blockquote>
+<p>转自 <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">Matery 主题官方文档</a> | <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README.md">🇺🇸English Document</a> | QQ 交流群: <a target="_blank" rel="noopener" href="https://jq.qq.com/?_wv=1027&k=5zMDYHT"><code>926552981</code></a></p>
+<blockquote>
+<p>这是一个采用 <code>Material Design</code> 和响应式设计的 Hexo 博客主题。</p>
+</blockquote>
+<h2 id="1-特性"><a href="#1-特性" class="headerlink" title="1. 特性"></a>1. 特性</h2><ul>
+<li>简单漂亮，文章内容美观易读</li>
+<li><a target="_blank" rel="noopener" href="https://material.io/">Material Design</a> 设计</li>
+<li>响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</li>
+<li>首页轮播文章及每天动态切换 <code>Banner</code> 图片</li>
+<li>瀑布流式的博客文章列表（文章无特色图片时会有 <code>24</code> 张漂亮的图片代替）</li>
+<li>时间轴式的归档页</li>
+<li><strong>词云</strong>的标签页和<strong>雷达图</strong>的分类页</li>
+<li>丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）</li>
+<li>可自定义的数据的友情链接页面</li>
+<li>支持文章置顶和文章打赏</li>
+<li>支持 <code>MathJax</code></li>
+<li><code>TOC</code> 目录</li>
+<li>可设置复制文章内容时追加版权信息</li>
+<li>可设置阅读文章时做密码验证</li>
+<li><a target="_blank" rel="noopener" href="https://gitalk.github.io/">Gitalk</a>、<a target="_blank" rel="noopener" href="https://imsun.github.io/gitment/">Gitment</a>、<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a> 和 <a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a> 评论模块（推荐使用 <code>Gitalk</code>）</li>
+<li>集成了<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>、谷歌分析（<code>Google Analytics</code>）和文章字数统计等功能</li>
+<li>支持在首页的音乐播放和视频播放功能</li>
+<li>支持<code>emoji</code>表情，用<code>markdown emoji</code>语法书写直接生成对应的能<strong>跳跃</strong>的表情。</li>
+<li>支持 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a>、<a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a> 在线聊天功能。</li>
+</ul>
+<h2 id="2-贡献者"><a href="#2-贡献者" class="headerlink" title="2. 贡献者"></a>2. 贡献者</h2><p>感谢下面列出的贡献者，没有他们，hexo-theme-matery 不会这么完美。</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/HarborZeng">@HarborZeng</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shw2018">@shw2018</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/L1cardo">@L1cardo</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Five-great">@Five-great</a></li>
+</ul>
+<h2 id="3-下载"><a href="#3-下载" class="headerlink" title="3. 下载"></a>3. 下载</h2><p>当你看到这里的时候，应该已经有一个自己的 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a> 博客了。如果还没有的话，不妨使用 Hexo 和 <a target="_blank" rel="noopener" href="https://www.appinn.com/markdown/">Markdown</a> 来写博客和文章。</p>
+<p>点击 <a target="_blank" rel="noopener" href="https://codeload.github.com/blinkfox/hexo-theme-matery/zip/master">这里</a> 下载 <code>master</code> 分支的最新稳定版的代码，解压缩后，将 <code>hexo-theme-matery</code> 的文件夹复制到你 Hexo 的 <code>themes</code> 文件夹中即可。</p>
+<p>当然你也可以在你的 <code>themes</code> 文件夹下使用 <code>Git clone</code> 命令来下载:</p>
+<ul>
+<li>请在稳定版与最新版中二选一</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/blinkfox/hexo-theme-matery.git            <span class="comment"># 稳定版</span></span><br><span class="line">git <span class="built_in">clone</span> -b develop https://github.com/blinkfox/hexo-theme-matery.git <span class="comment"># 最新版</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-配置"><a href="#4-配置" class="headerlink" title="4. 配置"></a>4. 配置</h2><h3 id="4-1-切换主题"><a href="#4-1-切换主题" class="headerlink" title="4.1. 切换主题"></a>4.1. 切换主题</h3><p>修改 Hexo 根目录下的 <code>_config.yml</code> 的  <code>theme</code> 的值：<code>theme: hexo-theme-matery</code></p>
+<h4 id="4-1-1-config-yml-文件的其它修改建议"><a href="#4-1-1-config-yml-文件的其它修改建议" class="headerlink" title="4.1.1. _config.yml 文件的其它修改建议:"></a>4.1.1. <code>_config.yml</code> 文件的其它修改建议:</h4><ul>
+<li>请修改 <code>_config.yml</code> 的 <code>url</code> 的值为你的网站主 <code>URL</code>（如：<code>http://xxx.github.io</code>）。</li>
+<li>建议修改两个 <code>per_page</code> 的分页条数值为 <code>6</code> 的倍数，如：<code>12</code>、<code>18</code> 等，这样文章列表在各个屏幕下都能较好的显示。</li>
+<li>如果你是中文用户，则建议修改 <code>language</code> 的值为 <code>zh-CN</code>。</li>
+</ul>
+<h3 id="4-2-新建分类-categories-页"><a href="#4-2-新建分类-categories-页" class="headerlink" title="4.2. 新建分类 categories 页"></a>4.2. 新建分类 categories 页</h3><p><code>categories</code> 页是用来展示所有分类的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>categories/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;categories&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/categories/index.md</code>，至少需要以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-09-30 17:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;categories&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;categories&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-新建标签-tags-页"><a href="#4-3-新建标签-tags-页" class="headerlink" title="4.3. 新建标签 tags 页"></a>4.3. 新建标签 tags 页</h3><p><code>tags</code> 页是用来展示所有标签的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>tags/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;tags&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/tags/index.md</code>，至少需要以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-09-30 18:23:38</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;tags&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-新建关于我-about-页"><a href="#4-4-新建关于我-about-页" class="headerlink" title="4.4. 新建关于我 about 页"></a>4.4. 新建关于我 about 页</h3><p><code>about</code> 页是用来展示<strong>关于我和我的博客</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>about/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;about&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/about/index.md</code>，至少需要以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-09-30 17:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;about&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5-新建留言板-contact-页（可选的）"><a href="#4-5-新建留言板-contact-页（可选的）" class="headerlink" title="4.5. 新建留言板 contact 页（可选的）"></a>4.5. 新建留言板 contact 页（可选的）</h3><p><code>contact</code> 页是用来展示<strong>留言板</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>contact/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;contact&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/contact/index.md</code>，至少需要以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">contact</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-09-30 17:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;contact&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;contact&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注</strong>：本留言板功能依赖于第三方评论系统，请<strong>激活</strong>你的评论系统才有效果。并且在主题的 <code>_config.yml</code> 文件中，第 <code>19</code> 至 <code>21</code> 行的“<strong>菜单</strong>”配置，取消关于留言板的注释即可。</p>
+</blockquote>
+<h3 id="4-6-新建友情连接-friends-页（可选的）"><a href="#4-6-新建友情连接-friends-页（可选的）" class="headerlink" title="4.6. 新建友情连接 friends 页（可选的）"></a>4.6. 新建友情连接 friends 页（可选的）</h3><p><code>friends</code> 页是用来展示<strong>友情连接</strong>信息的页面，如果在你的博客 <code>source</code> 目录下还没有 <code>friends/index.md</code> 文件，那么你就需要新建一个，命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page <span class="string">&quot;friends&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑你刚刚新建的页面文件 <code>/source/friends/index.md</code>，至少需要以下内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">friends</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-12-12 21:25:30</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">&quot;friends&quot;</span></span><br><span class="line"><span class="attr">layout:</span> <span class="string">&quot;friends&quot;</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<p>同时，在你的博客 <code>source</code> 目录下新建 <code>_data</code> 目录，在 <code>_data</code> 目录中新建 <code>friends.json</code> 文件，文件内容如下所示：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;avatar&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://image.luokangyuan.com/1_qq_27922023.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;码酱&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;introduction&quot;</span><span class="punctuation">:</span> <span class="string">&quot;我不是大佬，只是在追寻大佬的脚步&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://luokangyuan.com/&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;前去学习&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;avatar&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://image.luokangyuan.com/4027734.jpeg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;闪烁之狐&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;introduction&quot;</span><span class="punctuation">:</span> <span class="string">&quot;编程界大佬，技术牛，人还特别好，不懂的都可以请教大佬&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://blinkfox.github.io/&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;前去学习&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;avatar&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://image.luokangyuan.com/avatar.jpg&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;ja_rome&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;introduction&quot;</span><span class="punctuation">:</span> <span class="string">&quot;平凡的脚步也可以走出伟大的行程&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://me.csdn.net/jlh912008548&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;前去学习&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-7-菜单导航配置"><a href="#4-7-菜单导航配置" class="headerlink" title="4.7. 菜单导航配置"></a>4.7. 菜单导航配置</h3><h4 id="4-7-1-配置基本菜单导航的名称、路径url和图标icon"><a href="#4-7-1-配置基本菜单导航的名称、路径url和图标icon" class="headerlink" title="4.7.1. 配置基本菜单导航的名称、路径url和图标icon."></a>4.7.1. 配置基本菜单导航的名称、路径url和图标icon.</h4><ol>
+<li><p>菜单导航名称可以是中文也可以是英文(如：<code>Index</code>或<code>主页</code>)</p>
+</li>
+<li><p>图标icon 可以在<a target="_blank" rel="noopener" href="https://fontawesome.com/icons">Font Awesome</a> 中查找</p>
+</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">Index:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">Tags:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/tags</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">Categories:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/categories</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-bookmark</span></span><br><span class="line">  <span class="attr">Archives:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">About:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/about</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-user-circle</span></span><br><span class="line">  <span class="attr">Friends:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/friends</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-address-book</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-7-2-二级菜单配置方法"><a href="#4-7-2-二级菜单配置方法" class="headerlink" title="4.7.2. 二级菜单配置方法"></a>4.7.2. 二级菜单配置方法</h4><p>如果你需要二级菜单则可以在原基本菜单导航的基础上如下操作</p>
+<ol>
+<li>在需要添加二级菜单的一级菜单下添加<code>children</code>关键字(如:<code>About</code>菜单下添加<code>children</code>)     </li>
+<li>在<code>children</code>下创建二级菜单的 名称name,路径url和图标icon.      </li>
+<li>注意每个二级菜单模块前要加 <code>-</code>.     </li>
+<li>注意缩进格式</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line">  <span class="attr">Index:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-home</span></span><br><span class="line">  <span class="attr">Tags:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/tags</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-tags</span></span><br><span class="line">  <span class="attr">Categories:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/categories</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-bookmark</span></span><br><span class="line">  <span class="attr">Archives:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/archives</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-archive</span></span><br><span class="line">  <span class="attr">About:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/about</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-user-circle-o</span></span><br><span class="line">  <span class="attr">Friends:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">/friends</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-address-book</span></span><br><span class="line">  <span class="attr">Medias:</span></span><br><span class="line">    <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-list</span></span><br><span class="line">    <span class="attr">children:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Musics</span></span><br><span class="line">        <span class="attr">url:</span> <span class="string">/musics</span></span><br><span class="line">        <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-music</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Movies</span></span><br><span class="line">        <span class="attr">url:</span> <span class="string">/movies</span></span><br><span class="line">        <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-film</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Books</span></span><br><span class="line">        <span class="attr">url:</span> <span class="string">/books</span></span><br><span class="line">        <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-book</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Galleries</span></span><br><span class="line">        <span class="attr">url:</span> <span class="string">/galleries</span></span><br><span class="line">        <span class="attr">icon:</span> <span class="string">fas</span> <span class="string">fa-image</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-8-添加emoji表情支持（可选的）"><a href="#4-8-添加emoji表情支持（可选的）" class="headerlink" title="4.8. 添加emoji表情支持（可选的）"></a>4.8. 添加emoji表情支持（可选的）</h3><p>本主题新增了对<code>emoji</code>表情的支持，使用到了 <a target="_blank" rel="noopener" href="https://npm.taobao.org/package/hexo-filter-github-emojis">hexo-filter-github-emojis</a> 的 Hexo 插件来支持 <code>emoji</code>表情的生成，把对应的<code>markdown emoji</code>语法（<code>::</code>,例如：<code>:smile:</code>）转变成会跳跃的<code>emoji</code>表情，安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-filter-github-emojis --save</span><br></pre></td></tr></table></figure>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">githubEmojis:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">className:</span> <span class="string">github-emoji</span></span><br><span class="line">  <span class="attr">inject:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">styles:</span></span><br><span class="line">  <span class="attr">customEmojis:</span></span><br></pre></td></tr></table></figure>
+
+<p>执行 <code>hexo clean &amp;&amp; hexo g</code> 重新生成博客文件，然后就可以在文章中对应位置看到你用<code>emoji</code>语法写的表情了。</p>
+<h3 id="4-9-代码高亮"><a href="#4-9-代码高亮" class="headerlink" title="4.9. 代码高亮"></a>4.9. 代码高亮</h3><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了 <a target="_blank" rel="noopener" href="https://github.com/ele828/hexo-prism-plugin">hexo-prism-plugin</a> 的 Hexo 插件来做代码高亮，安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -S hexo-prism-plugin</span><br></pre></td></tr></table></figure>
+
+<p>然后，修改 Hexo 根目录下 <code>_config.yml</code> 文件中 <code>highlight.enable</code> 的值为 <code>false</code>，并新增 <code>prism</code> 插件相关的配置，主要配置如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">prism_plugin:</span></span><br><span class="line">  <span class="attr">mode:</span> <span class="string">&#x27;preprocess&#x27;</span>    <span class="comment"># realtime/preprocess</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">&#x27;tomorrow&#x27;</span></span><br><span class="line">  <span class="attr">line_number:</span> <span class="literal">false</span>    <span class="comment"># default false</span></span><br><span class="line">  <span class="attr">custom_css:</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-10-搜索"><a href="#4-10-搜索" class="headerlink" title="4.10. 搜索"></a>4.10. 搜索</h3><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-search --save</span><br></pre></td></tr></table></figure>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-11-中文链接转拼音（可选的）"><a href="#4-11-中文链接转拼音（可选的）" class="headerlink" title="4.11. 中文链接转拼音（可选的）"></a>4.11. 中文链接转拼音（可选的）</h3><p>如果你的文章名称是中文的，那么 Hexo 默认生成的永久链接也会有中文，这样不利于 <code>SEO</code>，且 <code>gitment</code> 评论对中文链接也不支持。我们可以用 <a target="_blank" rel="noopener" href="https://github.com/viko16/hexo-permalink-pinyin">hexo-permalink-pinyin</a> Hexo 插件使在生成文章时生成中文拼音的永久链接。</p>
+<p>安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-permalink-pinyin --save</span><br></pre></td></tr></table></figure>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">permalink_pinyin:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">separator:</span> <span class="string">&#x27;-&#x27;</span> <span class="comment"># default: &#x27;-&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注</strong>：除了此插件外，<a target="_blank" rel="noopener" href="https://github.com/rozbo/hexo-abbrlink">hexo-abbrlink</a> 插件也可以生成非中文的链接。</p>
+</blockquote>
+<h3 id="4-12-文章字数统计插件（可选的）"><a href="#4-12-文章字数统计插件（可选的）" class="headerlink" title="4.12. 文章字数统计插件（可选的）"></a>4.12. 文章字数统计插件（可选的）</h3><p>如果你想要在文章中显示文章字数、阅读时长信息，可以安装 <a target="_blank" rel="noopener" href="https://github.com/willin/hexo-wordcount">hexo-wordcount</a>插件。</p>
+<p>安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i --save hexo-wordcount</span><br></pre></td></tr></table></figure>
+
+<p>然后只需在本主题下的 <code>_config.yml</code> 文件中，激活以下配置项即可：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">wordCount:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">false</span> <span class="comment"># 将这个值设置为 true 即可.</span></span><br><span class="line">  <span class="attr">postWordCount:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">min2read:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">totalCount:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-13-添加-RSS-订阅支持（可选的）"><a href="#4-13-添加-RSS-订阅支持（可选的）" class="headerlink" title="4.13. 添加 RSS 订阅支持（可选的）"></a>4.13. 添加 RSS 订阅支持（可选的）</h3><p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-generator-feed">hexo-generator-feed</a> 的 Hexo 插件来做 <code>RSS</code>，安装命令如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save</span><br></pre></td></tr></table></figure>
+
+<p>在 Hexo 根目录下的 <code>_config.yml</code> 文件中，新增以下的配置项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">feed:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">atom</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">atom.xml</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">20</span></span><br><span class="line">  <span class="attr">hub:</span></span><br><span class="line">  <span class="attr">content:</span></span><br><span class="line">  <span class="attr">content_limit:</span> <span class="number">140</span></span><br><span class="line">  <span class="attr">content_limit_delim:</span> <span class="string">&#x27; &#x27;</span></span><br><span class="line">  <span class="attr">order_by:</span> <span class="string">-date</span></span><br></pre></td></tr></table></figure>
+
+<p>执行 <code>hexo clean &amp;&amp; hexo g</code> 重新生成博客文件，然后在 <code>public</code> 文件夹中即可看到 <code>atom.xml</code> 文件，说明你已经安装成功了。</p>
+<h3 id="4-14-添加-DaoVoice-在线聊天功能（可选的）"><a href="#4-14-添加-DaoVoice-在线聊天功能（可选的）" class="headerlink" title="4.14. 添加 DaoVoice 在线聊天功能（可选的）"></a>4.14. 添加 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a> 在线聊天功能（可选的）</h3><p>前往 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a> 官网注册并且获取 <code>app_id</code>，并将 <code>app_id</code> 填入主题的 <code>_config.yml</code> 文件中。</p>
+<h3 id="4-15-添加-Tidio-在线聊天功能（可选的）"><a href="#4-15-添加-Tidio-在线聊天功能（可选的）" class="headerlink" title="4.15. 添加 Tidio 在线聊天功能（可选的）"></a>4.15. 添加 <a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a> 在线聊天功能（可选的）</h3><p>前往 <a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a> 官网注册并且获取 <code>Public Key</code>，并将 <code>Public Key</code> 填入主题的 <code>_config.yml</code> 文件中。</p>
+<h3 id="4-16-修改页脚"><a href="#4-16-修改页脚" class="headerlink" title="4.16. 修改页脚"></a>4.16. 修改页脚</h3><p>页脚信息可能需要做定制化修改，而且它不便于做成配置信息，所以可能需要你自己去再修改和加工。修改的地方在主题文件的 <code>/layout/_partial/footer.ejs</code> 文件中，包括站点、使用的主题、访问量等。</p>
+<h3 id="4-17-修改社交链接"><a href="#4-17-修改社交链接" class="headerlink" title="4.17. 修改社交链接"></a>4.17. 修改社交链接</h3><p>在主题的 <code>_config.yml</code> 文件中，默认支持 <code>QQ</code>、<code>GitHub</code> 和邮箱等的配置，你可以在主题文件的 <code>/layout/_partial/social-link.ejs</code> 文件中，新增、修改你需要的社交链接地址，增加链接可参考如下代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if (theme.socialLink.github) &#123; %&gt;</span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;&lt;%= theme.socialLink.github %&gt;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tooltipped&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span> <span class="attr">data-tooltip</span>=<span class="string">&quot;访问我的GitHub&quot;</span> <span class="attr">data-position</span>=<span class="string">&quot;top&quot;</span> <span class="attr">data-delay</span>=<span class="string">&quot;50&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">&quot;fab fa-github&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中，社交图标（如：<code>fa-github</code>）你可以在 <a target="_blank" rel="noopener" href="https://fontawesome.com/icons">Font Awesome</a> 中搜索找到。以下是常用社交图标的标识，供你参考：</p>
+<ul>
+<li>Facebook: <code>fab fa-facebook</code></li>
+<li>Twitter: <code>fab fa-twitter</code></li>
+<li>Google-plus: <code>fab fa-google-plus</code></li>
+<li>Linkedin: <code>fab fa-linkedin</code></li>
+<li>Tumblr: <code>fab fa-tumblr</code></li>
+<li>Medium: <code>fab fa-medium</code></li>
+<li>Slack: <code>fab fa-slack</code></li>
+<li>Sina Weibo: <code>fab fa-weibo</code></li>
+<li>Wechat: <code>fab fa-weixin</code></li>
+<li>QQ: <code>fab fa-qq</code></li>
+<li>Zhihu: <code>fab fa-zhihu</code></li>
+</ul>
+<blockquote>
+<p><strong>注意</strong>: 本主题中使用的 <code>Font Awesome</code> 版本为 <code>5.11.0</code>。</p>
+</blockquote>
+<h3 id="4-18-修改打赏的二维码图片"><a href="#4-18-修改打赏的二维码图片" class="headerlink" title="4.18. 修改打赏的二维码图片"></a>4.18. 修改打赏的二维码图片</h3><p>在主题文件的 <code>source/medias/reward</code> 文件中，你可以替换成你的的微信和支付宝的打赏二维码图片。</p>
+<h3 id="4-19-配置音乐播放器（可选的）"><a href="#4-19-配置音乐播放器（可选的）" class="headerlink" title="4.19. 配置音乐播放器（可选的）"></a>4.19. 配置音乐播放器（可选的）</h3><p>要支持音乐播放，就必须开启音乐的播放配置和音乐数据的文件。</p>
+<p>首先，在你的博客 <code>source</code> 目录下的 <code>_data</code> 目录（没有的话就新建一个）中新建 <code>musics.json</code> 文件，文件内容如下所示：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">[</span><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;五月雨变奏电音&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;AnimeVibe&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://xxx.com/music1.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://xxx.com/music-cover1.png&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Take me hand&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;DAISHI DANCE,Cecile Corbel&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/medias/music/music2.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/medias/music/cover2.png&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span> <span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Shape of You&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;artist&quot;</span><span class="punctuation">:</span> <span class="string">&quot;J.Fla&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://xxx.com/music3.mp3&quot;</span><span class="punctuation">,</span></span><br><span class="line">	<span class="attr">&quot;cover&quot;</span><span class="punctuation">:</span> <span class="string">&quot;http://xxx.com/music-cover3.png&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注</strong>：以上 JSON 中的属性：<code>name</code>、<code>artist</code>、<code>url</code>、<code>cover</code> 分别表示音乐的名称、作者、音乐文件地址、音乐封面。</p>
+</blockquote>
+<p>然后，在主题的 <code>_config.yml</code> 配置文件中激活配置即可：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 是否在首页显示音乐.</span></span><br><span class="line"><span class="attr">music:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="attr">showTitle:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">title:</span> <span class="string">听听音乐</span></span><br><span class="line">  <span class="attr">fixed:</span> <span class="literal">false</span> <span class="comment"># 是否开启吸底模式</span></span><br><span class="line">  <span class="attr">autoplay:</span> <span class="literal">false</span> <span class="comment"># 是否自动播放</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">&#x27;#42b983&#x27;</span></span><br><span class="line">  <span class="attr">loop:</span> <span class="string">&#x27;all&#x27;</span> <span class="comment"># 音频循环播放, 可选值: &#x27;all&#x27;, &#x27;one&#x27;, &#x27;none&#x27;</span></span><br><span class="line">  <span class="attr">order:</span> <span class="string">&#x27;list&#x27;</span> <span class="comment"># 音频循环顺序, 可选值: &#x27;list&#x27;, &#x27;random&#x27;</span></span><br><span class="line">  <span class="attr">preload:</span> <span class="string">&#x27;auto&#x27;</span> <span class="comment"># 预加载，可选值: &#x27;none&#x27;, &#x27;metadata&#x27;, &#x27;auto&#x27;</span></span><br><span class="line">  <span class="attr">volume:</span> <span class="number">0.7</span> <span class="comment"># 默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效</span></span><br><span class="line">  <span class="attr">listFolded:</span> <span class="literal">false</span> <span class="comment"># 列表默认折叠</span></span><br><span class="line">  <span class="attr">listMaxHeight:</span> <span class="comment"># 列表最大高度</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="5-文章-Front-matter-介绍"><a href="#5-文章-Front-matter-介绍" class="headerlink" title="5. 文章 Front-matter 介绍"></a>5. 文章 Front-matter 介绍</h2><h3 id="5-1-Front-matter-选项详解"><a href="#5-1-Front-matter-选项详解" class="headerlink" title="5.1. Front-matter 选项详解"></a>5.1. Front-matter 选项详解</h3><p><code>Front-matter</code> 选项中的所有内容均为<strong>非必填</strong>的。但我仍然建议至少填写 <code>title</code> 和 <code>date</code> 的值。</p>
+<table>
+<thead>
+<tr>
+<th>配置选项</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td><code>Markdown</code> 的文件标题</td>
+<td>文章标题，强烈建议填写此选项</td>
+</tr>
+<tr>
+<td>date</td>
+<td>文件创建时的日期时间</td>
+<td>发布时间，强烈建议填写此选项，且最好保证全局唯一</td>
+</tr>
+<tr>
+<td>author</td>
+<td>根 <code>_config.yml</code> 中的 <code>author</code></td>
+<td>文章作者</td>
+</tr>
+<tr>
+<td>img</td>
+<td><code>featureImages</code> 中的某个值</td>
+<td>文章特征图，推荐使用图床(腾讯云、七牛云、又拍云等)来做图片的路径.如: <code>http://xxx.com/xxx.jpg</code></td>
+</tr>
+<tr>
+<td>top</td>
+<td><code>true</code></td>
+<td>推荐文章（文章是否置顶），如果 <code>top</code> 值为 <code>true</code>，则会作为首页推荐文章</td>
+</tr>
+<tr>
+<td>cover</td>
+<td><code>false</code></td>
+<td><code>v1.0.2</code>版本新增，表示该文章是否需要加入到首页轮播封面中</td>
+</tr>
+<tr>
+<td>coverImg</td>
+<td>无</td>
+<td><code>v1.0.2</code>版本新增，表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片</td>
+</tr>
+<tr>
+<td>password</td>
+<td>无</td>
+<td>文章阅读密码，如果要对文章设置阅读验证密码的话，就可以设置 <code>password</code> 的值，该值必须是用 <code>SHA256</code> 加密后的密码，防止被他人识破。前提是在主题的 <code>config.yml</code> 中激活了 <code>verifyPassword</code> 选项</td>
+</tr>
+<tr>
+<td>toc</td>
+<td><code>true</code></td>
+<td>是否开启 TOC，可以针对某篇文章单独关闭 TOC 的功能。前提是在主题的 <code>config.yml</code> 中激活了 <code>toc</code> 选项</td>
+</tr>
+<tr>
+<td>mathjax</td>
+<td><code>false</code></td>
+<td>是否开启数学公式支持 ，本文章是否开启 <code>mathjax</code>，且需要在主题的 <code>_config.yml</code> 文件中也需要开启才行</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>无</td>
+<td>文章摘要，自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</td>
+</tr>
+<tr>
+<td>categories</td>
+<td>无</td>
+<td>文章分类，本主题的分类表示宏观上大的分类，只建议一篇文章一个分类</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>无</td>
+<td>文章标签，一篇文章可以多个标签</td>
+</tr>
+<tr>
+<td>reprintPolicy</td>
+<td>cc_by</td>
+<td>文章转载规则， 可以是 cc_by, cc_by_nd, cc_by_sa, cc_by_nc, cc_by_nc_nd, cc_by_nc_sa, cc0, noreprint 或 pay 中的一个</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>注意</strong>:</p>
+<ol>
+<li>如果 <code>img</code> 属性不填写的话，文章特色图会根据文章标题的 <code>hashcode</code> 的值取余，然后选取主题中对应的特色图片，从而达到让所有文章都的特色图<strong>各有特色</strong>。</li>
+<li><code>date</code> 的值尽量保证每篇文章是唯一的，因为本主题中 <code>Gitalk</code> 和 <code>Gitment</code> 识别 <code>id</code> 是通过 <code>date</code> 的值来作为唯一标识的。</li>
+<li>如果要对文章设置阅读验证密码的功能，不仅要在 Front-matter 中设置采用了 SHA256 加密的 password 的值，还需要在主题的 <code>_config.yml</code> 中激活了配置。有些在线的 SHA256 加密的地址，可供你使用：<a target="_blank" rel="noopener" href="http://tool.oschina.net/encrypt?type=2">开源中国在线工具</a>、<a target="_blank" rel="noopener" href="http://encode.chahuo.com/">chahuo</a>、<a target="_blank" rel="noopener" href="http://tool.chinaz.com/tools/hash.aspx">站长工具</a>。</li>
+<li>您可以在文章md文件的 front-matter 中指定 reprintPolicy 来给单个文章配置转载规则</li>
+</ol>
+</blockquote>
+<p>以下为文章的 <code>Front-matter</code> 示例。</p>
+<h3 id="5-2-最简示例"><a href="#5-2-最简示例" class="headerlink" title="5.2. 最简示例"></a>5.2. 最简示例</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">typora-vue-theme主题介绍</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-09-07 09:25:00</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="5-3-最全示例"><a href="#5-3-最全示例" class="headerlink" title="5.3. 最全示例"></a>5.3. 最全示例</h3><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">typora-vue-theme主题介绍</span></span><br><span class="line"><span class="attr">date:</span> <span class="number">2018-09-07 09:25:00</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">赵奇</span></span><br><span class="line"><span class="attr">img:</span> <span class="string">/source/images/xxx.jpg</span></span><br><span class="line"><span class="attr">top:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">cover:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">coverImg:</span> <span class="string">/images/1.jpg</span></span><br><span class="line"><span class="attr">password:</span> <span class="string">8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92</span></span><br><span class="line"><span class="attr">toc:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">mathjax:</span> <span class="literal">false</span></span><br><span class="line"><span class="attr">summary:</span> <span class="string">这是你自定义的文章摘要内容，如果这个属性有值，文章卡片摘要就显示这段文字，否则程序会自动截取文章的部分内容作为摘要</span></span><br><span class="line"><span class="attr">categories:</span> <span class="string">Markdown</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Typora</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">Markdown</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="6-效果截图"><a href="#6-效果截图" class="headerlink" title="6. 效果截图"></a>6. 效果截图</h2><p><img src="http://static.blinkfox.com/matery-20181202-1.png" alt="首页"></p>
+<p><img src="http://static.blinkfox.com/matery-20181202-2.png" alt="首页推荐文章"></p>
+<p><img src="http://static.blinkfox.com/matery-20181202-3.png" alt="首页文章列表"></p>
+<p><img src="http://static.blinkfox.com/matery-20181202-7.png" alt="首页文章列表"></p>
+<p><img src="http://static.blinkfox.com/matery-20181202-8.png" alt="首页文章列表"></p>
+<h2 id="7-自定制修改"><a href="#7-自定制修改" class="headerlink" title="7. 自定制修改"></a>7. 自定制修改</h2><p>在本主题的 <code>_config.yml</code> 中可以修改部分自定义信息，有以下几个部分：</p>
+<ul>
+<li>菜单</li>
+<li>我的梦想</li>
+<li>首页的音乐播放器和视频播放器配置</li>
+<li>是否显示推荐文章名称和按钮配置</li>
+<li><code>favicon</code> 和 <code>Logo</code></li>
+<li>个人信息</li>
+<li>TOC 目录</li>
+<li>文章打赏信息</li>
+<li>复制文章内容时追加版权信息</li>
+<li>MathJax</li>
+<li>文章字数统计、阅读时长</li>
+<li>点击页面的’爱心’效果</li>
+<li>我的项目</li>
+<li>我的技能</li>
+<li>我的相册</li>
+<li><code>Gitalk</code>、<code>Gitment</code>、<code>Valine</code> 和 <code>disqus</code> 评论配置</li>
+<li><a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>和谷歌分析（<code>Google Analytics</code>）</li>
+<li>默认特色图的集合。当文章没有设置特色图时，本主题会根据文章标题的 <code>hashcode</code> 值取余，来选择展示对应的特色图</li>
+</ul>
+<p><strong>我认为个人博客应该都有自己的风格和特色</strong>。如果本主题中的诸多功能和主题色彩你不满意，可以在主题中自定义修改，很多更自由的功能和细节点的修改难以在主题的 <code>_config.yml</code> 中完成，需要修改源代码才来完成。以下列出了可能对你有用的地方：</p>
+<h3 id="7-1-修改主题颜色"><a href="#7-1-修改主题颜色" class="headerlink" title="7.1. 修改主题颜色"></a>7.1. 修改主题颜色</h3><p>在主题文件的 <code>/source/css/matery.css</code> 文件中，搜索 <code>.bg-color</code> 来修改背景颜色：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 整体背景颜色，包括导航、移动端的导航、页尾、标签页等的背景颜色. */</span></span><br><span class="line"><span class="selector-class">.bg-color</span> &#123;</span><br><span class="line">    <span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to right, <span class="number">#4cbf30</span> <span class="number">0%</span>, <span class="number">#0f9d58</span> <span class="number">100%</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@-webkit-keyframes</span> rainbow &#123;</span><br><span class="line">   <span class="comment">/* 动态切换背景颜色. */</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@keyframes</span> rainbow &#123;</span><br><span class="line">    <span class="comment">/* 动态切换背景颜色. */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-2-修改-banner-图和文章特色图"><a href="#7-2-修改-banner-图和文章特色图" class="headerlink" title="7.2. 修改 banner 图和文章特色图"></a>7.2. 修改 banner 图和文章特色图</h3><p>你可以直接在 <code>/source/medias/banner</code> 文件夹中更换你喜欢的 <code>banner</code> 图片，主题代码中是每天动态切换一张，只需 <code>7</code> 张即可。如果你会 <code>JavaScript</code> 代码，可以修改成你自己喜欢切换逻辑，如：随机切换等，<code>banner</code> 切换的代码位置在 <code>/layout/_partial/bg-cover-content.ejs</code> 文件的 <code>&lt;script&gt;&lt;/script&gt;</code> 代码中：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">&#x27;.bg-cover&#x27;</span>).<span class="title function_">css</span>(<span class="string">&#x27;background-image&#x27;</span>, <span class="string">&#x27;url(/medias/banner/&#x27;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getDay</span>() + <span class="string">&#x27;.jpg)&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>/source/medias/featureimages</code> 文件夹中默认有 24 张特色图片，你可以再增加或者减少，并需要在 <code>_config.yml</code> 做同步修改。</p>
+<h2 id="8-版本记录"><a href="#8-版本记录" class="headerlink" title="8. 版本记录"></a>8. 版本记录</h2><ul>
+<li>v1.1.0<ul>
+<li>新增了 <code>emoji</code> 的支持；</li>
+<li>新增了站点运行时间统计及配置；</li>
+<li>新增了留言板的功能,默认未开启；</li>
+<li>新增了 <code>Twitter</code>、<code>Facebook</code>、知乎的社交链接；</li>
+<li>更新了 <code>Valine</code> 的版本为最新版；</li>
+<li>其他小细节的修改；</li>
+</ul>
+</li>
+<li>v1.0.4<ul>
+<li>新增了能为每篇文章都自定义转载规则的功能；</li>
+<li>修复上一页、下一页的自定义 <code>summary</code> 不显示的问题；</li>
+<li>修复了友情链接显示错位的问题，改为了瀑布流的布局方式；</li>
+<li>其他小细节 bug 的修改；</li>
+</ul>
+</li>
+<li>v1.0.3<ul>
+<li>新增了<code>TOC</code>展开、收缩的按钮和相关配置，默认显示此按钮；</li>
+</ul>
+</li>
+<li>v1.0.2<ul>
+<li>升级了 <a target="_blank" rel="noopener" href="https://materializecss.com/">Materialize</a> 框架版本为<code>1.0.0</code>，重构和修改了升级过程中的部分文件或问题；</li>
+<li>新增了首页封面的全屏轮播特效，可以将更重要的文章设置到首页轮播中；</li>
+<li>修复首页第一个按钮是中文的问题</li>
+<li>修复了 iPhone 上点击搜索输入获取焦点的问题；</li>
+<li>修复了 iPhone 上输入框获取焦点后页面放大的问题；</li>
+<li>修复一些文章或 UI 显示问题；</li>
+</ul>
+</li>
+<li>v1.0.1<ul>
+<li>调整 <code>css</code>、<code>js</code> 的文件请求路径在主题的<code>_config.yml</code>中配置，便于你更快捷的配置自己的 CDN；</li>
+<li>新增代码是否折行为可配置，默认为折行；</li>
+<li>默认激活 <code>TOC</code> 功能，并新增为某篇文章关闭 <code>TOC</code> 的 <code>Front-matter</code> 配置选项；</li>
+<li>修复文章滚动时，高亮的目录选项不准确的问题；</li>
+<li><code>IOS</code>下移除搜索框自动获得焦点属性，防止自动获得焦点后导致视图上移；</li>
+</ul>
+</li>
+<li>v1.0.0<ul>
+<li>新增了所有基础功能；</li>
+</ul>
+</li>
+</ul>
+<div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.licardo.cn">Licardo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.licardo.cn/posts/f1670866/">https://blog.licardo.cn/posts/f1670866/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.licardo.cn" target="_blank">Licardo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/Matery/">Matery</a></div><div class="post-share"><div class="social-share" data-image="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/content_vbqo.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/262d839/" title="《老男孩》吉他谱"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/compose_music_ovo2.svg" onerror="onerror=null;src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">《老男孩》吉他谱</div></div><div class="info-2"><div class="info-item-1">《老男孩》吉他谱 2019-10-07  《老男孩》这首经典的歌曲只要是在21世纪有过青春的人都不会陌生，而《老男孩》这首曲子也成了学吉他的人必会弹得一手曲子。 《老男孩》有指弹版，但是我要分享的是和弦版的谱子。不知道为啥，我个人觉得和弦版比指弹版简单，我是这样认为的。 这个谱子很简单，主要的和弦有 C、G、Am、Em，中间穿插着 F 和弦，还有一两处的 Fm 与 Dm7 和弦。 扫弦手法也很简单，下——下下上 ，下——下下上 ，除了前奏和中间的一小部分，主歌部分一直是这样的。 我自己对着谱子练了三天，就很娴熟了，下次同学聚会就可以大显身手了！           </div></div></div></a><a class="pagination-related" href="/posts/e53fd116/" title="Matery 主题字体替换"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/fashion_blogging_w9ol.svg" onerror="onerror=null;src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">Matery 主题字体替换</div></div><div class="info-2"><div class="info-item-1">Matery 主题字体替换 2019-10-04  群里的一个小伙伴前几天问怎么替换 Matery 主题的字体，想改的更加个性化一点，我当时给他讲了一下方法。后来一想，可能更多的人会需要这个教程，于是今天就抽出时间谢谢这个教程吧。其实不难的，步骤很少。 1. 全局字体自定义 在 Hexo 根目录下的 source 文件夹内创建一个名为 font 的文件夹，即文件夹路径为 /source/font/ ，用来统一存放你要用到的字体  将你要用到的字体放入上述创建的文件夹内，字体名称最好为英文，如 /source/font/myFont.ttf   找到主题文件夹下的 my.css 文件，路径为 /themes/hexo-theme-matery/source/css/my.css ，并将下面的命令填入的文件中 12345678@font-face&#123;    font-family: &#x27;myFont&#x27;;    src: url(&#x27;../font/myFont.ttf&#x27;);&#125;body&#123;    font-family: &...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/105bb8da/" title="Matery 主题安装豆瓣插件"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/wordpress_utxt.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-29</div><div class="info-item-2">Matery 主题安装豆瓣插件</div></div><div class="info-2"><div class="info-item-1">Matery 主题安装豆瓣插件 2019-10-29  前几天发现一个很好用的插件，可以将自己在豆瓣上面的电影、书籍、游戏清单显示在 Hexo 搭建的博客页面上。由于 Matery 也是由 Hexo 驱动的，所以就想的安装来看看。 安装完，配置完，效果是惨不忍睹，可能由于没有适配，画面太美不能想象…… 于是我就自己摸索，看能不能将这个主题适配到 Matery 主题上面，经过一个医学生一下午的坚持不懈，终于将插件进行了适配，准确的来说，是将 Matery 对插件进行了适配，因为插件是别人写的，我改不了😂😂 最终的显示效果就像下面显示的一样，我觉得还是可以的：  下面就详细的教大家最终怎么样才能达到我这个效果吧 1. 安装在博客所在文件夹下执行以下命令行： 1npm install hexo-douban --save  2. 配置2.1. 配置博客 config 文件将下面的配置写入博客的 _config.yml 文件里（⚠️ 注意：不是主题的配置文件） 12345678910111213douban:  user: Licardo  builtin: false  book:...</div></div></div></a><a class="pagination-related" href="/posts/e53fd116/" title="Matery 主题字体替换"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/fashion_blogging_w9ol.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-10-04</div><div class="info-item-2">Matery 主题字体替换</div></div><div class="info-2"><div class="info-item-1">Matery 主题字体替换 2019-10-04  群里的一个小伙伴前几天问怎么替换 Matery 主题的字体，想改的更加个性化一点，我当时给他讲了一下方法。后来一想，可能更多的人会需要这个教程，于是今天就抽出时间谢谢这个教程吧。其实不难的，步骤很少。 1. 全局字体自定义 在 Hexo 根目录下的 source 文件夹内创建一个名为 font 的文件夹，即文件夹路径为 /source/font/ ，用来统一存放你要用到的字体  将你要用到的字体放入上述创建的文件夹内，字体名称最好为英文，如 /source/font/myFont.ttf   找到主题文件夹下的 my.css 文件，路径为 /themes/hexo-theme-matery/source/css/my.css ，并将下面的命令填入的文件中 12345678@font-face&#123;    font-family: &#x27;myFont&#x27;;    src: url(&#x27;../font/myFont.ttf&#x27;);&#125;body&#123;    font-family: &...</div></div></div></a><a class="pagination-related" href="/posts/57ddc7cc/" title="Hexo 搭建个人博客详细教程"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/blogging_vpvv.svg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-09-30</div><div class="info-item-2">Hexo 搭建个人博客详细教程</div></div><div class="info-2"><div class="info-item-1">Hexo 搭建个人博客详细教程 2019-09-30   本文的对象是仅会电脑开机的小伙伴，必须没有一点关于网络和代码的知识。如果你已知道一些知识，可能本文不适合你，因为本文将会是史上最详细的 Hexo 教程。  1. Hexo 介绍本文会详细的介绍如何使用 Hexo 搭建个人博客。Hexo 是基于 Node.js 的快速、简洁且高效的博客框架，拥有超快速度、一键部署、支持 Markdown、丰富的插件等优秀的特性。 以上是官方对于 Hexo 的描述，出了以上的描述，利用 Hexo 搭建个人博客还有以下特点：  全是静态文件，访问速度快  免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台  可以随意绑定自己的域名  数据绝对安全，基于github、coding等的版本管理，想恢复到哪个历史版本都行  博客内容可以轻松打包、转移、发布到其它平台 等等…   1.1 准备工作在使用 Hexo 搭建个人博客之前，你得要做一些准备工作，这些工作是必须的，相当于 Hexo 搭建并且运行的基石，你不能跳过  一个 GitHub 账户（Coding 或者 码云 也可以...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="author-info-name">Licardo</div><div class="author-info-description">喜欢编程的医学生</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/L1cardo"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/L1cardo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:albert.abdilim@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/AlbertAbdilim" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://weibo.com/1935602951" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://space.bilibili.com/7403418" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客, 喜欢请收藏!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Matery-%E4%B8%BB%E9%A2%98%E8%AF%A6%E7%BB%86%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">Matery 主题详细配置教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.</span> <span class="toc-text">1. 特性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E8%B4%A1%E7%8C%AE%E8%80%85"><span class="toc-number">1.2.</span> <span class="toc-text">2. 贡献者</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%B8%8B%E8%BD%BD"><span class="toc-number">1.3.</span> <span class="toc-text">3. 下载</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.</span> <span class="toc-text">4. 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-%E5%88%87%E6%8D%A2%E4%B8%BB%E9%A2%98"><span class="toc-number">1.4.1.</span> <span class="toc-text">4.1. 切换主题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-1-config-yml-%E6%96%87%E4%BB%B6%E7%9A%84%E5%85%B6%E5%AE%83%E4%BF%AE%E6%94%B9%E5%BB%BA%E8%AE%AE"><span class="toc-number">1.4.1.1.</span> <span class="toc-text">4.1.1. _config.yml 文件的其它修改建议:</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-%E6%96%B0%E5%BB%BA%E5%88%86%E7%B1%BB-categories-%E9%A1%B5"><span class="toc-number">1.4.2.</span> <span class="toc-text">4.2. 新建分类 categories 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-%E6%96%B0%E5%BB%BA%E6%A0%87%E7%AD%BE-tags-%E9%A1%B5"><span class="toc-number">1.4.3.</span> <span class="toc-text">4.3. 新建标签 tags 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E6%96%B0%E5%BB%BA%E5%85%B3%E4%BA%8E%E6%88%91-about-%E9%A1%B5"><span class="toc-number">1.4.4.</span> <span class="toc-text">4.4. 新建关于我 about 页</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-%E6%96%B0%E5%BB%BA%E7%95%99%E8%A8%80%E6%9D%BF-contact-%E9%A1%B5%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.5.</span> <span class="toc-text">4.5. 新建留言板 contact 页（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E6%96%B0%E5%BB%BA%E5%8F%8B%E6%83%85%E8%BF%9E%E6%8E%A5-friends-%E9%A1%B5%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.6.</span> <span class="toc-text">4.6. 新建友情连接 friends 页（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-%E8%8F%9C%E5%8D%95%E5%AF%BC%E8%88%AA%E9%85%8D%E7%BD%AE"><span class="toc-number">1.4.7.</span> <span class="toc-text">4.7. 菜单导航配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-7-1-%E9%85%8D%E7%BD%AE%E5%9F%BA%E6%9C%AC%E8%8F%9C%E5%8D%95%E5%AF%BC%E8%88%AA%E7%9A%84%E5%90%8D%E7%A7%B0%E3%80%81%E8%B7%AF%E5%BE%84url%E5%92%8C%E5%9B%BE%E6%A0%87icon"><span class="toc-number">1.4.7.1.</span> <span class="toc-text">4.7.1. 配置基本菜单导航的名称、路径url和图标icon.</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-7-2-%E4%BA%8C%E7%BA%A7%E8%8F%9C%E5%8D%95%E9%85%8D%E7%BD%AE%E6%96%B9%E6%B3%95"><span class="toc-number">1.4.7.2.</span> <span class="toc-text">4.7.2. 二级菜单配置方法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-%E6%B7%BB%E5%8A%A0emoji%E8%A1%A8%E6%83%85%E6%94%AF%E6%8C%81%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.8.</span> <span class="toc-text">4.8. 添加emoji表情支持（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-9-%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE"><span class="toc-number">1.4.9.</span> <span class="toc-text">4.9. 代码高亮</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-10-%E6%90%9C%E7%B4%A2"><span class="toc-number">1.4.10.</span> <span class="toc-text">4.10. 搜索</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-11-%E4%B8%AD%E6%96%87%E9%93%BE%E6%8E%A5%E8%BD%AC%E6%8B%BC%E9%9F%B3%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.11.</span> <span class="toc-text">4.11. 中文链接转拼音（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-12-%E6%96%87%E7%AB%A0%E5%AD%97%E6%95%B0%E7%BB%9F%E8%AE%A1%E6%8F%92%E4%BB%B6%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.12.</span> <span class="toc-text">4.12. 文章字数统计插件（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-13-%E6%B7%BB%E5%8A%A0-RSS-%E8%AE%A2%E9%98%85%E6%94%AF%E6%8C%81%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.13.</span> <span class="toc-text">4.13. 添加 RSS 订阅支持（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-14-%E6%B7%BB%E5%8A%A0-DaoVoice-%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.14.</span> <span class="toc-text">4.14. 添加 DaoVoice 在线聊天功能（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-15-%E6%B7%BB%E5%8A%A0-Tidio-%E5%9C%A8%E7%BA%BF%E8%81%8A%E5%A4%A9%E5%8A%9F%E8%83%BD%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.15.</span> <span class="toc-text">4.15. 添加 Tidio 在线聊天功能（可选的）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-16-%E4%BF%AE%E6%94%B9%E9%A1%B5%E8%84%9A"><span class="toc-number">1.4.16.</span> <span class="toc-text">4.16. 修改页脚</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-17-%E4%BF%AE%E6%94%B9%E7%A4%BE%E4%BA%A4%E9%93%BE%E6%8E%A5"><span class="toc-number">1.4.17.</span> <span class="toc-text">4.17. 修改社交链接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-18-%E4%BF%AE%E6%94%B9%E6%89%93%E8%B5%8F%E7%9A%84%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E7%89%87"><span class="toc-number">1.4.18.</span> <span class="toc-text">4.18. 修改打赏的二维码图片</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-19-%E9%85%8D%E7%BD%AE%E9%9F%B3%E4%B9%90%E6%92%AD%E6%94%BE%E5%99%A8%EF%BC%88%E5%8F%AF%E9%80%89%E7%9A%84%EF%BC%89"><span class="toc-number">1.4.19.</span> <span class="toc-text">4.19. 配置音乐播放器（可选的）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E6%96%87%E7%AB%A0-Front-matter-%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.5.</span> <span class="toc-text">5. 文章 Front-matter 介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-Front-matter-%E9%80%89%E9%A1%B9%E8%AF%A6%E8%A7%A3"><span class="toc-number">1.5.1.</span> <span class="toc-text">5.1. Front-matter 选项详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E6%9C%80%E7%AE%80%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.5.2.</span> <span class="toc-text">5.2. 最简示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-%E6%9C%80%E5%85%A8%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.5.3.</span> <span class="toc-text">5.3. 最全示例</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E6%95%88%E6%9E%9C%E6%88%AA%E5%9B%BE"><span class="toc-number">1.6.</span> <span class="toc-text">6. 效果截图</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%87%AA%E5%AE%9A%E5%88%B6%E4%BF%AE%E6%94%B9"><span class="toc-number">1.7.</span> <span class="toc-text">7. 自定制修改</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98%E9%A2%9C%E8%89%B2"><span class="toc-number">1.7.1.</span> <span class="toc-text">7.1. 修改主题颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-%E4%BF%AE%E6%94%B9-banner-%E5%9B%BE%E5%92%8C%E6%96%87%E7%AB%A0%E7%89%B9%E8%89%B2%E5%9B%BE"><span class="toc-number">1.7.2.</span> <span class="toc-text">7.2. 修改 banner 图和文章特色图</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E7%89%88%E6%9C%AC%E8%AE%B0%E5%BD%95"><span class="toc-number">1.8.</span> <span class="toc-text">8. 版本记录</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2eb96991/" title="轻松控制多Target的Xcode项目的版本号">轻松控制多Target的Xcode项目的版本号</a><time datetime="2025-11-08T20:28:53.000Z" title="发表于 2025-11-08 20:28:53">2025-11-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4c1858d3/" title="macOS沙盒里，如何安全又优雅地运行沙盒外脚本？">macOS沙盒里，如何安全又优雅地运行沙盒外脚本？</a><time datetime="2025-10-06T15:47:47.000Z" title="发表于 2025-10-06 15:47:47">2025-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/47195187/" title="开发了一款免费的macOS自动换每日Bing壁纸软件">开发了一款免费的macOS自动换每日Bing壁纸软件</a><time datetime="2025-09-27T13:53:01.000Z" title="发表于 2025-09-27 13:53:01">2025-09-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/elrs-led-indicator-status-1wn09q.html" title="ELRS LED指示灯状态">ELRS LED指示灯状态</a><time datetime="2025-02-21T20:42:08.000Z" title="发表于 2025-02-21 20:42:08">2025-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a02866e/" title="FIT 文件对比工具"><img src="https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="FIT 文件对比工具"/></a><div class="content"><a class="title" href="/posts/2a02866e/" title="FIT 文件对比工具">FIT 文件对比工具</a><time datetime="2024-07-14T00:00:00.000Z" title="发表于 2024-07-14 00:00:00">2024-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2025 By Licardo</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'blog-comment-2ggu4dqb436a1407',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'blog-comment-2ggu4dqb436a1407',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
