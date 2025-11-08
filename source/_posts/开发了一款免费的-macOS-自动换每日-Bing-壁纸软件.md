@@ -1,16 +1,14 @@
 ---
 title: 开发了一款免费的macOS自动换每日Bing壁纸软件
 date: '2025-09-27 13:53:01'
-updated: '2025-09-27 15:15:49'
+updated: '2025-09-27 15:34:51'
 tags:
   - macOS
   - App
   - Apple
   - Swift
-permalink: >-
-  /post/developed-a-free-macos-automatic-daily-bing-wallpaper-software-1ush1y.html
-comments: true
-toc: true
+categories:
+  - App 推荐
 ---
 
 
@@ -40,3 +38,11 @@ API 其实是 Bing 的每日壁纸，所以每天只能获取一张，没办法�
   <img src="https://img.cdn1.vip/i/68d76d251fe11_1758948645.webp" style="max-width: 300px; height: auto; border: none;" alt="图片2">
   <img src="https://img.cdn1.vip/i/68d76d23289e2_1758948643.webp" style="max-width: 300px; height: auto; border: none;" alt="图片3">
 </div>
+
+<div>
+<div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/siyuan-template-notbyai/main/asset/notbyai_zh_CN.svg" alt="真人撰写" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/siyuan-template-notbyai/main/asset/notbyai_en.svg" alt="written by human" style="height: 42px;">
+</div>
+
+‍
