@@ -19,7 +19,7 @@ toc: true
 
 还好，我们可以给 Xcode 项目添加构建配置文件，在每次构建时就从配置文件中读取版本号。这样每次更新版本就只需要在一个文件中更改，Xcode 会自动应用的所有 Target 的 Version 和 Build 中。
 
-在 [Apple 的文档](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project)中“详细”说明了怎么给项目添加构建配置文件，但是奈何 Apple 的文档起始一点都不详细，往往会遗漏掉最重要的步骤！
+在 [Apple 的文档](https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project)中“详细”说明了怎么给项目添加构建配置文件，但是奈何 Apple 的文档起始一点都不详细😂，往往会遗漏掉最重要的步骤！
 
 ### 1. 创建 `.xcconfig` 配置文件
 
