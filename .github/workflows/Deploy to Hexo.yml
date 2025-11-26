@@ -47,5 +47,5 @@ jobs:
           git config user.name "${{secrets.GIT_NAME}}"
           git config user.email "${{secrets.GIT_EMAIL}}"
           git add .
-          git commit -m "Bolg deploy by Github Action"
+          git commit -m "Blog deploy by Github Action"
           git push --force --quiet "https://${{secrets.GH_TOKEN}}@${{secrets.GH_REF}}" main:main
