@@ -1,0 +1,301 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Licardo</title><meta name="author" content="Licardo"><meta name="copyright" content="Licardo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="喜欢编程的医学生">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Licardo">
+<meta property="og:url" content="https://blog.licardo.cn/index.html">
+<meta property="og:site_name" content="Licardo">
+<meta property="og:description" content="喜欢编程的医学生">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png">
+<meta property="article:author" content="Licardo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Licardo",
+  "alternateName": [
+    "blog.licardo.cn"
+  ],
+  "url": "https://blog.licardo.cn/"
+}</script><link rel="shortcut icon" href="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/favicon.ico"><link rel="canonical" href="https://blog.licardo.cn/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?335d5a7787e03ba0532c58a4ef332c24";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Licardo',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/bing_wallpaper_1080p.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" alt="Logo"><span class="site-name">Licardo</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Licardo</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/L1cardo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:albert.abdilim@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/AlbertAbdilim" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://weibo.com/1935602951" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://space.bilibili.com/7403418" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="post_cover left"><a href="/posts/2a02866e/" title="FIT 文件对比工具"><img class="post-bg" src="https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="FIT 文件对比工具"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/2a02866e/" title="FIT 文件对比工具"><i class="fas fa-thumbtack sticky"></i>FIT 文件对比工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-07-14T00:00:00.000Z" title="发表于 2024-07-14 00:00:00">2024-07-14</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E8%BF%90%E5%8A%A8/">运动</a></span></div><div class="content">FIT 文件对比工具   此工具不会上传您的数据，所有的处理都在本地运行，请放心使用!如果在使用途中发现任何问题或者意见，请邮件联系我，谢谢！        对比        时间     距离           正在处理，请稍候...        总处理时间:  秒                     #content-inner {   max-width: none; }  #post {   width: 98%; }  #fileInputSection {   text-align: center;   align-items: center;   margin-bottom: 20px;   display: inline-flex; }  #fileInput, #compareButton {   margin: 10px;   padding: 10px 20px;   font-size: 16px;   border: 1px solid #ccc;   border-radius: 5px; }  #compareButton {   back...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/5a01448b/" title="板载 ELRS 密码设置"><img class="post-bg" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="板载 ELRS 密码设置"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/5a01448b/" title="板载 ELRS 密码设置"><i class="fas fa-thumbtack sticky"></i>板载 ELRS 密码设置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2022-06-03T00:00:00.000Z" title="发表于 2022-06-03 00:00:00">2022-06-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/FPV/">FPV</a></span></div><div class="content">板载 ELRS 密码设置 修改自 ExpressLRS SPI Receivers&#x2F;Binding Phrase  绑定密码        UID Bytes         设置绑定密码在 Betaflight CLI 命令行里面输入以下命令（现在上面输入你的密码         射频模式板载 ExpressLRS SPI 接收器的 AIO 飞控默认设置500Hz。 要调整它，你需要进入 Betaflight CLI 并使用以下命令：      set expresslrs_rate_index = [序号]save   上面的[序号]替换成以下内容：  500Hz &#x3D; 0 250Hz &#x3D; 1 150Hz &#x3D; 2 50Hz &#x3D; 3                window.addEventListener("load", (event) => {         initBindingPhraseGen();     });       function getBytesFromWordArray(wordArray) {  ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/2eb96991/" title="轻松控制多Target的Xcode项目的版本号">轻松控制多Target的Xcode项目的版本号</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-11-08T20:28:53.000Z" title="发表于 2025-11-08 20:28:53">2025-11-08</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Swift/">Swift</a></span></div><div class="content">轻松控制多Target的Xcode项目的版本号当在做原生 Apple 平台的开发的时候，Xcode 是我们必须要接触的工具，如果项目的 Target 比较少还好，我们可以直接在 Xcode 中的 Version 和 Build 中直接改变版本号。但如果项目的 Target 较多时，每次更新版本都要设置多个 Target 的版本号，这就比较麻烦。 还好，我们可以给 Xcode 项目添加构建配置文件，在每次构建时就从配置文件中读取版本号。这样每次更新版本就只需要在一个文件中更改，Xcode 会自动应用的所有 Target 的 Version 和 Build 中。 在 Apple 的文档中“详细”说明了怎么给项目添加构建配置文件，但是奈何 Apple 的文档起始一点都不详细😂，往往会遗漏掉最重要的步骤！ 1. 创建 .xcconfig 配置文件 首先这个文件我们是希望所有的 Target 都使用，所以要在项目的根目录创建，这里选择项目的根目录。  然后按下键盘快捷键 ⌘ + N 来创建新文件  在新文件的创建模版中，我们搜索 config​，然后再搜索结果中选择 Configurat...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/4c1858d3/" title="macOS沙盒里，如何安全又优雅地运行沙盒外脚本？">macOS沙盒里，如何安全又优雅地运行沙盒外脚本？</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-10-06T15:47:47.000Z" title="发表于 2025-10-06 15:47:47">2025-10-06</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Swift/">Swift</a></span></div><div class="content">macOS沙盒里，如何安全又优雅地运行沙盒外脚本？ 参考自：https://github.com/lexrus/SwiftyMenu  1. 问题背景在开发 macOS 应用时，苹果的沙盒（Sandbox）安全机制会带来一个挑战：为了保证用户安全，应用不能随意执行外部的脚本文件。本文档提供了一种可靠、灵活的解决方案。 2. 核心思路与流程这个方案的核心是使用一个统一的辅助脚本 (runner.sh) 作为所有脚本任务的“调度中心”。应用本身只和这个调度中心打交道，由它来分发和执行具体的任务。 我们依赖苹果官方推荐的沙盒内执行工具 NSUserUnixTask 来调用我们的调度中心。 总流程如下： 1App -&gt; NSUserUnixTask -&gt; runner.sh -&gt; 最终要执行的脚本或命令  3. 核心调度脚本 runner.sh 详解​runner.sh 是本方案的基石。理解它的工作原理至关重要。 3.1. 脚本源码该脚本的功能是接收一系列参数，将第一个参数作为要执行的命令，并将其余所有参数传递给该命令。 123456789#!/bin/sh# 1. 将...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/47195187/" title="开发了一款免费的macOS自动换每日Bing壁纸软件">开发了一款免费的macOS自动换每日Bing壁纸软件</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-09-27T13:53:01.000Z" title="发表于 2025-09-27 13:53:01">2025-09-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/App-%E6%8E%A8%E8%8D%90/">App 推荐</a></span></div><div class="content">开发了一款免费的macOS自动换每日Bing壁纸软件起因是因为女朋友抱怨自己的 macbook 每天都是同一个系统自带的壁纸，很羡慕我的 macos 自带的航拍视频。 其实我用航拍视频很久，也一直很满意，设置的“全部随机”，每天都能看到好看的风景，还能动。 但是最近发现电脑空间不足了，一看吓一跳，航拍视频占了大概 50 多个 G ，Apple 壁纸没有空间满了自动删除的功能吗？ 于是就自己开发了一款每天换壁纸的软件，逻辑代码部分就用 claude code ，UI 还是得自己来，不然 AI 的审美很不稳定。App 整体用起来还是满意的，个人感觉 UI 设计也比较精美，也顺利上架了 Mac App Store 。 因为参考了很多开源项目，API 也是免费的，所以我这边除了时间成本和每年的 Apple 开发者费用，就没有其他费用了，所以这个 App 就完全免费！ API 其实是 Bing 的每日壁纸，所以每天只能获取一张，没办法自己刷，如果不满意今天，那么也做了历史壁纸功能，手动切换到之前的就行。 也设置了定时功能，每天到了时间就自动换，每天新壁纸，每天新心情！ 下载地址： http...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/post/elrs-led-indicator-status-1wn09q.html" title="ELRS LED指示灯状态">ELRS LED指示灯状态</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-02-21T20:42:08.000Z" title="发表于 2025-02-21 20:42:08">2025-02-21</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ELRS/">ELRS</a></span></div><div class="content"> ELRS LED指示灯状态接收机&#x2F;高频头 LED 状态ExpressLRS 使用 LED 来表明 接收机 &#x2F; 高频头 的状态。  LED 条件和状态如下： 接收机接收机单色 LED    LED 指示灯 状态    ​​​​ 常亮 连接到高频头或进入 bootloader 模式   ​​​​ 间断双闪 对频模式   ​​​​ 500ms 慢闪 等待高频头连接   ​​​​ 间断三闪 已连接到高频头但模型设置不匹配   ​​​​ 100ms 中等速度慢闪 未检测到射频芯片   ​​​​ 25ms 快闪 WiFi 模式   接收机 RGB LED    LED 指示灯 状态    ​​ 彩虹渐变效果 启动   ​​ 绿色呼吸灯 网页更新模式已启用   ​​ 500ms 慢闪 等待高频头连接   ​​ 100 ms 红色闪烁 未检测到射频芯片   ​​ 间断橙色双闪 对频模式   ​​ 间断橙色三闪 已连接到高频头但模型设置不匹配   ​​ 单色常亮 已连接到高频头，颜色代表数据包速率   ​​ 无灯 关闭或处于 bootloader 模式      LED 颜色...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/posts/31bc9bc5/" title="Apple Device Model Name"><img class="post-bg" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/web_devices_ad58.svg" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="Apple Device Model Name"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/31bc9bc5/" title="Apple Device Model Name">Apple Device Model Name</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-11-17T00:00:00.000Z" title="发表于 2020-11-17 00:00:00">2020-11-17</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Apple/">Apple</a></span></div><div class="content">Apple Device Model Name Update time: 2020-10-18  You can use this link to see the raw data. Or you can just copy the json file below. 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157...</div></div></div><div class="recent-post-item"><div class="post_cover right"><a href="/posts/209ca420/" title="App Store 多账号自动登录器"><img class="post-bg" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/performance_overview_p9bm.svg" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="App Store 多账号自动登录器"></a></div><div class="recent-post-info"><a class="article-title" href="/posts/209ca420/" title="App Store 多账号自动登录器">App Store 多账号自动登录器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-10-04T00:00:00.000Z" title="发表于 2020-10-04 00:00:00">2020-10-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/App-%E6%8E%A8%E8%8D%90/">App 推荐</a></span></div><div class="content">Account-Switcher App Store 多账号自动登录器https://github.com/Bigwig-Club/Account-Switcher  由于我有多个不同地区的 App Store 账号, 并且有时候也需要在多个 App Store 账户中切换登录, 这就萌生出找一个能自动登录的 app 的念头, 但是找了很久都没找到. 要么是太老, 要么是不开源安全性无从考证. 所以干脆自己撸了一个, 虽然界面简单, 但是五脏俱全. 添加账户, 修改账户, 自定义账户名等都可以做到. 最重要的是开源, 安全! 声明所有的数据均保存在 你自己的电脑上, Account Switcher 不 收集你的任何信息! 安装在终端中运行以下命令: 12brew tap bigwig-club/brewbrew cask install bigwig-club/brew/account-switcher  卸载在终端中运行以下命令: 1brew cask zap bigwig-club/brew/account-switcher  示例 许可Apache License 2.0...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/8ba628ad/" title="隐私政策">隐私政策</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-20T00:00:00.000Z" title="发表于 2020-06-20 00:00:00">2020-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96/">隐私政策</a></span></div><div class="content">隐私政策生效日期：2020-06-20 本app（以及下文提到的“我们”、“我们的”或“本app”）是由 Albert Abdilim 提供的应用程序。 产品类别：app 如果您决定使用我们产品提供的服务，本协议用于告知我们对于用户的隐私如何处理。 如果您选择使用我们提供的服务，则表示您同意此政策。 除非本隐私政策另有规定，否则本隐私政策中使用的术语与我们的条款和条件具有相同的含义。 1、收集信息我们可能会收集以下数据仅用作分析，但数据不会关联您的身份：  标识符  诊断   2、链接到其他网站我们的服务可能包含指向非我们运营的其他网站的链接。如果您点击第三方链接，您将被引导至该第三方的网站。我们强烈建议您查看您访问的每个站点的隐私政策。 我们无法控制任何第三方网站或服务的内容，隐私政策或做法，也不承担任何责任。 3、第三方服务条款链接到应用程序使用的第三方服务提供商的隐私政策  Apple  4、支持如果您对本隐私政策有任何疑问，请联系我们： 邮件：albert.abdilim@foxmail.com 链接： 电话： 5、对此隐私策略的更改我们可能会不时更新我们的隐私政策。我们...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/posts/ee0e7537/" title="Privacy Policy">Privacy Policy</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2020-06-20T00:00:00.000Z" title="发表于 2020-06-20 00:00:00">2020-06-20</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96/">隐私政策</a></span></div><div class="content">Privacy PolicyEffective Date: 2020-06-20 This app (and “we”, “our” or “this app” mentioned below) are applications provided by Albert Abdilim. Product category: app If you decide to use the services provided by our products, this agreement is used to inform us how to deal with the privacy of users. If you choose to use the services we provide, you agree to this policy. Unless otherwise specified in this privacy policy, the terms used in this privacy policy have the same meaning as our terms a...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/#content-inner">4</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="author-info-name">Licardo</div><div class="author-info-description">喜欢编程的医学生</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/L1cardo"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/L1cardo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:albert.abdilim@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/AlbertAbdilim" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://weibo.com/1935602951" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://space.bilibili.com/7403418" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客, 喜欢请收藏!</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2eb96991/" title="轻松控制多Target的Xcode项目的版本号">轻松控制多Target的Xcode项目的版本号</a><time datetime="2025-11-08T20:28:53.000Z" title="发表于 2025-11-08 20:28:53">2025-11-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4c1858d3/" title="macOS沙盒里，如何安全又优雅地运行沙盒外脚本？">macOS沙盒里，如何安全又优雅地运行沙盒外脚本？</a><time datetime="2025-10-06T15:47:47.000Z" title="发表于 2025-10-06 15:47:47">2025-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/47195187/" title="开发了一款免费的macOS自动换每日Bing壁纸软件">开发了一款免费的macOS自动换每日Bing壁纸软件</a><time datetime="2025-09-27T13:53:01.000Z" title="发表于 2025-09-27 13:53:01">2025-09-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/elrs-led-indicator-status-1wn09q.html" title="ELRS LED指示灯状态">ELRS LED指示灯状态</a><time datetime="2025-02-21T20:42:08.000Z" title="发表于 2025-02-21 20:42:08">2025-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a02866e/" title="FIT 文件对比工具"><img src="https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="FIT 文件对比工具"/></a><div class="content"><a class="title" href="/posts/2a02866e/" title="FIT 文件对比工具">FIT 文件对比工具</a><time datetime="2024-07-14T00:00:00.000Z" title="发表于 2024-07-14 00:00:00">2024-07-14</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/App-%E6%8E%A8%E8%8D%90/"><span class="card-category-list-name">App 推荐</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Apple/"><span class="card-category-list-name">Apple</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ELRS/"><span class="card-category-list-name">ELRS</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/FPV/"><span class="card-category-list-name">FPV</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Hexo/"><span class="card-category-list-name">Hexo</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Swift/"><span class="card-category-list-name">Swift</span><span class="card-category-list-count">4</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%89%91%E6%A1%A5/"><span class="card-category-list-name">剑桥</span><span class="card-category-list-count">9</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%90%89%E4%BB%96/"><span class="card-category-list-name">吉他</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/%E5%89%91%E6%A1%A5/" style="font-size: 1.5em; color: #99a9bf">剑桥</a> <a href="/tags/git/" style="font-size: 1.1em; color: #999">git</a> <a href="/tags/FIT/" style="font-size: 1.1em; color: #999">FIT</a> <a href="/tags/Matery/" style="font-size: 1.21em; color: #999ea4">Matery</a> <a href="/tags/Swift/" style="font-size: 1.33em; color: #99a2af">Swift</a> <a href="/tags/iOS/" style="font-size: 1.21em; color: #999ea4">iOS</a> <a href="/tags/Privacy-Policy/" style="font-size: 1.16em; color: #999b9e">Privacy Policy</a> <a href="/tags/ELRS/" style="font-size: 1.16em; color: #999b9e">ELRS</a> <a href="/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" style="font-size: 1.1em; color: #999">版本控制</a> <a href="/tags/App/" style="font-size: 1.16em; color: #999b9e">App</a> <a href="/tags/%E5%BF%83%E5%BE%97/" style="font-size: 1.16em; color: #999b9e">心得</a> <a href="/tags/%E4%BD%B3%E6%98%8E/" style="font-size: 1.1em; color: #999">佳明</a> <a href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/" style="font-size: 1.1em; color: #999">小知识</a> <a href="/tags/Apple/" style="font-size: 1.21em; color: #999ea4">Apple</a> <a href="/tags/%E5%90%89%E4%BB%96/" style="font-size: 1.1em; color: #999">吉他</a> <a href="/tags/Hexo/" style="font-size: 1.27em; color: #99a0a9">Hexo</a> <a href="/tags/%E8%87%AA%E4%BC%A0/" style="font-size: 1.1em; color: #999">自传</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 1.1em; color: #999">运动</a> <a href="/tags/Critical-Summary/" style="font-size: 1.44em; color: #99a7ba">Critical Summary</a> <a href="/tags/git-flow/" style="font-size: 1.1em; color: #999">git-flow</a> <a href="/tags/%E8%AE%A1%E5%88%92/" style="font-size: 1.16em; color: #999b9e">计划</a> <a href="/tags/%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/" style="font-size: 1.1em; color: #999">时间格式</a> <a href="/tags/%E8%B1%86%E7%93%A3/" style="font-size: 1.1em; color: #999">豆瓣</a> <a href="/tags/FPV/" style="font-size: 1.1em; color: #999">FPV</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.21em; color: #999ea4">随笔</a> <a href="/tags/macOS/" style="font-size: 1.39em; color: #99a4b4">macOS</a> <a href="/tags/%E8%80%81%E7%94%B7%E5%AD%A9/" style="font-size: 1.1em; color: #999">老男孩</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      <a class="card-more-btn" href="/archives/"
+            title="查看更多">
+            <i class="fas fa-angle-right"></i>
+          </a>
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/11/">
+            <span class="card-archive-list-date">
+              2025 年 11 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/10/">
+            <span class="card-archive-list-date">
+              2025 年 10 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/09/">
+            <span class="card-archive-list-date">
+              2025 年 9 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              2025 年 2 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2024/07/">
+            <span class="card-archive-list-date">
+              2024 年 7 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2022/06/">
+            <span class="card-archive-list-date">
+              2022 年 6 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/11/">
+            <span class="card-archive-list-date">
+              2020 年 11 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2020/10/">
+            <span class="card-archive-list-date">
+              2020 年 10 月
+            </span>
+            <span class="card-archive-list-count">1</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">32</div></div><div class="webinfo-item"><div class="item-name">运行时间 :</div><div class="item-count" id="runtimeshow" data-publishDate="2019-06-28T00:00:00.000Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-11-26T03:02:04.404Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2025 By Licardo</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = ["喜欢编程的医学生","A medical student who loves programming"].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  typedJSFn.processSubtitle(["喜欢编程的医学生","A medical student who loves programming"])
+}
+typedJSFn.run(subtitleType)</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

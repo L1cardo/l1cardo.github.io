@@ -1,0 +1,364 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>时间格式 | Licardo</title><meta name="author" content="Licardo"><meta name="copyright" content="Licardo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Date &amp; Time Patterns 2019-10-12  Itsycal can optionally accept a datetime pattern which it will use to show the current date and&#x2F;or time next to its icon in the menu bar. Here are some exampl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="时间格式">
+<meta property="og:url" content="https://blog.licardo.cn/posts/b5936540/index.html">
+<meta property="og:site_name" content="Licardo">
+<meta property="og:description" content="Date &amp; Time Patterns 2019-10-12  Itsycal can optionally accept a datetime pattern which it will use to show the current date and&#x2F;or time next to its icon in the menu bar. Here are some exampl">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/time_management_30iu.svg">
+<meta property="article:published_time" content="2019-10-12T00:00:00.000Z">
+<meta property="article:modified_time" content="2025-11-26T03:01:38.568Z">
+<meta property="article:author" content="Licardo">
+<meta property="article:tag" content="小知识">
+<meta property="article:tag" content="时间格式">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/time_management_30iu.svg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "时间格式",
+  "url": "https://blog.licardo.cn/posts/b5936540/",
+  "image": "https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/time_management_30iu.svg",
+  "datePublished": "2019-10-12T00:00:00.000Z",
+  "dateModified": "2025-11-26T03:01:38.568Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Licardo",
+      "url": "https://blog.licardo.cn"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/favicon.ico"><link rel="canonical" href="https://blog.licardo.cn/posts/b5936540/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?335d5a7787e03ba0532c58a4ef332c24";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '时间格式',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/time_management_30iu.svg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" alt="Logo"><span class="site-name">Licardo</span></a><a class="nav-page-title" href="/"><span class="site-name">时间格式</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">时间格式</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-10-12T00:00:00.000Z" title="发表于 2019-10-12 00:00:00">2019-10-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-11-26T03:01:38.568Z" title="更新于 2025-11-26 03:01:38">2025-11-26</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="Date-Time-Patterns"><a href="#Date-Time-Patterns" class="headerlink" title="Date &amp; Time Patterns"></a>Date &amp; Time Patterns</h1><blockquote>
+<p>2019-10-12</p>
+</blockquote>
+<p>Itsycal can optionally accept a datetime pattern which it will use to show the current date and&#x2F;or time next to its icon in the menu bar. Here are some examples:</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>E, d-MMM H:mm</code></td>
+<td><code>Fri, 13-Jan 21:54</code></td>
+</tr>
+<tr>
+<td><code>EEEE h:mm a</code></td>
+<td><code>Friday 9:54 PM</code></td>
+</tr>
+</tbody></table>
+<p>The table below shows some of the most useful characters used in datetime patterns. Characters may be used multiple times. For example, if <code>y</code> is used for the year, <code>yy</code> might produce <code>17</code> whereas <code>yyyy</code> produces <code>2017</code>. For most numerical fields, the number of characters specifies the field width. For example, if <code>h</code> is the hour, <code>h</code> might produce <code>5</code> but <code>hh</code> produces <code>05</code>. For some characters, the count specifies whether an abbreviated or full form should be used.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">Symbol</th>
+<th align="center">Occurrences</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Year</td>
+<td align="center"><code>y</code></td>
+<td align="center">1..n</td>
+<td><code>1996</code></td>
+</tr>
+<tr>
+<td>Month</td>
+<td align="center"><code>M</code></td>
+<td align="center">1..2</td>
+<td><code>09</code></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center">3</td>
+<td><code>Sept</code></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center">4</td>
+<td><code>September</code></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>Week of Year</td>
+<td align="center"><code>w</code></td>
+<td align="center">1..2</td>
+<td><code>27</code></td>
+</tr>
+<tr>
+<td>Week of Month</td>
+<td align="center"><code>W</code></td>
+<td align="center">1</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>Day of the Month</td>
+<td align="center"><code>d</code></td>
+<td align="center">1..2</td>
+<td><code>31</code></td>
+</tr>
+<tr>
+<td>Day of the Week</td>
+<td align="center"><code>E</code></td>
+<td align="center">1..3</td>
+<td><code>Tues</code></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center">4</td>
+<td><code>Tuesday</code></td>
+</tr>
+<tr>
+<td></td>
+<td align="center"></td>
+<td align="center">5</td>
+<td><code>T</code></td>
+</tr>
+<tr>
+<td>AM or PM</td>
+<td align="center"><code>a</code></td>
+<td align="center">1</td>
+<td><code>AM</code></td>
+</tr>
+<tr>
+<td>Hour [1-12]</td>
+<td align="center"><code>h</code></td>
+<td align="center">1..2</td>
+<td><code>11</code></td>
+</tr>
+<tr>
+<td>Hour [0-23]</td>
+<td align="center"><code>H</code></td>
+<td align="center">1..2</td>
+<td><code>13</code></td>
+</tr>
+<tr>
+<td>Minute</td>
+<td align="center"><code>m</code></td>
+<td align="center">1..2</td>
+<td><code>59</code></td>
+</tr>
+<tr>
+<td>Second</td>
+<td align="center"><code>s</code></td>
+<td align="center">1..2</td>
+<td><code>59</code></td>
+</tr>
+</tbody></table>
+<p>Two single quotes (eg. <code>&#39;&#39;</code>) represents a literal single quote, either inside or outside single quotes. Text within single quotes is not interpreted in any way (eg. <code>&#39;o&#39;&#39;clock&#39;</code> is replaced with <code>o&#39;clock</code>). Otherwise all ASCII letters from <code>a-z</code> and <code>A-Z</code> are reserved as syntax characters, and require quoting if they are to represent literal characters.</p>
+<p>A full description of datetime patterns can be found in the <a target="_blank" rel="noopener" href="http://unicode.org/reports/tr35/tr35-25.html#Date_Format_Patterns">Unicode Local Data Markup Language</a>.</p>
+<div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.licardo.cn">Licardo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.licardo.cn/posts/b5936540/">https://blog.licardo.cn/posts/b5936540/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.licardo.cn" target="_blank">Licardo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F/">时间格式</a><a class="post-meta__tags" href="/tags/%E5%B0%8F%E7%9F%A5%E8%AF%86/">小知识</a></div><div class="post-share"><div class="social-share" data-image="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/time_management_30iu.svg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/20e9a1d8/" title="对医学人才培养过程的想法"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/exams_g4ow.svg" onerror="onerror=null;src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">对医学人才培养过程的想法</div></div><div class="info-2"><div class="info-item-1">对医学人才培养过程的想法 2019-10-23  今年暑假我参加了暑期剑桥项目，在英国度过了为期16天的学习生活。作为学院的出国交流的本科生，而且是一名少数民族同学，我此次出国的收获很大，而且对于本科阶医学人才的培养有了自己一定的想法。 英国的前三天我们待在了伦敦，住在皇家King’s London College，并在期间参观了位于King’s London College的钱德勒模拟中心，这个模拟中心是模拟真实的临床病人与真实的临床情况。两个老师给我讲授了在真实的临床情况中要怎么注意怎么手部消毒，与病人的交流沟通并且怎么在遇到困难时如何团队协作以达到最大的效率。虽然这次的课程很短，但是我体会到了老师们的热情，而且老师们能参与到每一个同学们的讨论思考，可以了解每一个同学的想法。我觉得这种教育模式不仅可以使老师能与同学们更近，最重要的是能使同学与老师更近，有什么问题直接与老师面对面讨论。我知道这种模式在学生数量很多，而老师数量很少的中国很难再在短期内实现，但是至少可以参考一下这种模式。 而在剑桥的学习中，教授们不仅注重于同学们获得知识的程度，也很关注同学们自身的发展。自我人格的建...</div></div></div></a><a class="pagination-related" href="/posts/262d839/" title="《老男孩》吉他谱"><img class="cover" src="https://42f2671d685f51e10fc6-b9fcecea3e50b3b59bdc28dead054ebc.ssl.cf5.rackcdn.com/illustrations/compose_music_ovo2.svg" onerror="onerror=null;src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">《老男孩》吉他谱</div></div><div class="info-2"><div class="info-item-1">《老男孩》吉他谱 2019-10-07  《老男孩》这首经典的歌曲只要是在21世纪有过青春的人都不会陌生，而《老男孩》这首曲子也成了学吉他的人必会弹得一手曲子。 《老男孩》有指弹版，但是我要分享的是和弦版的谱子。不知道为啥，我个人觉得和弦版比指弹版简单，我是这样认为的。 这个谱子很简单，主要的和弦有 C、G、Am、Em，中间穿插着 F 和弦，还有一两处的 Fm 与 Dm7 和弦。 扫弦手法也很简单，下——下下上 ，下——下下上 ，除了前奏和中间的一小部分，主歌部分一直是这样的。 我自己对着谱子练了三天，就很娴熟了，下次同学聚会就可以大显身手了！           </div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="author-info-name">Licardo</div><div class="author-info-description">喜欢编程的医学生</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/L1cardo"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/L1cardo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:albert.abdilim@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/AlbertAbdilim" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://weibo.com/1935602951" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://space.bilibili.com/7403418" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客, 喜欢请收藏!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Date-Time-Patterns"><span class="toc-number">1.</span> <span class="toc-text">Date &amp; Time Patterns</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2eb96991/" title="轻松控制多Target的Xcode项目的版本号">轻松控制多Target的Xcode项目的版本号</a><time datetime="2025-11-08T20:28:53.000Z" title="发表于 2025-11-08 20:28:53">2025-11-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4c1858d3/" title="macOS沙盒里，如何安全又优雅地运行沙盒外脚本？">macOS沙盒里，如何安全又优雅地运行沙盒外脚本？</a><time datetime="2025-10-06T15:47:47.000Z" title="发表于 2025-10-06 15:47:47">2025-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/47195187/" title="开发了一款免费的macOS自动换每日Bing壁纸软件">开发了一款免费的macOS自动换每日Bing壁纸软件</a><time datetime="2025-09-27T13:53:01.000Z" title="发表于 2025-09-27 13:53:01">2025-09-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/elrs-led-indicator-status-1wn09q.html" title="ELRS LED指示灯状态">ELRS LED指示灯状态</a><time datetime="2025-02-21T20:42:08.000Z" title="发表于 2025-02-21 20:42:08">2025-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a02866e/" title="FIT 文件对比工具"><img src="https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="FIT 文件对比工具"/></a><div class="content"><a class="title" href="/posts/2a02866e/" title="FIT 文件对比工具">FIT 文件对比工具</a><time datetime="2024-07-14T00:00:00.000Z" title="发表于 2024-07-14 00:00:00">2024-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2025 By Licardo</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'blog-comment-2ggu4dqb436a1407',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'blog-comment-2ggu4dqb436a1407',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

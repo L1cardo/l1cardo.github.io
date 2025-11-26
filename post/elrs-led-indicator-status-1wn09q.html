@@ -1,0 +1,483 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ELRS LED指示灯状态 | Licardo</title><meta name="author" content="Licardo"><meta name="copyright" content="Licardo"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="ELRS LED指示灯状态接收机&#x2F;高频头 LED 状态ExpressLRS 使用 LED 来表明 接收机 &#x2F; 高频头 的状态。  LED 条件和状态如下： 接收机接收机单色 LED    LED 指示灯 状态    ​​​​ 常亮 连接到高频头或进入 bootloader 模式   ​​​​ 间断双闪 对频模式   ​​​​ 500ms 慢闪 等待高频头连接   ​​​​ 间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ELRS LED指示灯状态">
+<meta property="og:url" content="https://blog.licardo.cn/post/elrs-led-indicator-status-1wn09q.html">
+<meta property="og:site_name" content="Licardo">
+<meta property="og:description" content="ELRS LED指示灯状态接收机&#x2F;高频头 LED 状态ExpressLRS 使用 LED 来表明 接收机 &#x2F; 高频头 的状态。  LED 条件和状态如下： 接收机接收机单色 LED    LED 指示灯 状态    ​​​​ 常亮 连接到高频头或进入 bootloader 模式   ​​​​ 间断双闪 对频模式   ​​​​ 500ms 慢闪 等待高频头连接   ​​​​ 间">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png">
+<meta property="article:published_time" content="2025-02-21T20:42:08.000Z">
+<meta property="article:modified_time" content="2025-02-21T21:46:51.000Z">
+<meta property="article:author" content="Licardo">
+<meta property="article:tag" content="ELRS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ELRS LED指示灯状态",
+  "url": "https://blog.licardo.cn/post/elrs-led-indicator-status-1wn09q.html",
+  "image": "https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png",
+  "datePublished": "2025-02-21T20:42:08.000Z",
+  "dateModified": "2025-02-21T21:46:51.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Licardo",
+      "url": "https://blog.licardo.cn"
+    }
+  ]
+}</script><link rel="shortcut icon" href="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/favicon.ico"><link rel="canonical" href="https://blog.licardo.cn/post/elrs-led-indicator-status-1wn09q.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?335d5a7787e03ba0532c58a4ef332c24";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+btf.addGlobalFn('pjaxComplete', () => {
+  _hmt.push(['_trackPageview',window.location.pathname])
+}, 'baidu_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ELRS LED指示灯状态',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(https://raw.githubusercontent.com/L1cardo/L1cardo/main/assets/bing_wallpaper_1080p.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" alt="Logo"><span class="site-name">Licardo</span></a><a class="nav-page-title" href="/"><span class="site-name">ELRS LED指示灯状态</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-list"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/books/"><i class="fa-fw fas fa-book"></i><span> 书籍</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-film"></i><span> 电影</span></a></li><li><a class="site-page child" href="/games/"><i class="fa-fw fas fa-gamepad"></i><span> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/contact/"><i class="fa-fw fas fa-comments"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/friends/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://run.licardo.cn"><i class="fa-fw fas fa-running"></i><span> 跑步</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">ELRS LED指示灯状态</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-21T20:42:08.000Z" title="发表于 2025-02-21 20:42:08">2025-02-21</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-21T21:46:51.000Z" title="更新于 2025-02-21 21:46:51">2025-02-21</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ELRS/">ELRS</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/ExpressLRS-Hardware/raw/master/img/quick-start.png" alt="image"></p>
+<h1 id="ELRS-LED指示灯状态"><a href="#ELRS-LED指示灯状态" class="headerlink" title="ELRS LED指示灯状态"></a>ELRS LED指示灯状态</h1><h1 id="接收机-高频头-LED-状态"><a href="#接收机-高频头-LED-状态" class="headerlink" title="接收机&#x2F;高频头 LED 状态"></a>接收机&#x2F;高频头 LED 状态</h1><p>ExpressLRS 使用 LED 来表明 <strong>接收机</strong> &#x2F; <strong>高频头</strong> 的状态。</p>
+<p> LED 条件和状态如下：</p>
+<h2 id="接收机"><a href="#接收机" class="headerlink" title="接收机"></a>接收机</h2><h3 id="接收机单色-LED"><a href="#接收机单色-LED" class="headerlink" title="接收机单色 LED"></a>接收机单色 LED</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>LED 指示灯</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>​​​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LED_ON.gif" alt="CONNECTED">​</td>
+<td>常亮</td>
+<td>连接到高频头或进入 bootloader 模式</td>
+</tr>
+<tr>
+<td>​​​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQ_BINDING_10_10_10_100.gif" alt="LEDSEQ_BINDING">​</td>
+<td>间断双闪</td>
+<td>对频模式</td>
+</tr>
+<tr>
+<td>​​​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQ_DISCONNECTED_50_50.gif" alt="LEDSEQ_DISCONNECTED">​</td>
+<td>500ms 慢闪</td>
+<td>等待高频头连接</td>
+</tr>
+<tr>
+<td>​​​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQ_MODEL_MISMATCH_10_10_10_10_10_100.gif" alt="LEDSEQ_MODEL_MISMATCH">​</td>
+<td>间断三闪</td>
+<td>已连接到高频头但模型设置不匹配</td>
+</tr>
+<tr>
+<td>​​​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQ_RADIO_FAILED_20_100.gif" alt="LEDSEQ_RADIO_FAILED">​</td>
+<td>100ms 中等速度慢闪</td>
+<td>未检测到射频芯片</td>
+</tr>
+<tr>
+<td>​​​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQ_WIFI_UPDATE_2_3.gif" alt="LEDSEQ_WIFI_UPDATE">​</td>
+<td>25ms 快闪</td>
+<td>WiFi 模式</td>
+</tr>
+</tbody></table>
+<h3 id="接收机-RGB-LED"><a href="#接收机-RGB-LED" class="headerlink" title="接收机 RGB LED"></a>接收机 RGB LED</h3><table>
+<thead>
+<tr>
+<th></th>
+<th>LED 指示灯</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQRGB_STARTUP.gif" alt="LEDRGB_STARTUP">​</td>
+<td>彩虹渐变效果</td>
+<td>启动</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQRGB_WIFI_UPDATE.gif" alt="LEDRGB_WIFI_UPDATE">​</td>
+<td>绿色呼吸灯</td>
+<td>网页更新模式已启用</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQRGB_WAITING_TO_CONNECT.gif" alt="LEDRGB_WAITING_FOR_CONNECTION">​</td>
+<td>500ms 慢闪</td>
+<td>等待高频头连接</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQRGB_RADIO_FAILED.gif" alt="LEDRGB_RADIO_FAILED">​</td>
+<td>100 ms 红色闪烁</td>
+<td>未检测到射频芯片</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQRGB_BINDING.gif" alt="LEDRGB_BINDING_ENABLED">​</td>
+<td>间断橙色双闪</td>
+<td>对频模式</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LEDSEQRGB_MODEL_MISMATCH.gif" alt="LEDRGB_MODEL_MISMATCH">​</td>
+<td>间断橙色三闪</td>
+<td>已连接到高频头但模型设置不匹配</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LED_RGB_ON.png" alt="LEDRGB_CONNECTED">​</td>
+<td>单色常亮</td>
+<td>已连接到高频头，颜色代表数据包速率</td>
+</tr>
+<tr>
+<td>​<img src="https://ghproxy.licardo.vip/https://github.com/ExpressLRS/Docs/raw/master/docs/assets/images/LED_RGB_OFF.png" alt="BOOTLOADER_OR_OFF">​</td>
+<td>无灯</td>
+<td>关闭或处于 bootloader 模式</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>LED 颜色</th>
+<th>2.4GHz 数据包速率 (Hz)</th>
+<th>915&#x2F;868MHz 数据包速率 (Hz)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>红</td>
+<td>F1000</td>
+<td>200</td>
+</tr>
+<tr>
+<td>黄</td>
+<td>F500</td>
+<td></td>
+</tr>
+<tr>
+<td>黄-绿</td>
+<td>D500</td>
+<td>100 Full</td>
+</tr>
+<tr>
+<td>绿</td>
+<td>D250</td>
+<td>100</td>
+</tr>
+<tr>
+<td>青</td>
+<td>333 Full</td>
+<td></td>
+</tr>
+<tr>
+<td>浅蓝</td>
+<td>500</td>
+<td>50</td>
+</tr>
+<tr>
+<td>蓝</td>
+<td>250</td>
+<td>25</td>
+</tr>
+<tr>
+<td>蓝-紫</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr>
+<td>紫</td>
+<td>100 Full</td>
+<td>D50</td>
+</tr>
+<tr>
+<td>品红</td>
+<td>50</td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="高频头"><a href="#高频头" class="headerlink" title="高频头"></a>高频头</h2><h3 id="高频头-RGB-LED"><a href="#高频头-RGB-LED" class="headerlink" title="高频头 RGB LED"></a>高频头 RGB LED</h3><table>
+<thead>
+<tr>
+<th>LED 指示灯</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>彩虹渐变效果</td>
+<td>启动</td>
+</tr>
+<tr>
+<td>绿色呼吸灯</td>
+<td>网页更新模式已启用</td>
+</tr>
+<tr>
+<td>蓝色呼吸灯</td>
+<td>蓝牙摇杆模式已启用</td>
+</tr>
+<tr>
+<td>100 ms 红色闪烁</td>
+<td>未检测到射频芯片</td>
+</tr>
+<tr>
+<td>橙色每秒闪烁</td>
+<td>未检测到遥控器</td>
+</tr>
+<tr>
+<td>单色常亮</td>
+<td>已连接到接收机，颜色代表数据包速率</td>
+</tr>
+<tr>
+<td>单色渐隐</td>
+<td>未连接到接收机，颜色代表数据包速率</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>LED 颜色</th>
+<th>2.4GHz 数据包速率 (Hz)</th>
+<th>915&#x2F;868MHz 数据包速率 (Hz)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>红</td>
+<td>F1000</td>
+<td>200</td>
+</tr>
+<tr>
+<td>黄</td>
+<td>F500</td>
+<td></td>
+</tr>
+<tr>
+<td>黄-绿</td>
+<td>D500</td>
+<td>100 Full</td>
+</tr>
+<tr>
+<td>绿</td>
+<td>D250</td>
+<td>100</td>
+</tr>
+<tr>
+<td>青</td>
+<td>333 Full</td>
+<td></td>
+</tr>
+<tr>
+<td>浅蓝</td>
+<td>500</td>
+<td>50</td>
+</tr>
+<tr>
+<td>蓝</td>
+<td>250</td>
+<td>25</td>
+</tr>
+<tr>
+<td>蓝-紫</td>
+<td>150</td>
+<td></td>
+</tr>
+<tr>
+<td>紫</td>
+<td>100 Full</td>
+<td>D50</td>
+</tr>
+<tr>
+<td>品红</td>
+<td>50</td>
+<td></td>
+</tr>
+</tbody></table>
+<div>
+<div style="display: flex;align-items: center;justify-content: space-evenly;padding-top: 40px;">
+  <img src="https://ghproxy.licardo.vip/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_cn.png" alt="真人撰写" style="height: 42px;">
+  <img src="https://ghproxy.licardo.vip/https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/notbyai_en.png" alt="written by human" style="height: 42px;">
+</div>
+
+<p>‍</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://blog.licardo.cn">Licardo</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://blog.licardo.cn/post/elrs-led-indicator-status-1wn09q.html">https://blog.licardo.cn/post/elrs-led-indicator-status-1wn09q.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.licardo.cn" target="_blank">Licardo</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/ELRS/">ELRS</a></div><div class="post-share"><div class="social-share" data-image="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/wechat.jpg" alt="微信"/></a><div class="post-qr-code-desc">微信</div></li><li class="reward-item"><a href="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/donate/alipay.jpg" alt="支付宝"/></a><div class="post-qr-code-desc">支付宝</div></li></ul></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/posts/47195187/" title="开发了一款免费的macOS自动换每日Bing壁纸软件"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">开发了一款免费的macOS自动换每日Bing壁纸软件</div></div><div class="info-2"><div class="info-item-1">开发了一款免费的macOS自动换每日Bing壁纸软件起因是因为女朋友抱怨自己的 macbook 每天都是同一个系统自带的壁纸，很羡慕我的 macos 自带的航拍视频。 其实我用航拍视频很久，也一直很满意，设置的“全部随机”，每天都能看到好看的风景，还能动。 但是最近发现电脑空间不足了，一看吓一跳，航拍视频占了大概 50 多个 G ，Apple 壁纸没有空间满了自动删除的功能吗？ 于是就自己开发了一款每天换壁纸的软件，逻辑代码部分就用 claude code ，UI 还是得自己来，不然 AI 的审美很不稳定。App 整体用起来还是满意的，个人感觉 UI 设计也比较精美，也顺利上架了 Mac App Store 。 因为参考了很多开源项目，API 也是免费的，所以我这边除了时间成本和每年的 Apple 开发者费用，就没有其他费用了，所以这个 App 就完全免费！ API 其实是 Bing 的每日壁纸，所以每天只能获取一张，没办法自己刷，如果不满意今天，那么也做了历史壁纸功能，手动切换到之前的就行。 也设置了定时功能，每天到了时间就自动换，每天新壁纸，每天新心情！ 下载地址： http...</div></div></div></a><a class="pagination-related" href="/posts/2a02866e/" title="FIT 文件对比工具"><img class="cover" src="https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png" onerror="onerror=null;src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">FIT 文件对比工具</div></div><div class="info-2"><div class="info-item-1">FIT 文件对比工具   此工具不会上传您的数据，所有的处理都在本地运行，请放心使用!如果在使用途中发现任何问题或者意见，请邮件联系我，谢谢！        对比        时间     距离           正在处理，请稍候...        总处理时间:  秒                     #content-inner {   max-width: none; }  #post {   width: 98%; }  #fileInputSection {   text-align: center;   align-items: center;   margin-bottom: 20px;   display: inline-flex; }  #fileInput, #compareButton {   margin: 10px;   padding: 10px 20px;   font-size: 16px;   border: 1px solid #ccc;   border-radius: 5px; }  #compareButton {   back...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/posts/5a01448b/" title="板载 ELRS 密码设置"><img class="cover" src="https://raw.githubusercontent.com/ExpressLRS/ExpressLRS-Hardware/master/img/banner.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-06-03</div><div class="info-item-2">板载 ELRS 密码设置</div></div><div class="info-2"><div class="info-item-1">板载 ELRS 密码设置 修改自 ExpressLRS SPI Receivers&#x2F;Binding Phrase  绑定密码        UID Bytes         设置绑定密码在 Betaflight CLI 命令行里面输入以下命令（现在上面输入你的密码         射频模式板载 ExpressLRS SPI 接收器的 AIO 飞控默认设置500Hz。 要调整它，你需要进入 Betaflight CLI 并使用以下命令：      set expresslrs_rate_index = [序号]save   上面的[序号]替换成以下内容：  500Hz &#x3D; 0 250Hz &#x3D; 1 150Hz &#x3D; 2 50Hz &#x3D; 3                window.addEventListener("load", (event) => {         initBindingPhraseGen();     });       function getBytesFromWordArray(wordArray) {  ...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/avatar.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="avatar"/></div><div class="author-info-name">Licardo</div><div class="author-info-description">喜欢编程的医学生</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">27</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/L1cardo"><i class="fab fa-github"></i><span>关注我</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/L1cardo" target="_blank" title="GitHub"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:albert.abdilim@foxmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://twitter.com/AlbertAbdilim" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a><a class="social-icon" href="https://weibo.com/1935602951" target="_blank" title="Weibo"><i class="fab fa-weibo"></i></a><a class="social-icon" href="https://space.bilibili.com/7403418" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎来到我的博客, 喜欢请收藏!</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ELRS-LED%E6%8C%87%E7%A4%BA%E7%81%AF%E7%8A%B6%E6%80%81"><span class="toc-number">1.</span> <span class="toc-text">ELRS LED指示灯状态</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A5%E6%94%B6%E6%9C%BA-%E9%AB%98%E9%A2%91%E5%A4%B4-LED-%E7%8A%B6%E6%80%81"><span class="toc-number">2.</span> <span class="toc-text">接收机&#x2F;高频头 LED 状态</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A5%E6%94%B6%E6%9C%BA"><span class="toc-number">2.1.</span> <span class="toc-text">接收机</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E6%94%B6%E6%9C%BA%E5%8D%95%E8%89%B2-LED"><span class="toc-number">2.1.1.</span> <span class="toc-text">接收机单色 LED</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8E%A5%E6%94%B6%E6%9C%BA-RGB-LED"><span class="toc-number">2.1.2.</span> <span class="toc-text">接收机 RGB LED</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E9%A2%91%E5%A4%B4"><span class="toc-number">2.2.</span> <span class="toc-text">高频头</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E9%A2%91%E5%A4%B4-RGB-LED"><span class="toc-number">2.2.1.</span> <span class="toc-text">高频头 RGB LED</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/2eb96991/" title="轻松控制多Target的Xcode项目的版本号">轻松控制多Target的Xcode项目的版本号</a><time datetime="2025-11-08T20:28:53.000Z" title="发表于 2025-11-08 20:28:53">2025-11-08</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4c1858d3/" title="macOS沙盒里，如何安全又优雅地运行沙盒外脚本？">macOS沙盒里，如何安全又优雅地运行沙盒外脚本？</a><time datetime="2025-10-06T15:47:47.000Z" title="发表于 2025-10-06 15:47:47">2025-10-06</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/47195187/" title="开发了一款免费的macOS自动换每日Bing壁纸软件">开发了一款免费的macOS自动换每日Bing壁纸软件</a><time datetime="2025-09-27T13:53:01.000Z" title="发表于 2025-09-27 13:53:01">2025-09-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/post/elrs-led-indicator-status-1wn09q.html" title="ELRS LED指示灯状态">ELRS LED指示灯状态</a><time datetime="2025-02-21T20:42:08.000Z" title="发表于 2025-02-21 20:42:08">2025-02-21</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/2a02866e/" title="FIT 文件对比工具"><img src="https://staticcn.coros.com/coros-web-faq/public/img/banner.ff751ead.png" onerror="this.onerror=null;this.src='https://raw.githubusercontent.com/L1cardo/Image-Hosting/master/blog/loading.gif'" alt="FIT 文件对比工具"/></a><div class="content"><a class="title" href="/posts/2a02866e/" title="FIT 文件对比工具">FIT 文件对比工具</a><time datetime="2024-07-14T00:00:00.000Z" title="发表于 2024-07-14 00:00:00">2024-07-14</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2019 - 2025 By Licardo</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.0</a></span></div><div class="footer_custom_text"><a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img class="icp-icon" src="https://raw.githubusercontent.com/L1cardo/l1cardo.github.io/blog/themes/butterfly/source/img/upyun.png" style="max-height:1.2em"><span></span></a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'blog-comment-2ggu4dqb436a1407',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'blog-comment-2ggu4dqb436a1407',
+      region: '',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
